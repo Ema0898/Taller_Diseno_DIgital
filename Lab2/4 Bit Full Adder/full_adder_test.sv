@@ -1,4 +1,4 @@
-module full_adder_testbench();
+module full_adder_test();
 
 	logic[3:0] A, B, O;
 	logic Cin, Co;
