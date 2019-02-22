@@ -1,6 +1,6 @@
 module nBitCounter_testbench();
 
-	parameter N = 4;
+	parameter N = 6;
 
 	logic clock, reset;
 	logic[N-1:0] nextState0,nextState1, nextState2;
