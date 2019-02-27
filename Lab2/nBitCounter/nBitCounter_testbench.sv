@@ -11,7 +11,7 @@ module nBitCounter_testbench();
 	nBitCounter #(6) DUT2(clock, reset, nextState2);
 
 	initial begin
-		#10 clock = 0; reset = 1; 
+		#10 clock = 1; reset = 1; 
 		#10 clock = 1; reset = 0; 
 		#10 clock = 0; reset = 0; 
 		#10 clock = 1; reset = 0; 
