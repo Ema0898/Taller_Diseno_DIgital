@@ -47,3 +47,4 @@ module nBitCounter_sc_testbench();
 	 assert (nextState2 === 'b000100) else $error("Count failed on 6 bit counter");	  
   end
 endmodule
+
