@@ -1,17 +1,16 @@
 module adder_test();
 
-	parameter N = 10;
-	logic[N - 1 : 0] A, B, O;
-	logic Cin, Co;
+	parameter N = 4;
 
-	adder #(N)DUT(A, B, Cin, O, Co);
-
+	logic [N - 1 : 0] a, b, d0, d1, d2, d3, d4, d5, d6, d7;
+	
+	logic_module #(N) DUT(a, b, d0, d1, d2, d3, d4, d5, d6, d7);
+	
 	initial begin
-		#10 A = 10101010; B = 10101011; Cin = 0; 
-		#1	$display("A = %b, B = %b, Cin = %b, O = %b, Co = %b", A, B, Cin, O, Co);
-		#10 A = 1111010111; B = 0000000001; Cin = 1; 
-		#1	$display("A = %b, B = %b, Cin = %b, O = %b, Co = %b", A, B, Cin, O, Co);
-	end 
-
+		#10 a = 'b1011; b = 'b1001;
+		#1 $display("a = %b, b = %b, d0 = %b, d1 = %b, d2 = %b, d3 = %b, d4 = %b, d5 = %b, d6 = %b, d7 = %b",
+		a, b, d0, d1, d2, d3, d4, d5, d6, d7);
+			
+	end
 
 endmodule 

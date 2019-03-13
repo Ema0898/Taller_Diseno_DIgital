@@ -4,8 +4,7 @@ module adder
    logic [N - 1:0] carry_arr;
 	
    genvar i;
-   generate 
-   for(i = 0; i < N; i = i + 1)
+   generate for(i = 0; i < N; i = i + 1)
      begin: generate_N_bit_Adder
 	  
 		if(i == 0) 
