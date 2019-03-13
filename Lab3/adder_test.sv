@@ -1,6 +1,6 @@
 module adder_test();
 
-	parameter N = 4;
+	parameter N = 3;
 
 	logic [N - 1 : 0] a, b, z;
 	logic [3:0] s, flags;

@@ -13,6 +13,6 @@ module adder
 			full_adder f(a[i], b[i], carry_arr[i - 1], s[i], carry_arr[i]);
      end
 	  
-	  assign carry_out = carry_arr[N- 1];
+	  assign carry_out = carry_arr[N - 1];
    endgenerate
 endmodule  
