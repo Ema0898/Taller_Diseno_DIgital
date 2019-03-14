@@ -8,8 +8,35 @@ module adder_test();
 	ALU #(N) DUT(a, b, s, z, flags);
 	
 	initial begin
-		#10 a = 'b1010; b = 'b1010; s = 'b0111;
-		#1 $display("a = %b, b = %b, s = %b, z = %b, flags = %b", a, b, s, z, flags);
+		//NZCV
+	
+		#10 a = 'b001; b = 'b001; s = 'b0000;
+		assert(z === 'b010) else $error("Output failed");
+		assert(flags === 'b0000) else $error("Flags failed");
+		
+		#10 a = 'b001; b = 'b001; s = 'b0001;
+		assert(z === 'b000) else $error("Output failed");
+		assert(flags === 'b0100) else $error("Flags failed");
+		
+		#10 a = 'b001; b = 'b010; s = 'b0100;
+		assert(z === 'b100) else $error("Output failed");
+		assert(flags === 'b1000) else $error("Flags failed");
+		
+		#10 a = 'b001; b = 'b001; s = 'b0101;
+		assert(z === 'b000) else $error("Output failed");
+		assert(flags === 'b0100) else $error("Flags failed");
+		
+		#10 a = 'b001; b = 'b001; s = 'b1000;
+		assert(z === 'b001) else $error("Output failed");
+		assert(flags === 'b0000) else $error("Flags failed");
+		
+		#10 a = 'b001; b = 'b001; s = 'b1010;
+		assert(z === 'b000) else $error("Output failed");
+		assert(flags === 'b0100) else $error("Flags failed");
+		
+		#10 a = 'b001; b = 'b001; s = 'b1100;
+		assert(z === 'b010) else $error("Output failed");
+		assert(flags === 'b0000) else $error("Flags failed");
 			
 	end
 
