@@ -1,5 +1,5 @@
 module ALU
-	#(parameter N = 3)
+	#(parameter N = 4)
 	(input logic [N - 1 : 0] a, b, input logic [3:0] s, output logic [N - 1 : 0] z, output logic [3:0] flags);
 	
 	logic carry_out, msb_sum;

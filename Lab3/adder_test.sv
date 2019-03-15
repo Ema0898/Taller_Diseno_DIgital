@@ -10,31 +10,31 @@ module adder_test();
 	initial begin
 		//NZCV
 	
-		#10 a = 'b001; b = 'b001; s = 'b0000;
+		a = 'b001; b = 'b001; s = 'b0000; #10;
 		assert(z === 'b010) else $error("Output failed");
 		assert(flags === 'b0000) else $error("Flags failed");
 		
-		#10 a = 'b001; b = 'b001; s = 'b0001;
+		a = 'b001; b = 'b001; s = 'b0001; #10;
 		assert(z === 'b000) else $error("Output failed");
-		assert(flags === 'b0100) else $error("Flags failed");
+		assert(flags === 'b0110) else $error("Flags failed");
 		
-		#10 a = 'b001; b = 'b010; s = 'b0100;
+		a = 'b001; b = 'b010; s = 'b0100; #10;
 		assert(z === 'b100) else $error("Output failed");
 		assert(flags === 'b1000) else $error("Flags failed");
 		
-		#10 a = 'b001; b = 'b001; s = 'b0101;
+		a = 'b001; b = 'b001; s = 'b0101; #10;
 		assert(z === 'b000) else $error("Output failed");
 		assert(flags === 'b0100) else $error("Flags failed");
 		
-		#10 a = 'b001; b = 'b001; s = 'b1000;
+		a = 'b001; b = 'b001; s = 'b1000; #10;
 		assert(z === 'b001) else $error("Output failed");
 		assert(flags === 'b0000) else $error("Flags failed");
 		
-		#10 a = 'b001; b = 'b001; s = 'b1010;
+		a = 'b001; b = 'b001; s = 'b1010; #10;
 		assert(z === 'b000) else $error("Output failed");
 		assert(flags === 'b0100) else $error("Flags failed");
 		
-		#10 a = 'b001; b = 'b001; s = 'b1100;
+		#10 a = 'b001; b = 'b001; s = 'b1100; #10;
 		assert(z === 'b010) else $error("Output failed");
 		assert(flags === 'b0000) else $error("Flags failed");
 			
