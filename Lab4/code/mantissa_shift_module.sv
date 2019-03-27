@@ -1,5 +1,4 @@
 module mantissa_shift_module(input logic [32:0] a, b, input logic [8:0] shift, output logic [23:0] x, y, output logic [8:0] max_exp, output logic sign_bit);
-//module mantissa_shift_module(input logic [23:0] a, input logic [8:0] shift, output logic [23:0] max_exp);
 
 	logic [23:0] a_25, b_25, m1, mantissa_shift; 
 	logic [32:0] higher_number;
