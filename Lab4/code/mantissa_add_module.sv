@@ -1,4 +1,4 @@
-module mantissa_add_module(input logic [23:0] a, b, input logic [8:0] exp_in, output logic [24:0] mantissa, output logic [8:0] exp_out);
+module mantissa_add_module(input logic [23:0] a, b, output logic [24:0] mantissa);
 
 	logic [24:0] x, y;
 	logic c_o;
@@ -12,8 +12,5 @@ module mantissa_add_module(input logic [23:0] a, b, input logic [8:0] exp_in, ou
 	
 	// Realiza la suma de mantisas	
 	adder #(25) adder(x, y, 0, mantissa, c_o);
-	
-	// Asigna el mayor exponente
-	assign exp_out = exp_in;
 
 endmodule 

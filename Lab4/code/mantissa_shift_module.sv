@@ -1,4 +1,4 @@
-module mantissa_shift_module(input logic [32:0] a, b, input logic [8:0] shift, output logic [23:0] x, y, output logic [8:0] max_exp);
+module mantissa_shift_module(input logic [32:0] a, b, input logic [8:0] shift, output logic [23:0] x, y, output logic [8:0] max_exp, output logic sign_bit);
 //module mantissa_shift_module(input logic [23:0] a, input logic [8:0] shift, output logic [23:0] max_exp);
 
 	logic [23:0] a_25, b_25, m1, mantissa_shift; 
@@ -14,7 +14,7 @@ module mantissa_shift_module(input logic [32:0] a, b, input logic [8:0] shift, o
 	assign a_25[22:0] = a[22:0];
 	assign b_25[22:0] = b[22:0];
 	
-	// Realiza el complemento a 2 del exponente y lo selecciona si es necesairio
+	// Realiza el complemento a 2 del exponente y lo selecciona si es necesario
 	adder #(9) adder (~shift, 0, 1, complement, c_o);	
 	mux_2_x_1 #(9) mux0 (shift, complement, shift[8], exp_shift);		
 
@@ -33,5 +33,6 @@ module mantissa_shift_module(input logic [32:0] a, b, input logic [8:0] shift, o
 	assign x[22:0] = higher_number[22:0];
 	
 	assign y = mantissa_shift;
+	assign sign_bit = higher_number[32];
 										
 endmodule 									

@@ -1,4 +1,4 @@
-module mantissa_norm_module(input logic [24:0] mantissa, input logic [8:0] fexp, output logic [32:0] result);
+module mantissa_norm_module(input logic [24:0] mantissa, input logic [8:0] fexp, input logic sign_bit, output logic [32:0] result);
 
 	logic [8:0] m1, add;
 	logic [24:0] m2, shift;
@@ -16,7 +16,7 @@ module mantissa_norm_module(input logic [24:0] mantissa, input logic [8:0] fexp,
 	mux_2_x_1 #(25) mux2(mantissa, shift, selecc, m2);
 	
 	// Toma los datos necesarios de la mantisa
-	assign result[32] = 0;
+	assign result[32] = sign_bit;
 	assign result[31:23] = m1;
 	assign result[22:0] = m2[22:0];
 

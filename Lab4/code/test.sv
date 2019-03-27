@@ -1,18 +1,13 @@
 module test();
 
-	logic [32:0] A, B;
-   logic [8:0] shift, max_exp;
-	logic [23:0] x, y;
+	logic [32:0] A, B, sum;
 	
-	mantissa_shift_module DUT(A, B, shift, x, y, max_exp);
+	floating_point_adder DUT(A, B, sum);
 
 	initial begin
-		#10 B = 33'b001000000111111000000000000000000; A = 33'b000111110010000000000000000000000; shift = 9'b111111011; 
-		#1	$display("a = %b, B = %b, shift = %b, x = %b, y = %b, max_exp = %b", A, B, shift, x, y, max_exp);
+		#10 A = 33'b001000001011001000001100010010011; B = 33'b000111111110101011100001010001111;
+		#1	$display("a = %b, B = %b, sum = %b", A, B, sum);
 				
 	end 
 	
-	// 111111000000000000000000
-	// 000001100000000000000000
-	// 010000001
 endmodule 
