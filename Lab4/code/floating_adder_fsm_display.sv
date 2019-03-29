@@ -9,8 +9,8 @@ module floating_adder_fsm_display(input logic clock, reset, button, switch, outp
 	assign conditions[0] = ~button;
 	assign conditions[1] = d_switch;
 	
-	assign a = 33'b001000000011000000000000000000000;
-	assign b = 33'b001000000110001100110011001100110;
+	assign a = 33'b001000001010001111000010100011111;
+	assign b = 33'b001000010000001001101011100001010;
 
 	frequency_divider divider1(clock, ~reset, slowclock);
 	
@@ -18,12 +18,7 @@ module floating_adder_fsm_display(input logic clock, reset, button, switch, outp
 	
 	floating_adder_fsm adder1(a, b, conditions, slowclock, ~reset, adder_out, state);
 	
-	assign seg0 = adder_out[3:0];
-	assign seg1 = adder_out[7:4];
-	assign seg2 = adder_out[11:8];
-	assign seg3 = adder_out[15:12];
-	assign seg4 = adder_out[19:16];
-	assign seg5 = adder_out[23:20];
+	check_result checker(adder_out, state, seg0, seg1, seg2, seg3, seg4, seg5);
 	
 	DecoSeg deco1(seg0, s0);
 	DecoSeg deco2(seg1, s1);
