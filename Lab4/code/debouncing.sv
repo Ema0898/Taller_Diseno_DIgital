@@ -5,6 +5,6 @@ module debouncing(input logic clock, pushb, output logic q);
 	flip_flop_D #(1) ffD1(clock, pushb, q1);
 	flip_flop_D #(1) ffD2(clock, q1, q2);
 	
-	assign q = q1 & ~q2;	
+	assign q = q1 & q2;	
 	
 endmodule 
