@@ -3,7 +3,7 @@ module ClkDivisor(
 	output logic clk25Mhz
 	);
 
- reg counter;
+ logic counter;
  
 always @(posedge clock) 
 	begin

@@ -1,4 +1,4 @@
-module ControllerSync #(parameter DATA_WIDTH = 4)(
+module ControllerSync (
   input clock,  //clock divided
   input reset,
   output logic hSync,
@@ -33,7 +33,7 @@ module ControllerSync #(parameter DATA_WIDTH = 4)(
       end else if(refreshVSync) begin
         vCounter <= 0;
       end else begin 
-        if(hCounter == 799) begin
+        if(hCounter == 793) begin
           vCounter <= vCounter + 1'b1;
         end else begin 
           vCounter <= vCounter;
@@ -41,13 +41,13 @@ module ControllerSync #(parameter DATA_WIDTH = 4)(
       end
     end
 
-  assign hVideoOn = (hCounter < 640);
+  assign hVideoOn = (hCounter < 635);
   assign vVideoOn = (vCounter < 480);
-  assign hSync = ((hCounter < 655) || (hCounter > 750));
-  assign vSync = ((vCounter < 489) || (vCounter > 490));
+  assign hSync = ((hCounter < 650) || (hCounter > 745));
+  assign vSync = ((vCounter < 490) || (vCounter > 492));
 
-  assign refreshHSync = (hCounter == 799);
-  assign refreshVSync = ((hCounter == 799) && (vCounter == 524));
+  assign refreshHSync = (hCounter == 793);
+  assign refreshVSync = ((hCounter == 793) && (vCounter == 525));
   assign vidOn = (hVideoOn && vVideoOn);
  
 endmodule
