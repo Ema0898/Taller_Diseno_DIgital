@@ -7,7 +7,6 @@ module PixelGenerator(input logic [9:0] posX, posY, pixelX, pixelY, input logic 
 	
 	Sprite sprite(posX, posY, pixelX, pixelY, selec, spriteColor, spriteActive);
 	
-	mux_2_x_1 #(24) mux0(background, spriteColor, spriteActive, RGB);
-	
+	mux_2_x_1 #(24) mux0(background, spriteColor, spriteActive, RGB);	
 
 endmodule 

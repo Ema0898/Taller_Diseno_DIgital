@@ -5,7 +5,8 @@ module ControllerSync (
   output logic vSync,
   output logic [9:0] hCounter,
   output logic [9:0] vCounter,
-  output logic vidOn
+  output logic vidOn,
+  output logic refreshDraw
   );
   
   initial
@@ -49,5 +50,7 @@ module ControllerSync (
   assign refreshHSync = (hCounter == 793);
   assign refreshVSync = ((hCounter == 793) && (vCounter == 525));
   assign vidOn = (hVideoOn && vVideoOn);
+  
+  assign refreshDraw = ((hCounter == 635) & (vCounter == 480));
  
 endmodule

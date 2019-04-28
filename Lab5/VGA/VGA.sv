@@ -1,8 +1,6 @@
 module VGA (
     input clk,  // Clock FPGA
-    input reset, 
-	 input s0,
-	 input s1,
+    input reset,
     output vga_hs,
     output vga_vs,
     output logic [7:0] red,
@@ -13,26 +11,30 @@ module VGA (
     );
     
     logic [9:0] hCounter, vCounter;	 
-	 logic [9:0] posX, posY;
-	 //logic [23:0] RGB = 24'b101010111111111111111011;
+	 logic [9:0] posX, posY, newPosX;
+	 
 	 logic [23:0] RGB;
 	 logic [1:0] s;
+	 
+	 logic refreshDraw;
+	 logic low_clock;
+	 
+	 assign posX = 0;
+	 assign posY = 200;
     
     ClkDivisor VGAClkDivisor(clk,clockVGA);
+	 frequency_divider divider(clk, ~reset, low_clock); 
     
     ControllerSync VGASync(clockVGA,~reset,
-        vga_hs,vga_vs,hCounter,vCounter,vga_blank_n); 
-
-	 assign posX = 300;
-	 assign posY = 200;
-	 
-	 assign s[1] = ~s1;
-	 assign s[0] = ~s0;
+        vga_hs,vga_vs,hCounter,vCounter,vga_blank_n, refreshDraw); 
+		  
+	 counter count(low_clock, ~reset, refreshDraw, s);
+	 moveCounter move(clockVGA, ~reset, refreshDraw, posX, newPosX);	 	 
         
     //ControllerPainter VGAPainter(~reset,
       //RGB,blue,green,red);
 		
-	PixelGenerator pixel(posX, posY, vCounter, hCounter, s, RGB);
+	PixelGenerator pixel(posY, newPosX, vCounter, hCounter, s, RGB);
 	
 	assign red = RGB[23:16];
 	assign green = RGB[15:8];
