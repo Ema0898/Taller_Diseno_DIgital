@@ -1,4 +1,4 @@
-module PixelGenerator(input logic [9:0] posX, posY, pixelX, pixelY, input logic [1:0] selec, state, output logic [23:0] RGB);
+module PixelGenerator(input logic [9:0] posX, posY, pixelX, pixelY, input logic [1:0] selec, input logic [2:0] state, output logic [23:0] RGB);
 
 	logic [23:0] spriteColor, totalBackground, background, no_final_RGB, wordColor;
 	logic mux0Selec, mux2Selec, mux3Selec, spriteActive, lineActive, lineActiveX, lineActiveY, wordActive;	
@@ -17,9 +17,9 @@ module PixelGenerator(input logic [9:0] posX, posY, pixelX, pixelY, input logic 
 	assign lineActiveX = ((pixelY > 320) & (pixelY < 325));
 	
 	assign lineActive = lineActiveX | lineActiveY; // SI se debe dibujar las lineas
-	assign mux0Selec = ((~state[1] & state[0]) | (state[0] & ~state[1])); // estado 01 o 10 de la fsm
-	assign mux2Selec = (spriteActive & ((~state[1] & ~state[0]) | (state[1] & state[0])));
-	assign mux3Selec = (wordActive & (state[1] & state[0]));
+	assign mux0Selec = ((~state[2] & ~state[1] & state[0]) | (~state[2] & state[1] & ~state[0])); // estado 01 o 10 de la fsm
+	assign mux2Selec = (spriteActive & ((~state[2] & ~state[1] & ~state[0]) | (~state[2] & state[1] & state[0]) | (state[2] & ~state[1] & ~state[0])));
+	assign mux3Selec = (wordActive & (~state[2] & state[1] & state[0]));
 	
 	mux_2_x_1 #(24) mux0(background1, background2, mux0Selec, background);	
 	mux_2_x_1 #(24) mux1(background, lineColor, lineActive, totalBackground);	

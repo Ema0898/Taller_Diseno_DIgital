@@ -162,7 +162,6 @@ module Sprite(input logic [9:0] posX, posY, pixelX, pixelY, input logic [1:0] se
 	 
 	 decoRGB deco(codedColor, RGB);
 	 
-	 
 	 assign hActive = ((pixelX > posX) & (pixelX < (posX + 32)));
 	 assign vActive = ((pixelY > posY) & (pixelY < (posY + 25)));
 	

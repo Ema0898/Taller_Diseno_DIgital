@@ -2,100 +2,308 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : -2.427
-TNS   : -63.969
-
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -1.527
-TNS   : -2.005
+Slack : -5.353
+TNS   : -111.635
 
-Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.500
-TNS   : 0.000
+Type  : Slow 1100mV 85C Model Setup 'ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -4.208
+TNS   : -257.501
+
+Type  : Slow 1100mV 85C Model Setup 'frequency_divider:divider|clk_out'
+Slack : -2.733
+TNS   : -5.466
+
+Type  : Slow 1100mV 85C Model Setup 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : -1.343
+TNS   : -2.154
+
+Type  : Slow 1100mV 85C Model Setup 'frequency_divider_deb:fddeb|clk_out'
+Slack : -0.816
+TNS   : -1.631
 
 Type  : Slow 1100mV 85C Model Hold 'ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : 0.564
+Slack : 0.289
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.442
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'frequency_divider:divider|clk_out'
+Slack : 0.603
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'frequency_divider_deb:fddeb|clk_out'
+Slack : 0.706
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : 0.750
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -2.142
+TNS   : -138.116
+
+Type  : Slow 1100mV 85C Model Recovery 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : -1.588
+TNS   : -3.135
+
+Type  : Slow 1100mV 85C Model Removal 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : 0.643
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : 0.872
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.833
-TNS   : -2.663
+Slack : -0.900
+TNS   : -28.056
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ClkDivisor:VGAClkDivisor|clk25Mhz'
 Slack : -0.394
-TNS   : -14.389
+TNS   : -49.750
 
-Type  : Slow 1100mV 0C Model Setup 'ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : -2.415
-TNS   : -63.759
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'frequency_divider_deb:fddeb|clk_out'
+Slack : -0.394
+TNS   : -1.791
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : -0.394
+TNS   : -1.269
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'frequency_divider:divider|clk_out'
+Slack : -0.394
+TNS   : -1.158
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -1.444
-TNS   : -1.909
+Slack : -5.565
+TNS   : -108.895
 
-Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.479
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Setup 'ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -4.160
+TNS   : -253.352
+
+Type  : Slow 1100mV 0C Model Setup 'frequency_divider:divider|clk_out'
+Slack : -2.642
+TNS   : -5.284
+
+Type  : Slow 1100mV 0C Model Setup 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : -1.367
+TNS   : -2.166
+
+Type  : Slow 1100mV 0C Model Setup 'frequency_divider_deb:fddeb|clk_out'
+Slack : -0.808
+TNS   : -1.614
 
 Type  : Slow 1100mV 0C Model Hold 'ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : 0.522
+Slack : 0.320
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.458
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'frequency_divider:divider|clk_out'
+Slack : 0.573
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'frequency_divider_deb:fddeb|clk_out'
+Slack : 0.703
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : 0.714
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -2.041
+TNS   : -131.395
+
+Type  : Slow 1100mV 0C Model Recovery 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : -1.512
+TNS   : -2.990
+
+Type  : Slow 1100mV 0C Model Removal 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : 0.603
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : 0.782
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.836
-TNS   : -2.740
+Slack : -0.892
+TNS   : -30.339
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ClkDivisor:VGAClkDivisor|clk25Mhz'
 Slack : -0.394
-TNS   : -14.431
+TNS   : -48.717
 
-Type  : Fast 1100mV 85C Model Setup 'ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : -1.066
-TNS   : -27.462
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'frequency_divider_deb:fddeb|clk_out'
+Slack : -0.394
+TNS   : -1.761
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : -0.394
+TNS   : -1.236
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'frequency_divider:divider|clk_out'
+Slack : -0.394
+TNS   : -1.120
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -0.751
-TNS   : -0.751
+Slack : -4.054
+TNS   : -53.899
+
+Type  : Fast 1100mV 85C Model Setup 'ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -2.110
+TNS   : -122.758
+
+Type  : Fast 1100mV 85C Model Setup 'frequency_divider:divider|clk_out'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Fast 1100mV 85C Model Setup 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : -0.519
+TNS   : -0.742
+
+Type  : Fast 1100mV 85C Model Setup 'frequency_divider_deb:fddeb|clk_out'
+Slack : -0.266
+TNS   : -0.531
 
 Type  : Fast 1100mV 85C Model Hold 'ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : 0.255
+Slack : -0.012
+TNS   : -0.012
+
+Type  : Fast 1100mV 85C Model Hold 'frequency_divider:divider|clk_out'
+Slack : 0.170
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.259
+Slack : 0.202
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'frequency_divider_deb:fddeb|clk_out'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -1.061
+TNS   : -67.477
+
+Type  : Fast 1100mV 85C Model Recovery 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : -0.702
+TNS   : -1.365
+
+Type  : Fast 1100mV 85C Model Removal 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : 0.071
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : 0.298
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.742
-TNS   : -2.083
+Slack : -0.794
+TNS   : -7.210
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : -0.012
+TNS   : -0.022
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : 0.142
+Slack : 0.008
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : -0.951
-TNS   : -24.462
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'frequency_divider_deb:fddeb|clk_out'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'frequency_divider:divider|clk_out'
+Slack : 0.043
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -0.593
-TNS   : -0.593
+Slack : -3.508
+TNS   : -45.844
+
+Type  : Fast 1100mV 0C Model Setup 'ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -1.893
+TNS   : -108.797
+
+Type  : Fast 1100mV 0C Model Setup 'frequency_divider:divider|clk_out'
+Slack : -1.112
+TNS   : -2.224
+
+Type  : Fast 1100mV 0C Model Setup 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : -0.433
+TNS   : -0.608
+
+Type  : Fast 1100mV 0C Model Setup 'frequency_divider_deb:fddeb|clk_out'
+Slack : -0.198
+TNS   : -0.395
 
 Type  : Fast 1100mV 0C Model Hold 'ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : 0.221
+Slack : -0.044
+TNS   : -0.044
+
+Type  : Fast 1100mV 0C Model Hold 'frequency_divider:divider|clk_out'
+Slack : 0.122
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.230
+Slack : 0.195
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'frequency_divider_deb:fddeb|clk_out'
+Slack : 0.332
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -0.896
+TNS   : -57.119
+
+Type  : Fast 1100mV 0C Model Recovery 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : -0.574
+TNS   : -1.116
+
+Type  : Fast 1100mV 0C Model Removal 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : 0.024
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.711
-TNS   : -2.017
+Slack : -0.746
+TNS   : -7.143
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm_top:fsm|frequency_divider_fsm:divider|clk_out'
+Slack : 0.029
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ClkDivisor:VGAClkDivisor|clk25Mhz'
-Slack : 0.142
+Slack : 0.044
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'frequency_divider_deb:fddeb|clk_out'
+Slack : 0.051
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'frequency_divider:divider|clk_out'
+Slack : 0.073
 TNS   : 0.000
 
 ------------------------------------------------------------

@@ -5,7 +5,7 @@ module fsm_top(input logic [3:0] button, input logic clk, reset, guess, output l
 	
 	assign btn = |(button);
 	
-	assign rst = ((~out[1] & out[0]) | ((~out[0] & out[1])) | out[2]);
+	assign rst = ((~out[1] & out[0] & ~out[2]) | ((~out[0] & out[1] & ~out[2])) | (out[2] & ~out[1] & out[0]));
 	
 	frequency_divider_fsm divider(clk, reset, low_clock);
 	counter_fsm counter(low_clock, rst, outCounter);
