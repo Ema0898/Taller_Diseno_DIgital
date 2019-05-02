@@ -1,0 +1,3 @@
+module decoRGB(input logic [1:0] decodedColor, output logic [23:0] RGB);
+
+endmodule 

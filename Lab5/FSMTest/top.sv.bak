@@ -1,0 +1,8 @@
+module top(input logic seg3, button, guess, clk, reset, output logic[1:0] out);
+
+	logic low_clock;
+	
+	frequency_divider divider(clk, ~reset, low_clock);
+	
+	
+endmodule 

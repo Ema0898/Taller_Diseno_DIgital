@@ -1,0 +1,133 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -5.001
+TNS   : -104.523
+
+Type  : Slow 1100mV 85C Model Setup 'top:top|frequency_divider:divider|clk_out'
+Slack : -1.241
+TNS   : -3.668
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'top:top|frequency_divider:divider|clk_out'
+Slack : 0.559
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'top:top|frequency_divider:divider|clk_out'
+Slack : -4.015
+TNS   : -16.050
+
+Type  : Slow 1100mV 85C Model Removal 'top:top|frequency_divider:divider|clk_out'
+Slack : 3.022
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.450
+TNS   : -22.201
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'top:top|frequency_divider:divider|clk_out'
+Slack : -0.394
+TNS   : -2.036
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -5.127
+TNS   : -101.553
+
+Type  : Slow 1100mV 0C Model Setup 'top:top|frequency_divider:divider|clk_out'
+Slack : -1.205
+TNS   : -3.590
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.207
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'top:top|frequency_divider:divider|clk_out'
+Slack : 0.547
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'top:top|frequency_divider:divider|clk_out'
+Slack : -4.113
+TNS   : -16.442
+
+Type  : Slow 1100mV 0C Model Removal 'top:top|frequency_divider:divider|clk_out'
+Slack : 3.096
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.433
+TNS   : -23.753
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'top:top|frequency_divider:divider|clk_out'
+Slack : -0.394
+TNS   : -2.048
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -3.028
+TNS   : -51.133
+
+Type  : Fast 1100mV 85C Model Setup 'top:top|frequency_divider:divider|clk_out'
+Slack : -0.462
+TNS   : -1.088
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'top:top|frequency_divider:divider|clk_out'
+Slack : 0.288
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'top:top|frequency_divider:divider|clk_out'
+Slack : -1.883
+TNS   : -7.528
+
+Type  : Fast 1100mV 85C Model Removal 'top:top|frequency_divider:divider|clk_out'
+Slack : 1.526
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.429
+TNS   : -4.071
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'top:top|frequency_divider:divider|clk_out'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -2.621
+TNS   : -42.536
+
+Type  : Fast 1100mV 0C Model Setup 'top:top|frequency_divider:divider|clk_out'
+Slack : -0.379
+TNS   : -0.856
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.103
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'top:top|frequency_divider:divider|clk_out'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'top:top|frequency_divider:divider|clk_out'
+Slack : -1.832
+TNS   : -7.324
+
+Type  : Fast 1100mV 0C Model Removal 'top:top|frequency_divider:divider|clk_out'
+Slack : 1.482
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.412
+TNS   : -4.093
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'top:top|frequency_divider:divider|clk_out'
+Slack : 0.147
+TNS   : 0.000
+
+------------------------------------------------------------

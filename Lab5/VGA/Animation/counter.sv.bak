@@ -1,0 +1,7 @@
+module counter (input logic clk, en, output logic [1:0] q);
+	
+	always_ff @(posedge clk)
+		if (en) q <= d;
+		else q <= q;
+
+endmodule

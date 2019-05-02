@@ -1,0 +1,3 @@
+module sprite(input logic posX, input logic posY, input logic pixelX, input logic pixelY, output logic [23:0] RGB);
+
+endmodule 

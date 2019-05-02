@@ -1,0 +1,22 @@
+module decoPostionX(input logic [1:0] codedPosition, output logic [9:0] posX);
+
+	always_comb
+		case(codedPosition)		
+			2'b00: 
+				posX = 10'b0001100100; // 100
+				
+			2'b01:
+				posX = 10'b0101101000; // 360
+	
+			2'b10:
+				posX = 10'b0001100100; // 100
+
+			2'b11:
+				posX = 10'b0101101000; // 360
+	
+		default:
+				posX = 10'b0001100100;
+			
+		endcase
+
+endmodule 

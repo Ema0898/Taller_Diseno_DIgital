@@ -1,0 +1,1 @@
+module wordSpriteDeco(input logic codedColor, output logic [23:0] RGB)

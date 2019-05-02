@@ -1,0 +1,3 @@
+module decoButtons(input logic [3:0] buttons, output logic [1:0] zone);
+
+endmodule 

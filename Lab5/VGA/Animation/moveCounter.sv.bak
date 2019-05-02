@@ -1,0 +1,2 @@
+module moveCounter
+		(input logic clk, reset, enable, input logic [9:0] initPos, output logic [9:0] q);

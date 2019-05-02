@@ -1,0 +1,640 @@
+Analysis & Synthesis report for VGA
+Wed May  1 22:08:02 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0
+ 13. Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux0
+ 14. Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux1
+ 15. Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux2
+ 16. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux0
+ 17. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux1
+ 18. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux2
+ 19. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux3
+ 20. Port Connectivity Checks: "PixelGenerator:pixel|mux_2_x_1:mux1"
+ 21. Port Connectivity Checks: "PixelGenerator:pixel|mux_2_x_1:mux0"
+ 22. Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word|wordSpriteDeco:deco"
+ 23. Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word"
+ 24. Port Connectivity Checks: "PixelGenerator:pixel"
+ 25. Port Connectivity Checks: "animation:anm"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+ 29. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed May  1 22:08:02 2019       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; VGA                                         ;
+; Top-level Entity Name           ; VGA                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 22                                          ;
+; Total pins                      ; 30                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; VGA                ; VGA                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++----------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+; Painter/wordSpriteDeco.sv              ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/wordSpriteDeco.sv              ;         ;
+; Painter/wordSprite.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/wordSprite.sv                  ;         ;
+; FrequencyDividers/frequency_divider.sv ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/FrequencyDividers/frequency_divider.sv ;         ;
+; FrequencyDividers/ClkDivisor.sv        ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/FrequencyDividers/ClkDivisor.sv        ;         ;
+; Animation/counter.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/Animation/counter.sv                   ;         ;
+; Painter/mux_4_x_1.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/mux_4_x_1.sv                   ;         ;
+; Painter/mux_2_x_1.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/mux_2_x_1.sv                   ;         ;
+; VGA.sv                                 ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv                                 ;         ;
+; Controller/ControllerSync.sv           ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/Controller/ControllerSync.sv           ;         ;
+; Painter/Sprite.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv                      ;         ;
+; Painter/decoRGB.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/decoRGB.sv                     ;         ;
+; Painter/PixelGenerator.sv              ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/PixelGenerator.sv              ;         ;
+; Animation/moveCounter.sv               ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/Animation/moveCounter.sv               ;         ;
+; Animation/animation.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGA/Animation/animation.sv                 ;         ;
++----------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                     ;
++---------------------------------------------+-----------------------------------+
+; Resource                                    ; Usage                             ;
++---------------------------------------------+-----------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 23                                ;
+;                                             ;                                   ;
+; Combinational ALUT usage for logic          ; 42                                ;
+;     -- 7 input functions                    ; 0                                 ;
+;     -- 6 input functions                    ; 4                                 ;
+;     -- 5 input functions                    ; 8                                 ;
+;     -- 4 input functions                    ; 4                                 ;
+;     -- <=3 input functions                  ; 26                                ;
+;                                             ;                                   ;
+; Dedicated logic registers                   ; 22                                ;
+;                                             ;                                   ;
+; I/O pins                                    ; 30                                ;
+;                                             ;                                   ;
+; Total DSP Blocks                            ; 0                                 ;
+;                                             ;                                   ;
+; Maximum fan-out node                        ; ClkDivisor:VGAClkDivisor|clk25Mhz ;
+; Maximum fan-out                             ; 21                                ;
+; Total fan-out                               ; 268                               ;
+; Average fan-out                             ; 2.16                              ;
++---------------------------------------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+----------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name    ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+----------------+--------------+
+; |VGA                          ; 42 (0)              ; 22 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |VGA                          ; VGA            ; work         ;
+;    |ClkDivisor:VGAClkDivisor| ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|ClkDivisor:VGAClkDivisor ; ClkDivisor     ; work         ;
+;    |ControllerSync:VGASync|   ; 36 (36)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|ControllerSync:VGASync   ; ControllerSync ; work         ;
+;    |PixelGenerator:pixel|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel     ; PixelGenerator ; work         ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------+
+; Registers Removed During Synthesis                             ;
++-------------------------------------------+--------------------+
+; Register name                             ; Reason for Removal ;
++-------------------------------------------+--------------------+
+; animation:anm|moveCounter:moveCnt|q[0..9] ; Lost fanout        ;
+; animation:anm|counter:count|q[0,1]        ; Lost fanout        ;
+; frequency_divider:divider|clk_out         ; Lost fanout        ;
+; frequency_divider:divider|counter[0..4]   ; Lost fanout        ;
+; Total Number of Removed Registers = 18    ;                    ;
++-------------------------------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                         ;
++----------------------------------+--------------------+-----------------------------------------------------------------------------+
+; Register name                    ; Reason for Removal ; Registers Removed due to This Register                                      ;
++----------------------------------+--------------------+-----------------------------------------------------------------------------+
+; animation:anm|counter:count|q[0] ; Lost Fanouts       ; frequency_divider:divider|clk_out, frequency_divider:divider|counter[4],    ;
+;                                  ;                    ; frequency_divider:divider|counter[3], frequency_divider:divider|counter[2], ;
+;                                  ;                    ; frequency_divider:divider|counter[1], frequency_divider:divider|counter[0]  ;
++----------------------------------+--------------------+-----------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 22    ;
+; Number of registers using Synchronous Clear  ; 20    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 20    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |VGA|ControllerSync:VGASync|vCounter[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 2     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux0 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; N              ; 2     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux1 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; N              ; 2     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux2 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; N              ; 2     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux0 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 24    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux1 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 24    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux2 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 24    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux3 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 24    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "PixelGenerator:pixel|mux_2_x_1:mux1" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                          ;
++------+-------+----------+---------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "PixelGenerator:pixel|mux_2_x_1:mux0" ;
++-----------+-------+----------+----------------------------------+
+; Port      ; Type  ; Severity ; Details                          ;
++-----------+-------+----------+----------------------------------+
+; a[17..3]  ; Input ; Info     ; Stuck at VCC                     ;
+; a[1..0]   ; Input ; Info     ; Stuck at VCC                     ;
+; a[23]     ; Input ; Info     ; Stuck at VCC                     ;
+; a[22]     ; Input ; Info     ; Stuck at GND                     ;
+; a[21]     ; Input ; Info     ; Stuck at VCC                     ;
+; a[20]     ; Input ; Info     ; Stuck at GND                     ;
+; a[19]     ; Input ; Info     ; Stuck at VCC                     ;
+; a[18]     ; Input ; Info     ; Stuck at GND                     ;
+; a[2]      ; Input ; Info     ; Stuck at GND                     ;
+; b[21..19] ; Input ; Info     ; Stuck at VCC                     ;
+; b[6..5]   ; Input ; Info     ; Stuck at VCC                     ;
+; b[3..2]   ; Input ; Info     ; Stuck at VCC                     ;
+; b[23..22] ; Input ; Info     ; Stuck at GND                     ;
+; b[18..12] ; Input ; Info     ; Stuck at GND                     ;
+; b[10..9]  ; Input ; Info     ; Stuck at GND                     ;
+; b[11]     ; Input ; Info     ; Stuck at VCC                     ;
+; b[8]      ; Input ; Info     ; Stuck at VCC                     ;
+; b[7]      ; Input ; Info     ; Stuck at GND                     ;
+; b[4]      ; Input ; Info     ; Stuck at GND                     ;
+; b[1]      ; Input ; Info     ; Stuck at GND                     ;
+; b[0]      ; Input ; Info     ; Stuck at VCC                     ;
++-----------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word|wordSpriteDeco:deco"                                                                                                                             ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; codedColor ; Input ; Warning  ; Input port expression (2 bits) is wider than the input port (1 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word" ;
++------------+-------+----------+----------------------------------+
+; Port       ; Type  ; Severity ; Details                          ;
++------------+-------+----------+----------------------------------+
+; posX[7..0] ; Input ; Info     ; Stuck at GND                     ;
+; posX[9]    ; Input ; Info     ; Stuck at GND                     ;
+; posX[8]    ; Input ; Info     ; Stuck at VCC                     ;
+; posY[8..7] ; Input ; Info     ; Stuck at VCC                     ;
+; posY[4..3] ; Input ; Info     ; Stuck at GND                     ;
+; posY[1..0] ; Input ; Info     ; Stuck at GND                     ;
+; posY[9]    ; Input ; Info     ; Stuck at GND                     ;
+; posY[6]    ; Input ; Info     ; Stuck at GND                     ;
+; posY[5]    ; Input ; Info     ; Stuck at VCC                     ;
+; posY[2]    ; Input ; Info     ; Stuck at VCC                     ;
++------------+-------+----------+----------------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "PixelGenerator:pixel" ;
++------------+-------+----------+------------------+
+; Port       ; Type  ; Severity ; Details          ;
++------------+-------+----------+------------------+
+; posX[7..6] ; Input ; Info     ; Stuck at VCC     ;
+; posX[9..8] ; Input ; Info     ; Stuck at GND     ;
+; posX[5..4] ; Input ; Info     ; Stuck at GND     ;
+; posX[2..0] ; Input ; Info     ; Stuck at GND     ;
+; posX[3]    ; Input ; Info     ; Stuck at VCC     ;
+; state[1]   ; Input ; Info     ; Stuck at GND     ;
+; state[0]   ; Input ; Info     ; Stuck at VCC     ;
++------------+-------+----------+------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "animation:anm"       ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; initPos[6..5] ; Input ; Info     ; Stuck at VCC ;
+; initPos[9..7] ; Input ; Info     ; Stuck at GND ;
+; initPos[4..3] ; Input ; Info     ; Stuck at GND ;
+; initPos[1..0] ; Input ; Info     ; Stuck at GND ;
+; initPos[2]    ; Input ; Info     ; Stuck at VCC ;
++---------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 22                          ;
+;     CLR SCLR          ; 10                          ;
+;     ENA CLR SCLR      ; 10                          ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 44                          ;
+;     arith             ; 20                          ;
+;         1 data inputs ; 20                          ;
+;     normal            ; 24                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 8                           ;
+;         6 data inputs ; 4                           ;
+; boundary_port         ; 30                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.04                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed May  1 22:07:49 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/wordSpriteDeco.sv
+    Info (12023): Found entity 1: wordSpriteDeco File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/wordSpriteDeco.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/wordSprite.sv
+    Info (12023): Found entity 1: wordSprite File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/wordSprite.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Random/decoPostionX.sv
+    Info (12023): Found entity 1: decoPostionX File: /home/ema0898/Programas/Quartus/Lab5/VGA/Random/decoPostionX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FSM/counter_fsm.sv
+    Info (12023): Found entity 1: counter_fsm File: /home/ema0898/Programas/Quartus/Lab5/VGA/FSM/counter_fsm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FSM/frequency_divider_fsm.sv
+    Info (12023): Found entity 1: frequency_divider_fsm File: /home/ema0898/Programas/Quartus/Lab5/VGA/FSM/frequency_divider_fsm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FSM/fsm_top.sv
+    Info (12023): Found entity 1: fsm_top File: /home/ema0898/Programas/Quartus/Lab5/VGA/FSM/fsm_top.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FSM/fsm.sv
+    Info (12023): Found entity 1: fsm File: /home/ema0898/Programas/Quartus/Lab5/VGA/FSM/fsm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FrequencyDividers/frequency_divider.sv
+    Info (12023): Found entity 1: frequency_divider File: /home/ema0898/Programas/Quartus/Lab5/VGA/FrequencyDividers/frequency_divider.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FrequencyDividers/ClkDivisor.sv
+    Info (12023): Found entity 1: ClkDivisor File: /home/ema0898/Programas/Quartus/Lab5/VGA/FrequencyDividers/ClkDivisor.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Animation/counter.sv
+    Info (12023): Found entity 1: counter File: /home/ema0898/Programas/Quartus/Lab5/VGA/Animation/counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/mux_4_x_1.sv
+    Info (12023): Found entity 1: mux_4_x_1 File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/mux_4_x_1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/mux_2_x_1.sv
+    Info (12023): Found entity 1: mux_2_x_1 File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/mux_2_x_1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file VGA.sv
+    Info (12023): Found entity 1: VGA File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Controller/ControllerSync.sv
+    Info (12023): Found entity 1: ControllerSync File: /home/ema0898/Programas/Quartus/Lab5/VGA/Controller/ControllerSync.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Controller/ControllerPainter.sv
+    Info (12023): Found entity 1: ControllerPainter File: /home/ema0898/Programas/Quartus/Lab5/VGA/Controller/ControllerPainter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/Sprite.sv
+    Info (12023): Found entity 1: Sprite File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/decoRGB.sv
+    Info (12023): Found entity 1: decoRGB File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/decoRGB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/PixelGenerator.sv
+    Info (12023): Found entity 1: PixelGenerator File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/PixelGenerator.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file test.sv
+    Info (12023): Found entity 1: test File: /home/ema0898/Programas/Quartus/Lab5/VGA/test.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Animation/moveCounter.sv
+    Info (12023): Found entity 1: moveCounter File: /home/ema0898/Programas/Quartus/Lab5/VGA/Animation/moveCounter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Animation/animation.sv
+    Info (12023): Found entity 1: animation File: /home/ema0898/Programas/Quartus/Lab5/VGA/Animation/animation.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Random/decoPostionY.sv
+    Info (12023): Found entity 1: decoPostionY File: /home/ema0898/Programas/Quartus/Lab5/VGA/Random/decoPostionY.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Random/decoLimitX.sv
+    Info (12023): Found entity 1: decoLimitX File: /home/ema0898/Programas/Quartus/Lab5/VGA/Random/decoLimitX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Random/random.sv
+    Info (12023): Found entity 1: random File: /home/ema0898/Programas/Quartus/Lab5/VGA/Random/random.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Win/decoButtons.sv
+    Info (12023): Found entity 1: decoButtons File: /home/ema0898/Programas/Quartus/Lab5/VGA/Win/decoButtons.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Win/win_module.sv
+    Info (12023): Found entity 1: win_module File: /home/ema0898/Programas/Quartus/Lab5/VGA/Win/win_module.sv Line: 1
+Info (12127): Elaborating entity "VGA" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at VGA.sv(15): object "rposX" assigned a value but never read File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 15
+Warning (10036): Verilog HDL or VHDL warning at VGA.sv(15): object "rposY" assigned a value but never read File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 15
+Info (12128): Elaborating entity "ClkDivisor" for hierarchy "ClkDivisor:VGAClkDivisor" File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 27
+Info (12128): Elaborating entity "frequency_divider" for hierarchy "frequency_divider:divider" File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at frequency_divider.sv(20): truncated value with size 32 to match size of target (5) File: /home/ema0898/Programas/Quartus/Lab5/VGA/FrequencyDividers/frequency_divider.sv Line: 20
+Info (12128): Elaborating entity "ControllerSync" for hierarchy "ControllerSync:VGASync" File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 31
+Info (12128): Elaborating entity "animation" for hierarchy "animation:anm" File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 41
+Info (12128): Elaborating entity "counter" for hierarchy "animation:anm|counter:count" File: /home/ema0898/Programas/Quartus/Lab5/VGA/Animation/animation.sv Line: 9
+Warning (10230): Verilog HDL assignment warning at counter.sv(8): truncated value with size 32 to match size of target (2) File: /home/ema0898/Programas/Quartus/Lab5/VGA/Animation/counter.sv Line: 8
+Info (12128): Elaborating entity "moveCounter" for hierarchy "animation:anm|moveCounter:moveCnt" File: /home/ema0898/Programas/Quartus/Lab5/VGA/Animation/animation.sv Line: 10
+Warning (10230): Verilog HDL assignment warning at moveCounter.sv(9): truncated value with size 32 to match size of target (10) File: /home/ema0898/Programas/Quartus/Lab5/VGA/Animation/moveCounter.sv Line: 9
+Info (12128): Elaborating entity "PixelGenerator" for hierarchy "PixelGenerator:pixel" File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 42
+Info (12128): Elaborating entity "Sprite" for hierarchy "PixelGenerator:pixel|Sprite:sprite" File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/PixelGenerator.sv Line: 13
+Warning (10030): Net "sprite.data_a" at Sprite.sv(46) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 46
+Warning (10030): Net "sprite.waddr_a" at Sprite.sv(46) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 46
+Warning (10030): Net "sprite1.data_a" at Sprite.sv(82) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 82
+Warning (10030): Net "sprite1.waddr_a" at Sprite.sv(82) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 82
+Warning (10030): Net "sprite2.data_a" at Sprite.sv(118) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 118
+Warning (10030): Net "sprite2.waddr_a" at Sprite.sv(118) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 118
+Warning (10030): Net "sprite3.data_a" at Sprite.sv(154) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 154
+Warning (10030): Net "sprite3.waddr_a" at Sprite.sv(154) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 154
+Warning (10030): Net "sprite.we_a" at Sprite.sv(46) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 46
+Warning (10030): Net "sprite1.we_a" at Sprite.sv(82) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 82
+Warning (10030): Net "sprite2.we_a" at Sprite.sv(118) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 118
+Warning (10030): Net "sprite3.we_a" at Sprite.sv(154) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 154
+Info (12128): Elaborating entity "mux_4_x_1" for hierarchy "PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0" File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 161
+Info (12128): Elaborating entity "mux_2_x_1" for hierarchy "PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux0" File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/mux_4_x_1.sv Line: 7
+Info (12128): Elaborating entity "decoRGB" for hierarchy "PixelGenerator:pixel|Sprite:sprite|decoRGB:deco" File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/Sprite.sv Line: 163
+Info (12128): Elaborating entity "wordSprite" for hierarchy "PixelGenerator:pixel|wordSprite:word" File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/PixelGenerator.sv Line: 14
+Warning (10030): Net "sprite.waddr_a" at wordSprite.sv(40) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/wordSprite.sv Line: 40
+Warning (10030): Net "sprite.data_a" at wordSprite.sv(40) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/wordSprite.sv Line: 40
+Warning (10030): Net "sprite.we_a" at wordSprite.sv(40) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/wordSprite.sv Line: 40
+Info (12128): Elaborating entity "wordSpriteDeco" for hierarchy "PixelGenerator:pixel|wordSprite:word|wordSpriteDeco:deco" File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/wordSprite.sv Line: 44
+Info (12128): Elaborating entity "mux_2_x_1" for hierarchy "PixelGenerator:pixel|mux_2_x_1:mux0" File: /home/ema0898/Programas/Quartus/Lab5/VGA/Painter/PixelGenerator.sv Line: 24
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "red[0]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 6
+    Warning (13410): Pin "red[1]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 6
+    Warning (13410): Pin "red[2]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 6
+    Warning (13410): Pin "red[6]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 6
+    Warning (13410): Pin "red[7]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 6
+    Warning (13410): Pin "green[1]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 7
+    Warning (13410): Pin "green[2]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 7
+    Warning (13410): Pin "green[4]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 7
+    Warning (13410): Pin "green[5]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 7
+    Warning (13410): Pin "green[6]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 7
+    Warning (13410): Pin "green[7]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 7
+    Warning (13410): Pin "blue[1]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 8
+    Warning (13410): Pin "blue[4]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 8
+    Warning (13410): Pin "blue[7]" is stuck at GND File: /home/ema0898/Programas/Quartus/Lab5/VGA/VGA.sv Line: 8
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 18 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /home/ema0898/Programas/Quartus/Lab5/VGA/output_files/VGA.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 72 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 28 output pins
+    Info (21061): Implemented 42 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 1026 megabytes
+    Info: Processing ended: Wed May  1 22:08:02 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:31
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/ema0898/Programas/Quartus/Lab5/VGA/output_files/VGA.map.smsg.
+
+

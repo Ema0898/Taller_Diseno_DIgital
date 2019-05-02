@@ -1,0 +1,3 @@
+module animation(input logic clkVGA, low_clock, enable, output logic [1:0] currentSprite, output logic [9:0] currentPos);
+
+endmodule 

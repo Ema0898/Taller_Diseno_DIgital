@@ -1,0 +1,6 @@
+module test()
+	
+	logic clk, reset, enable;
+	logic [1:0] counter;
+	
+endmodule 

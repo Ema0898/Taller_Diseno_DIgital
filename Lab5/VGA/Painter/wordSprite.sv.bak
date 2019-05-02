@@ -1,0 +1,4 @@
+module wordSprite(input logic [9:0] posX, posY, pixelX, pixelY, input logic [1:0] selec, output logic [23:0] RGB, output logic isActive);
+
+
+endmodule 
