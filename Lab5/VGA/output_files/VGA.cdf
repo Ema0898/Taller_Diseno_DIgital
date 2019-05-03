@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("D:/FPGA Projects/Lab5/VGA/output_files/") File("VGA.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("/home/ema0898/Programas/Quartus/Lab5/VGAMkII/output_files/") File("VGA.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -1,6 +1,6 @@
 module wordSprite(input logic [9:0] posX, posY, pixelX, pixelY, output logic [23:0] RGB, output logic isActive);
  
-	logic [1:0] codedColorSprite;
+	logic codedColorSprite;
 	logic hActive, vActive;
 	
 	logic sprite [0:31][0:127] = 

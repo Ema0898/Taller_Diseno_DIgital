@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA
-Thu May 02 21:50:43 2019
+Fri May  3 01:15:02 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -51,19 +51,18 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  43. Port Connectivity Checks: "DecoSeg:deco"
  44. Port Connectivity Checks: "PixelGenerator:pixel|mux_2_x_1:mux1"
  45. Port Connectivity Checks: "PixelGenerator:pixel|mux_2_x_1:mux0"
- 46. Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word|wordSpriteDeco:deco"
- 47. Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word"
- 48. Port Connectivity Checks: "mux_8_x_1:muxY"
- 49. Port Connectivity Checks: "mux_8_x_1:muxX"
- 50. Port Connectivity Checks: "fsm_top:fsm|counter_fsm:counter"
- 51. Port Connectivity Checks: "random:rnd|rng:random|flip_flop_D_ENL:ffD0"
- 52. Port Connectivity Checks: "random:rnd|rng:random|flip_flop_D_ENL:ffD1"
- 53. Port Connectivity Checks: "random:rnd|rng:random|flip_flop_D_ENL:ffD2"
- 54. Port Connectivity Checks: "frequency_divider_deb:fddeb"
- 55. Post-Synthesis Netlist Statistics for Top Partition
- 56. Elapsed Time Per Partition
- 57. Analysis & Synthesis Messages
- 58. Analysis & Synthesis Suppressed Messages
+ 46. Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word"
+ 47. Port Connectivity Checks: "mux_8_x_1:muxY"
+ 48. Port Connectivity Checks: "mux_8_x_1:muxX"
+ 49. Port Connectivity Checks: "fsm_top:fsm|counter_fsm:counter"
+ 50. Port Connectivity Checks: "random:rnd|rng:random|flip_flop_D_ENL:ffD0"
+ 51. Port Connectivity Checks: "random:rnd|rng:random|flip_flop_D_ENL:ffD1"
+ 52. Port Connectivity Checks: "random:rnd|rng:random|flip_flop_D_ENL:ffD2"
+ 53. Port Connectivity Checks: "frequency_divider_deb:fddeb"
+ 54. Post-Synthesis Netlist Statistics for Top Partition
+ 55. Elapsed Time Per Partition
+ 56. Analysis & Synthesis Messages
+ 57. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -89,7 +88,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 02 21:50:43 2019       ;
+; Analysis & Synthesis Status     ; Successful - Fri May  3 01:15:02 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; VGA                                         ;
 ; Top-level Entity Name           ; VGA                                         ;
@@ -202,53 +201,52 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
-; DecoSeg.vhd                            ; yes             ; User VHDL File               ; D:/FPGA Projects/Lab5/VGA/DecoSeg.vhd                            ;         ;
-; mux_8_x_1.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/mux_8_x_1.sv                           ;         ;
-; Painter/wordSpriteDeco.sv              ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Painter/wordSpriteDeco.sv              ;         ;
-; Painter/wordSprite.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Painter/wordSprite.sv                  ;         ;
-; Random/decoPostionX.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Random/decoPostionX.sv                 ;         ;
-; FSM/counter_fsm.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/FSM/counter_fsm.sv                     ;         ;
-; FSM/frequency_divider_fsm.sv           ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/FSM/frequency_divider_fsm.sv           ;         ;
-; FSM/fsm_top.sv                         ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/FSM/fsm_top.sv                         ;         ;
-; FSM/fsm.sv                             ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/FSM/fsm.sv                             ;         ;
-; FrequencyDividers/frequency_divider.sv ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/FrequencyDividers/frequency_divider.sv ;         ;
-; FrequencyDividers/ClkDivisor.sv        ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/FrequencyDividers/ClkDivisor.sv        ;         ;
-; Animation/counter.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Animation/counter.sv                   ;         ;
-; Painter/mux_4_x_1.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Painter/mux_4_x_1.sv                   ;         ;
-; Painter/mux_2_x_1.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Painter/mux_2_x_1.sv                   ;         ;
-; VGA.sv                                 ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/VGA.sv                                 ;         ;
-; Controller/ControllerSync.sv           ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Controller/ControllerSync.sv           ;         ;
-; Painter/Sprite.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv                      ;         ;
-; Painter/decoRGB.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Painter/decoRGB.sv                     ;         ;
-; Painter/PixelGenerator.sv              ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Painter/PixelGenerator.sv              ;         ;
-; Animation/moveCounter.sv               ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Animation/moveCounter.sv               ;         ;
-; Animation/animation.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Animation/animation.sv                 ;         ;
-; Random/decoPostionY.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Random/decoPostionY.sv                 ;         ;
-; Random/decoLimitX.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Random/decoLimitX.sv                   ;         ;
-; Random/random.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Random/random.sv                       ;         ;
-; Win/win_module.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Win/win_module.sv                      ;         ;
-; frequency_divider_deb.sv               ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/frequency_divider_deb.sv               ;         ;
-; Random/rng.sv                          ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Random/rng.sv                          ;         ;
-; Random/flip_flop_D_ENL.sv              ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Random/flip_flop_D_ENL.sv              ;         ;
-; counterBtn.sv                          ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/counterBtn.sv                          ;         ;
-+----------------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
+; DecoSeg.vhd                            ; yes             ; User VHDL File               ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/DecoSeg.vhd                            ;         ;
+; mux_8_x_1.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/mux_8_x_1.sv                           ;         ;
+; Painter/wordSpriteDeco.sv              ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/wordSpriteDeco.sv              ;         ;
+; Painter/wordSprite.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/wordSprite.sv                  ;         ;
+; Random/decoPostionX.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/decoPostionX.sv                 ;         ;
+; FSM/counter_fsm.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/counter_fsm.sv                     ;         ;
+; FSM/frequency_divider_fsm.sv           ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/frequency_divider_fsm.sv           ;         ;
+; FSM/fsm_top.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/fsm_top.sv                         ;         ;
+; FSM/fsm.sv                             ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/fsm.sv                             ;         ;
+; FrequencyDividers/frequency_divider.sv ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FrequencyDividers/frequency_divider.sv ;         ;
+; FrequencyDividers/ClkDivisor.sv        ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FrequencyDividers/ClkDivisor.sv        ;         ;
+; Animation/counter.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Animation/counter.sv                   ;         ;
+; Painter/mux_4_x_1.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/mux_4_x_1.sv                   ;         ;
+; Painter/mux_2_x_1.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/mux_2_x_1.sv                   ;         ;
+; VGA.sv                                 ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv                                 ;         ;
+; Controller/ControllerSync.sv           ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Controller/ControllerSync.sv           ;         ;
+; Painter/Sprite.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv                      ;         ;
+; Painter/decoRGB.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/decoRGB.sv                     ;         ;
+; Painter/PixelGenerator.sv              ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/PixelGenerator.sv              ;         ;
+; Animation/moveCounter.sv               ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Animation/moveCounter.sv               ;         ;
+; Animation/animation.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Animation/animation.sv                 ;         ;
+; Random/decoPostionY.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/decoPostionY.sv                 ;         ;
+; Random/decoLimitX.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/decoLimitX.sv                   ;         ;
+; Random/random.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/random.sv                       ;         ;
+; Win/win_module.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Win/win_module.sv                      ;         ;
+; frequency_divider_deb.sv               ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/frequency_divider_deb.sv               ;         ;
+; Random/rng.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/rng.sv                          ;         ;
+; Random/flip_flop_D_ENL.sv              ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/flip_flop_D_ENL.sv              ;         ;
+; counterBtn.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/ema0898/Programas/Quartus/Lab5/VGAMkII/counterBtn.sv                          ;         ;
++----------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------+
@@ -364,15 +362,15 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |VGA|ControllerSync:VGASync|vCounter[2]        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |VGA|ControllerSync:VGASync|vCounter[5]        ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VGA|animation:anm|counter:count|q[0]          ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |VGA|animation:anm|moveCounter:moveCnt|q[5]    ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |VGA|mux_8_x_1:muxY|mux_2_x_1:mux6|z[2]        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |VGA|animation:anm|moveCounter:moveCnt|q[1]    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |VGA|mux_8_x_1:muxY|mux_2_x_1:mux6|z[7]        ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |VGA|PixelGenerator:pixel|mux_2_x_1:mux3|z[12] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |VGA|PixelGenerator:pixel|mux_2_x_1:mux3|z[21] ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |VGA|mux_8_x_1:muxY|mux_2_x_1:mux6|z[8]        ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; No         ; |VGA|mux_8_x_1:muxX|mux_2_x_1:mux6|z[0]        ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |VGA|mux_8_x_1:muxX|mux_2_x_1:mux6|z[3]        ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; No         ; |VGA|mux_8_x_1:muxX|mux_2_x_1:mux6|z[9]        ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |VGA|mux_8_x_1:muxX|mux_2_x_1:mux6|z[5]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
@@ -411,7 +409,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
-; N              ; 24    ; Signed Integer                     ;
+; N              ; 10    ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -421,7 +419,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -431,7 +429,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -441,7 +439,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -451,7 +449,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -461,7 +459,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -471,7 +469,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -481,7 +479,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -491,7 +489,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
-; N              ; 24    ; Signed Integer                     ;
+; N              ; 10    ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -501,7 +499,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -511,7 +509,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -521,7 +519,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -531,7 +529,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -541,7 +539,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -551,7 +549,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -561,7 +559,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
-; N              ; 24    ; Signed Integer                                    ;
+; N              ; 10    ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -686,13 +684,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "DecoSeg:deco"                                                                                                  ;
-+-------+-------+------------------+--------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity         ; Details                                                                                                ;
-+-------+-------+------------------+--------------------------------------------------------------------------------------------------------+
-; input ; Input ; Critical Warning ; Can't connect array with 3 elements in array dimension 1 to port with 4 elements in the same dimension ;
-+-------+-------+------------------+--------------------------------------------------------------------------------------------------------+
++--------------------------------------------+
+; Port Connectivity Checks: "DecoSeg:deco"   ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; input[3] ; Input ; Info     ; Stuck at GND ;
++----------+-------+----------+--------------+
 
 
 +-----------------------------------------------------------------+
@@ -733,15 +731,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+----------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word|wordSpriteDeco:deco"                                                                                                                             ;
-+------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                                                                                                                                          ;
-+------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; codedColor ; Input ; Warning  ; Input port expression (2 bits) is wider than the input port (1 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------------------+
 ; Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word" ;
 +------------+-------+----------+----------------------------------+
@@ -760,42 +749,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+----------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux_8_x_1:muxY"                                                                                                                                                                         ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; d0        ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d0[23..10]" will be connected to GND.                                     ;
-; d1        ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d1[23..10]" will be connected to GND.                                     ;
-; d2        ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d2[23..10]" will be connected to GND.                                     ;
-; d3        ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d3[23..10]" will be connected to GND.                                     ;
-; d4        ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d4[23..10]" will be connected to GND.                                     ;
-; d5        ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d5[23..10]" will be connected to GND.                                     ;
-; d6        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (24 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; d6[23..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; d7        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (24 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; d7[23..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; z         ; Output ; Warning  ; Output or bidir port (24 bits) is wider than the port expression (10 bits) it drives; bit(s) "z[23..10]" have no fanouts                                                           ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------+
+; Port Connectivity Checks: "mux_8_x_1:muxY" ;
++------+-------+----------+------------------+
+; Port ; Type  ; Severity ; Details          ;
++------+-------+----------+------------------+
+; d6   ; Input ; Info     ; Stuck at GND     ;
+; d7   ; Input ; Info     ; Stuck at GND     ;
++------+-------+----------+------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux_8_x_1:muxX"                                                                                                                                                                         ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; d0        ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d0[23..10]" will be connected to GND.                                     ;
-; d1        ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d1[23..10]" will be connected to GND.                                     ;
-; d2        ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d2[23..10]" will be connected to GND.                                     ;
-; d3        ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d3[23..10]" will be connected to GND.                                     ;
-; d4        ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d4[23..10]" will be connected to GND.                                     ;
-; d5        ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d5[23..10]" will be connected to GND.                                     ;
-; d6        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (24 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; d6[23..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; d7        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (24 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; d7[23..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; z         ; Output ; Warning  ; Output or bidir port (24 bits) is wider than the port expression (10 bits) it drives; bit(s) "z[23..10]" have no fanouts                                                           ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------+
+; Port Connectivity Checks: "mux_8_x_1:muxX" ;
++------+-------+----------+------------------+
+; Port ; Type  ; Severity ; Details          ;
++------+-------+----------+------------------+
+; d6   ; Input ; Info     ; Stuck at GND     ;
+; d7   ; Input ; Info     ; Stuck at GND     ;
++------+-------+----------+------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -898,141 +869,146 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 02 21:50:31 2019
+    Info: Processing started: Fri May  3 01:14:46 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file decoseg.vhd
-    Info (12022): Found design unit 1: DecoSeg-synth File: D:/FPGA Projects/Lab5/VGA/DecoSeg.vhd Line: 9
-    Info (12023): Found entity 1: DecoSeg File: D:/FPGA Projects/Lab5/VGA/DecoSeg.vhd Line: 3
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file fsm_test.sv
+    Info (12023): Found entity 1: fsm_test File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/fsm_test.sv Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file DecoSeg.vhd
+    Info (12022): Found design unit 1: DecoSeg-synth File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/DecoSeg.vhd Line: 9
+    Info (12023): Found entity 1: DecoSeg File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/DecoSeg.vhd Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file mux_8_x_1.sv
-    Info (12023): Found entity 1: mux_8_x_1 File: D:/FPGA Projects/Lab5/VGA/mux_8_x_1.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file flip_flop_d.sv
-    Info (12023): Found entity 1: flip_flop_D File: D:/FPGA Projects/Lab5/VGA/flip_flop_D.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file painter/wordspritedeco.sv
-    Info (12023): Found entity 1: wordSpriteDeco File: D:/FPGA Projects/Lab5/VGA/Painter/wordSpriteDeco.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file painter/wordsprite.sv
-    Info (12023): Found entity 1: wordSprite File: D:/FPGA Projects/Lab5/VGA/Painter/wordSprite.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file random/decopostionx.sv
-    Info (12023): Found entity 1: decoPostionX File: D:/FPGA Projects/Lab5/VGA/Random/decoPostionX.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file fsm/counter_fsm.sv
-    Info (12023): Found entity 1: counter_fsm File: D:/FPGA Projects/Lab5/VGA/FSM/counter_fsm.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file fsm/frequency_divider_fsm.sv
-    Info (12023): Found entity 1: frequency_divider_fsm File: D:/FPGA Projects/Lab5/VGA/FSM/frequency_divider_fsm.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file fsm/fsm_top.sv
-    Info (12023): Found entity 1: fsm_top File: D:/FPGA Projects/Lab5/VGA/FSM/fsm_top.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file fsm/fsm.sv
-    Info (12023): Found entity 1: fsm File: D:/FPGA Projects/Lab5/VGA/FSM/fsm.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file frequencydividers/frequency_divider.sv
-    Info (12023): Found entity 1: frequency_divider File: D:/FPGA Projects/Lab5/VGA/FrequencyDividers/frequency_divider.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file frequencydividers/clkdivisor.sv
-    Info (12023): Found entity 1: ClkDivisor File: D:/FPGA Projects/Lab5/VGA/FrequencyDividers/ClkDivisor.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file animation/counter.sv
-    Info (12023): Found entity 1: counter File: D:/FPGA Projects/Lab5/VGA/Animation/counter.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file painter/mux_4_x_1.sv
-    Info (12023): Found entity 1: mux_4_x_1 File: D:/FPGA Projects/Lab5/VGA/Painter/mux_4_x_1.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file painter/mux_2_x_1.sv
-    Info (12023): Found entity 1: mux_2_x_1 File: D:/FPGA Projects/Lab5/VGA/Painter/mux_2_x_1.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
-    Info (12023): Found entity 1: VGA File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file controller/controllersync.sv
-    Info (12023): Found entity 1: ControllerSync File: D:/FPGA Projects/Lab5/VGA/Controller/ControllerSync.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file painter/sprite.sv
-    Info (12023): Found entity 1: Sprite File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file painter/decorgb.sv
-    Info (12023): Found entity 1: decoRGB File: D:/FPGA Projects/Lab5/VGA/Painter/decoRGB.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file painter/pixelgenerator.sv
-    Info (12023): Found entity 1: PixelGenerator File: D:/FPGA Projects/Lab5/VGA/Painter/PixelGenerator.sv Line: 1
+    Info (12023): Found entity 1: mux_8_x_1 File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/mux_8_x_1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file flip_flop_D.sv
+    Info (12023): Found entity 1: flip_flop_D File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/flip_flop_D.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/wordSpriteDeco.sv
+    Info (12023): Found entity 1: wordSpriteDeco File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/wordSpriteDeco.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/wordSprite.sv
+    Info (12023): Found entity 1: wordSprite File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/wordSprite.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Random/decoPostionX.sv
+    Info (12023): Found entity 1: decoPostionX File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/decoPostionX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FSM/counter_fsm.sv
+    Info (12023): Found entity 1: counter_fsm File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/counter_fsm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FSM/frequency_divider_fsm.sv
+    Info (12023): Found entity 1: frequency_divider_fsm File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/frequency_divider_fsm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FSM/fsm_top.sv
+    Info (12023): Found entity 1: fsm_top File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/fsm_top.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FSM/fsm.sv
+    Info (12023): Found entity 1: fsm File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/fsm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FrequencyDividers/frequency_divider.sv
+    Info (12023): Found entity 1: frequency_divider File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FrequencyDividers/frequency_divider.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FrequencyDividers/ClkDivisor.sv
+    Info (12023): Found entity 1: ClkDivisor File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FrequencyDividers/ClkDivisor.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Animation/counter.sv
+    Info (12023): Found entity 1: counter File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Animation/counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/mux_4_x_1.sv
+    Info (12023): Found entity 1: mux_4_x_1 File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/mux_4_x_1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/mux_2_x_1.sv
+    Info (12023): Found entity 1: mux_2_x_1 File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/mux_2_x_1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file VGA.sv
+    Info (12023): Found entity 1: VGA File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Controller/ControllerSync.sv
+    Info (12023): Found entity 1: ControllerSync File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Controller/ControllerSync.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/Sprite.sv
+    Info (12023): Found entity 1: Sprite File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/decoRGB.sv
+    Info (12023): Found entity 1: decoRGB File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/decoRGB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Painter/PixelGenerator.sv
+    Info (12023): Found entity 1: PixelGenerator File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/PixelGenerator.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file test.sv
-    Info (12023): Found entity 1: test File: D:/FPGA Projects/Lab5/VGA/test.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file animation/movecounter.sv
-    Info (12023): Found entity 1: moveCounter File: D:/FPGA Projects/Lab5/VGA/Animation/moveCounter.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file animation/animation.sv
-    Info (12023): Found entity 1: animation File: D:/FPGA Projects/Lab5/VGA/Animation/animation.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file random/decopostiony.sv
-    Info (12023): Found entity 1: decoPostionY File: D:/FPGA Projects/Lab5/VGA/Random/decoPostionY.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file random/decolimitx.sv
-    Info (12023): Found entity 1: decoLimitX File: D:/FPGA Projects/Lab5/VGA/Random/decoLimitX.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file random/random.sv
-    Info (12023): Found entity 1: random File: D:/FPGA Projects/Lab5/VGA/Random/random.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file win/decobuttons.sv
-    Info (12023): Found entity 1: decoButtons File: D:/FPGA Projects/Lab5/VGA/Win/decoButtons.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file win/win_module.sv
-    Info (12023): Found entity 1: win_module File: D:/FPGA Projects/Lab5/VGA/Win/win_module.sv Line: 1
+    Info (12023): Found entity 1: test File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/test.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Animation/moveCounter.sv
+    Info (12023): Found entity 1: moveCounter File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Animation/moveCounter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Animation/animation.sv
+    Info (12023): Found entity 1: animation File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Animation/animation.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Random/decoPostionY.sv
+    Info (12023): Found entity 1: decoPostionY File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/decoPostionY.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Random/decoLimitX.sv
+    Info (12023): Found entity 1: decoLimitX File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/decoLimitX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Random/random.sv
+    Info (12023): Found entity 1: random File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/random.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Win/decoButtons.sv
+    Info (12023): Found entity 1: decoButtons File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Win/decoButtons.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Win/win_module.sv
+    Info (12023): Found entity 1: win_module File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Win/win_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file debouncing.sv
-    Info (12023): Found entity 1: debouncing File: D:/FPGA Projects/Lab5/VGA/debouncing.sv Line: 1
+    Info (12023): Found entity 1: debouncing File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/debouncing.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file frequency_divider_deb.sv
-    Info (12023): Found entity 1: frequency_divider_deb File: D:/FPGA Projects/Lab5/VGA/frequency_divider_deb.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file random/rng.sv
-    Info (12023): Found entity 1: rng File: D:/FPGA Projects/Lab5/VGA/Random/rng.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file random/flip_flop_d_enl.sv
-    Info (12023): Found entity 1: flip_flop_D_ENL File: D:/FPGA Projects/Lab5/VGA/Random/flip_flop_D_ENL.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file counterbtn.sv
-    Info (12023): Found entity 1: counterBtn File: D:/FPGA Projects/Lab5/VGA/counterBtn.sv Line: 1
+    Info (12023): Found entity 1: frequency_divider_deb File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/frequency_divider_deb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Random/rng.sv
+    Info (12023): Found entity 1: rng File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/rng.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Random/flip_flop_D_ENL.sv
+    Info (12023): Found entity 1: flip_flop_D_ENL File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/flip_flop_D_ENL.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counterBtn.sv
+    Info (12023): Found entity 1: counterBtn File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/counterBtn.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file VGA_test.sv
+    Info (12023): Found entity 1: VGA_test File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA_test.sv Line: 1
 Info (12127): Elaborating entity "VGA" for the top level hierarchy
-Info (12128): Elaborating entity "ClkDivisor" for hierarchy "ClkDivisor:VGAClkDivisor" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 38
-Info (12128): Elaborating entity "frequency_divider" for hierarchy "frequency_divider:divider" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 39
-Warning (10230): Verilog HDL assignment warning at frequency_divider.sv(20): truncated value with size 32 to match size of target (5) File: D:/FPGA Projects/Lab5/VGA/FrequencyDividers/frequency_divider.sv Line: 20
-Info (12128): Elaborating entity "frequency_divider_deb" for hierarchy "frequency_divider_deb:fddeb" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 41
-Warning (10230): Verilog HDL assignment warning at frequency_divider_deb.sv(20): truncated value with size 32 to match size of target (28) File: D:/FPGA Projects/Lab5/VGA/frequency_divider_deb.sv Line: 20
-Info (12128): Elaborating entity "ControllerSync" for hierarchy "ControllerSync:VGASync" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 54
-Info (12128): Elaborating entity "counterBtn" for hierarchy "counterBtn:count" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 56
-Warning (10230): Verilog HDL assignment warning at counterBtn.sv(8): truncated value with size 32 to match size of target (2) File: D:/FPGA Projects/Lab5/VGA/counterBtn.sv Line: 8
-Info (12128): Elaborating entity "random" for hierarchy "random:rnd" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 57
-Info (12128): Elaborating entity "rng" for hierarchy "random:rnd|rng:random" File: D:/FPGA Projects/Lab5/VGA/Random/random.sv Line: 8
-Info (12128): Elaborating entity "flip_flop_D_ENL" for hierarchy "random:rnd|rng:random|flip_flop_D_ENL:ffD2" File: D:/FPGA Projects/Lab5/VGA/Random/rng.sv Line: 7
-Info (12128): Elaborating entity "decoPostionX" for hierarchy "random:rnd|decoPostionX:decoX" File: D:/FPGA Projects/Lab5/VGA/Random/random.sv Line: 11
-Info (12128): Elaborating entity "decoPostionY" for hierarchy "random:rnd|decoPostionY:decoY" File: D:/FPGA Projects/Lab5/VGA/Random/random.sv Line: 12
-Info (12128): Elaborating entity "decoLimitX" for hierarchy "random:rnd|decoLimitX:decoX2" File: D:/FPGA Projects/Lab5/VGA/Random/random.sv Line: 13
-Info (12128): Elaborating entity "win_module" for hierarchy "win_module:win" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 58
-Info (12128): Elaborating entity "fsm_top" for hierarchy "fsm_top:fsm" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 59
-Info (12128): Elaborating entity "frequency_divider_fsm" for hierarchy "fsm_top:fsm|frequency_divider_fsm:divider" File: D:/FPGA Projects/Lab5/VGA/FSM/fsm_top.sv Line: 8
-Warning (10230): Verilog HDL assignment warning at frequency_divider_fsm.sv(20): truncated value with size 32 to match size of target (28) File: D:/FPGA Projects/Lab5/VGA/FSM/frequency_divider_fsm.sv Line: 20
-Info (12128): Elaborating entity "counter_fsm" for hierarchy "fsm_top:fsm|counter_fsm:counter" File: D:/FPGA Projects/Lab5/VGA/FSM/fsm_top.sv Line: 9
-Warning (10230): Verilog HDL assignment warning at counter_fsm.sv(6): truncated value with size 32 to match size of target (2) File: D:/FPGA Projects/Lab5/VGA/FSM/counter_fsm.sv Line: 6
-Info (12128): Elaborating entity "fsm" for hierarchy "fsm_top:fsm|fsm:fsm" File: D:/FPGA Projects/Lab5/VGA/FSM/fsm_top.sv Line: 13
-Info (12128): Elaborating entity "animation" for hierarchy "animation:anm" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 63
-Info (12128): Elaborating entity "counter" for hierarchy "animation:anm|counter:count" File: D:/FPGA Projects/Lab5/VGA/Animation/animation.sv Line: 10
-Warning (10230): Verilog HDL assignment warning at counter.sv(8): truncated value with size 32 to match size of target (2) File: D:/FPGA Projects/Lab5/VGA/Animation/counter.sv Line: 8
-Info (12128): Elaborating entity "moveCounter" for hierarchy "animation:anm|moveCounter:moveCnt" File: D:/FPGA Projects/Lab5/VGA/Animation/animation.sv Line: 11
-Warning (10230): Verilog HDL assignment warning at moveCounter.sv(9): truncated value with size 32 to match size of target (10) File: D:/FPGA Projects/Lab5/VGA/Animation/moveCounter.sv Line: 9
-Info (12128): Elaborating entity "mux_8_x_1" for hierarchy "mux_8_x_1:muxX" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 65
-Info (12128): Elaborating entity "mux_2_x_1" for hierarchy "mux_8_x_1:muxX|mux_2_x_1:mux0" File: D:/FPGA Projects/Lab5/VGA/mux_8_x_1.sv Line: 8
-Info (12128): Elaborating entity "PixelGenerator" for hierarchy "PixelGenerator:pixel" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 67
-Info (12128): Elaborating entity "Sprite" for hierarchy "PixelGenerator:pixel|Sprite:sprite" File: D:/FPGA Projects/Lab5/VGA/Painter/PixelGenerator.sv Line: 14
-Warning (10030): Net "sprite.data_a" at Sprite.sv(46) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 46
-Warning (10030): Net "sprite.waddr_a" at Sprite.sv(46) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 46
-Warning (10030): Net "sprite1.data_a" at Sprite.sv(82) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 82
-Warning (10030): Net "sprite1.waddr_a" at Sprite.sv(82) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 82
-Warning (10030): Net "sprite2.data_a" at Sprite.sv(118) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 118
-Warning (10030): Net "sprite2.waddr_a" at Sprite.sv(118) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 118
-Warning (10030): Net "sprite3.data_a" at Sprite.sv(154) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 154
-Warning (10030): Net "sprite3.waddr_a" at Sprite.sv(154) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 154
-Warning (10030): Net "sprite.we_a" at Sprite.sv(46) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 46
-Warning (10030): Net "sprite1.we_a" at Sprite.sv(82) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 82
-Warning (10030): Net "sprite2.we_a" at Sprite.sv(118) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 118
-Warning (10030): Net "sprite3.we_a" at Sprite.sv(154) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 154
-Info (12128): Elaborating entity "mux_4_x_1" for hierarchy "PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0" File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 161
-Info (12128): Elaborating entity "mux_2_x_1" for hierarchy "PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux0" File: D:/FPGA Projects/Lab5/VGA/Painter/mux_4_x_1.sv Line: 7
-Info (12128): Elaborating entity "decoRGB" for hierarchy "PixelGenerator:pixel|Sprite:sprite|decoRGB:deco" File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 163
-Info (12128): Elaborating entity "wordSprite" for hierarchy "PixelGenerator:pixel|wordSprite:word" File: D:/FPGA Projects/Lab5/VGA/Painter/PixelGenerator.sv Line: 15
-Warning (10030): Net "sprite.waddr_a" at wordSprite.sv(40) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/wordSprite.sv Line: 40
-Warning (10030): Net "sprite.data_a" at wordSprite.sv(40) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/wordSprite.sv Line: 40
-Warning (10030): Net "sprite.we_a" at wordSprite.sv(40) has no driver or initial value, using a default initial value '0' File: D:/FPGA Projects/Lab5/VGA/Painter/wordSprite.sv Line: 40
-Info (12128): Elaborating entity "wordSpriteDeco" for hierarchy "PixelGenerator:pixel|wordSprite:word|wordSpriteDeco:deco" File: D:/FPGA Projects/Lab5/VGA/Painter/wordSprite.sv Line: 44
-Info (12128): Elaborating entity "mux_4_x_1" for hierarchy "PixelGenerator:pixel|mux_4_x_1:sqMux" File: D:/FPGA Projects/Lab5/VGA/Painter/PixelGenerator.sv Line: 37
-Info (12128): Elaborating entity "mux_2_x_1" for hierarchy "PixelGenerator:pixel|mux_4_x_1:sqMux|mux_2_x_1:mux0" File: D:/FPGA Projects/Lab5/VGA/Painter/mux_4_x_1.sv Line: 7
-Info (12128): Elaborating entity "DecoSeg" for hierarchy "DecoSeg:deco" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 74
+Info (12128): Elaborating entity "ClkDivisor" for hierarchy "ClkDivisor:VGAClkDivisor" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 30
+Info (12128): Elaborating entity "frequency_divider" for hierarchy "frequency_divider:divider" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at frequency_divider.sv(20): truncated value with size 32 to match size of target (5) File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FrequencyDividers/frequency_divider.sv Line: 20
+Info (12128): Elaborating entity "frequency_divider_deb" for hierarchy "frequency_divider_deb:fddeb" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at frequency_divider_deb.sv(20): truncated value with size 32 to match size of target (28) File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/frequency_divider_deb.sv Line: 20
+Info (12128): Elaborating entity "ControllerSync" for hierarchy "ControllerSync:VGASync" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 43
+Info (12128): Elaborating entity "counterBtn" for hierarchy "counterBtn:count" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at counterBtn.sv(8): truncated value with size 32 to match size of target (2) File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/counterBtn.sv Line: 8
+Info (12128): Elaborating entity "random" for hierarchy "random:rnd" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 46
+Info (12128): Elaborating entity "rng" for hierarchy "random:rnd|rng:random" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/random.sv Line: 8
+Info (12128): Elaborating entity "flip_flop_D_ENL" for hierarchy "random:rnd|rng:random|flip_flop_D_ENL:ffD2" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/rng.sv Line: 7
+Info (12128): Elaborating entity "decoPostionX" for hierarchy "random:rnd|decoPostionX:decoX" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/random.sv Line: 11
+Info (12128): Elaborating entity "decoPostionY" for hierarchy "random:rnd|decoPostionY:decoY" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/random.sv Line: 12
+Info (12128): Elaborating entity "decoLimitX" for hierarchy "random:rnd|decoLimitX:decoX2" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Random/random.sv Line: 13
+Info (12128): Elaborating entity "win_module" for hierarchy "win_module:win" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 47
+Info (12128): Elaborating entity "fsm_top" for hierarchy "fsm_top:fsm" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 48
+Info (12128): Elaborating entity "frequency_divider_fsm" for hierarchy "fsm_top:fsm|frequency_divider_fsm:divider" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/fsm_top.sv Line: 8
+Warning (10230): Verilog HDL assignment warning at frequency_divider_fsm.sv(20): truncated value with size 32 to match size of target (28) File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/frequency_divider_fsm.sv Line: 20
+Info (12128): Elaborating entity "counter_fsm" for hierarchy "fsm_top:fsm|counter_fsm:counter" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/fsm_top.sv Line: 9
+Warning (10230): Verilog HDL assignment warning at counter_fsm.sv(6): truncated value with size 32 to match size of target (2) File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/counter_fsm.sv Line: 6
+Info (12128): Elaborating entity "fsm" for hierarchy "fsm_top:fsm|fsm:fsm" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/FSM/fsm_top.sv Line: 13
+Info (12128): Elaborating entity "animation" for hierarchy "animation:anm" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 50
+Info (12128): Elaborating entity "counter" for hierarchy "animation:anm|counter:count" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Animation/animation.sv Line: 10
+Warning (10230): Verilog HDL assignment warning at counter.sv(8): truncated value with size 32 to match size of target (2) File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Animation/counter.sv Line: 8
+Info (12128): Elaborating entity "moveCounter" for hierarchy "animation:anm|moveCounter:moveCnt" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Animation/animation.sv Line: 11
+Warning (10230): Verilog HDL assignment warning at moveCounter.sv(9): truncated value with size 32 to match size of target (10) File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Animation/moveCounter.sv Line: 9
+Info (12128): Elaborating entity "mux_8_x_1" for hierarchy "mux_8_x_1:muxX" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 52
+Info (12128): Elaborating entity "mux_2_x_1" for hierarchy "mux_8_x_1:muxX|mux_2_x_1:mux0" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/mux_8_x_1.sv Line: 8
+Info (12128): Elaborating entity "PixelGenerator" for hierarchy "PixelGenerator:pixel" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 54
+Info (12128): Elaborating entity "Sprite" for hierarchy "PixelGenerator:pixel|Sprite:sprite" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/PixelGenerator.sv Line: 14
+Warning (10030): Net "sprite.data_a" at Sprite.sv(46) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 46
+Warning (10030): Net "sprite.waddr_a" at Sprite.sv(46) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 46
+Warning (10030): Net "sprite1.data_a" at Sprite.sv(82) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 82
+Warning (10030): Net "sprite1.waddr_a" at Sprite.sv(82) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 82
+Warning (10030): Net "sprite2.data_a" at Sprite.sv(118) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 118
+Warning (10030): Net "sprite2.waddr_a" at Sprite.sv(118) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 118
+Warning (10030): Net "sprite3.data_a" at Sprite.sv(154) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 154
+Warning (10030): Net "sprite3.waddr_a" at Sprite.sv(154) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 154
+Warning (10030): Net "sprite.we_a" at Sprite.sv(46) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 46
+Warning (10030): Net "sprite1.we_a" at Sprite.sv(82) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 82
+Warning (10030): Net "sprite2.we_a" at Sprite.sv(118) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 118
+Warning (10030): Net "sprite3.we_a" at Sprite.sv(154) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 154
+Info (12128): Elaborating entity "mux_4_x_1" for hierarchy "PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 161
+Info (12128): Elaborating entity "mux_2_x_1" for hierarchy "PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux0" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/mux_4_x_1.sv Line: 7
+Info (12128): Elaborating entity "decoRGB" for hierarchy "PixelGenerator:pixel|Sprite:sprite|decoRGB:deco" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 163
+Info (12128): Elaborating entity "wordSprite" for hierarchy "PixelGenerator:pixel|wordSprite:word" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/PixelGenerator.sv Line: 15
+Warning (10030): Net "sprite.waddr_a" at wordSprite.sv(40) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/wordSprite.sv Line: 40
+Warning (10030): Net "sprite.data_a" at wordSprite.sv(40) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/wordSprite.sv Line: 40
+Warning (10030): Net "sprite.we_a" at wordSprite.sv(40) has no driver or initial value, using a default initial value '0' File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/wordSprite.sv Line: 40
+Info (12128): Elaborating entity "wordSpriteDeco" for hierarchy "PixelGenerator:pixel|wordSprite:word|wordSpriteDeco:deco" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/wordSprite.sv Line: 44
+Info (12128): Elaborating entity "mux_4_x_1" for hierarchy "PixelGenerator:pixel|mux_4_x_1:sqMux" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/PixelGenerator.sv Line: 37
+Info (12128): Elaborating entity "mux_2_x_1" for hierarchy "PixelGenerator:pixel|mux_4_x_1:sqMux|mux_2_x_1:mux0" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/mux_4_x_1.sv Line: 7
+Info (12128): Elaborating entity "mux_2_x_1" for hierarchy "PixelGenerator:pixel|mux_2_x_1:mux0" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/PixelGenerator.sv Line: 38
+Info (12128): Elaborating entity "DecoSeg" for hierarchy "DecoSeg:deco" File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/VGA.sv Line: 63
 Info (276014): Found 5 instances of uninferred RAM logic
-    Info (276007): RAM logic "PixelGenerator:pixel|wordSprite:word|sprite" is uninferred due to asynchronous read logic File: D:/FPGA Projects/Lab5/VGA/Painter/wordSprite.sv Line: 40
-    Info (276007): RAM logic "PixelGenerator:pixel|Sprite:sprite|sprite" is uninferred due to asynchronous read logic File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 46
-    Info (276007): RAM logic "PixelGenerator:pixel|Sprite:sprite|sprite1" is uninferred due to asynchronous read logic File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 82
-    Info (276007): RAM logic "PixelGenerator:pixel|Sprite:sprite|sprite2" is uninferred due to asynchronous read logic File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 118
-    Info (276007): RAM logic "PixelGenerator:pixel|Sprite:sprite|sprite3" is uninferred due to asynchronous read logic File: D:/FPGA Projects/Lab5/VGA/Painter/Sprite.sv Line: 154
-Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Info (276007): RAM logic "PixelGenerator:pixel|wordSprite:word|sprite" is uninferred due to asynchronous read logic File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/wordSprite.sv Line: 40
+    Info (276007): RAM logic "PixelGenerator:pixel|Sprite:sprite|sprite" is uninferred due to asynchronous read logic File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 46
+    Info (276007): RAM logic "PixelGenerator:pixel|Sprite:sprite|sprite1" is uninferred due to asynchronous read logic File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 82
+    Info (276007): RAM logic "PixelGenerator:pixel|Sprite:sprite|sprite2" is uninferred due to asynchronous read logic File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 118
+    Info (276007): RAM logic "PixelGenerator:pixel|Sprite:sprite|sprite3" is uninferred due to asynchronous read logic File: /home/ema0898/Programas/Quartus/Lab5/VGAMkII/Painter/Sprite.sv Line: 154
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file D:/FPGA Projects/Lab5/VGA/output_files/VGA.map.smsg
+Info (144001): Generated suppressed messages file /home/ema0898/Programas/Quartus/Lab5/VGAMkII/output_files/VGA.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 464 device resources after synthesis - the final resource count might be different
@@ -1040,15 +1016,15 @@ Info (21057): Implemented 464 device resources after synthesis - the final resou
     Info (21059): Implemented 37 output pins
     Info (21061): Implemented 423 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4888 megabytes
-    Info: Processing ended: Thu May 02 21:50:43 2019
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 1042 megabytes
+    Info: Processing ended: Fri May  3 01:15:02 2019
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:33
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/FPGA Projects/Lab5/VGA/output_files/VGA.map.smsg.
+The suppressed messages can be found in /home/ema0898/Programas/Quartus/Lab5/VGAMkII/output_files/VGA.map.smsg.
 
 

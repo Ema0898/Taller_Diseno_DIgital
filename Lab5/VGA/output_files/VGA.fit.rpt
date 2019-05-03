@@ -1,5 +1,5 @@
 Fitter report for VGA
-Thu May 02 21:51:26 2019
+Fri May  3 01:15:55 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,6 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  28. Estimated Delay Added for Hold Timing Summary
  29. Estimated Delay Added for Hold Timing Details
  30. Fitter Messages
- 31. Fitter Suppressed Messages
 
 
 
@@ -62,14 +61,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu May 02 21:51:26 2019       ;
+; Fitter Status                   ; Successful - Fri May  3 01:15:55 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; VGA                                         ;
 ; Top-level Entity Name           ; VGA                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 278 / 32,070 ( < 1 % )                      ;
+; Logic utilization (in ALMs)     ; 277 / 32,070 ( < 1 % )                      ;
 ; Total registers                 ; 110                                         ;
 ; Total pins                      ; 41 / 457 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
@@ -150,16 +149,14 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.02        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.2%      ;
-;     Processor 3            ;   1.1%      ;
-;     Processor 4            ;   1.1%      ;
+;     Processor 2            ;   2.2%      ;
 +----------------------------+-------------+
 
 
@@ -170,33 +167,33 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------------------------------+------------------+-----------------------+
 ; btn[0]~inputCLKENA0                                   ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                 ;                  ;                       ;
 ; clk~inputCLKENA0                                      ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                 ;                  ;                       ;
+; ControllerSync:VGASync|hCounter[0]                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ControllerSync:VGASync|hCounter[0]~DUPLICATE                    ;                  ;                       ;
 ; ControllerSync:VGASync|hCounter[1]                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ControllerSync:VGASync|hCounter[1]~DUPLICATE                    ;                  ;                       ;
-; ControllerSync:VGASync|hCounter[5]                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ControllerSync:VGASync|hCounter[5]~DUPLICATE                    ;                  ;                       ;
-; ControllerSync:VGASync|hCounter[6]                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ControllerSync:VGASync|hCounter[6]~DUPLICATE                    ;                  ;                       ;
-; ControllerSync:VGASync|vCounter[0]                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ControllerSync:VGASync|vCounter[0]~DUPLICATE                    ;                  ;                       ;
-; ControllerSync:VGASync|vCounter[1]                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ControllerSync:VGASync|vCounter[1]~DUPLICATE                    ;                  ;                       ;
+; ControllerSync:VGASync|hCounter[2]                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ControllerSync:VGASync|hCounter[2]~DUPLICATE                    ;                  ;                       ;
+; ControllerSync:VGASync|hCounter[3]                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ControllerSync:VGASync|hCounter[3]~DUPLICATE                    ;                  ;                       ;
+; ControllerSync:VGASync|hCounter[4]                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ControllerSync:VGASync|hCounter[4]~DUPLICATE                    ;                  ;                       ;
+; ControllerSync:VGASync|hCounter[9]                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ControllerSync:VGASync|hCounter[9]~DUPLICATE                    ;                  ;                       ;
+; ControllerSync:VGASync|vCounter[2]                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ControllerSync:VGASync|vCounter[2]~DUPLICATE                    ;                  ;                       ;
+; ControllerSync:VGASync|vCounter[3]                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ControllerSync:VGASync|vCounter[3]~DUPLICATE                    ;                  ;                       ;
 ; counterBtn:count|q[0]                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; counterBtn:count|q[0]~DUPLICATE                                 ;                  ;                       ;
-; counterBtn:count|q[1]                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; counterBtn:count|q[1]~DUPLICATE                                 ;                  ;                       ;
-; frequency_divider:divider|counter[0]                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; frequency_divider:divider|counter[0]~DUPLICATE                  ;                  ;                       ;
 ; frequency_divider:divider|counter[1]                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; frequency_divider:divider|counter[1]~DUPLICATE                  ;                  ;                       ;
 ; frequency_divider:divider|counter[2]                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; frequency_divider:divider|counter[2]~DUPLICATE                  ;                  ;                       ;
 ; frequency_divider:divider|counter[3]                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; frequency_divider:divider|counter[3]~DUPLICATE                  ;                  ;                       ;
+; frequency_divider:divider|counter[4]                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; frequency_divider:divider|counter[4]~DUPLICATE                  ;                  ;                       ;
+; fsm_top:fsm|counter_fsm:counter|q[0]                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|counter_fsm:counter|q[0]~DUPLICATE                  ;                  ;                       ;
 ; fsm_top:fsm|counter_fsm:counter|q[1]                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|counter_fsm:counter|q[1]~DUPLICATE                  ;                  ;                       ;
 ; fsm_top:fsm|frequency_divider_fsm:divider|counter[0]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[0]~DUPLICATE  ;                  ;                       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[1]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[1]~DUPLICATE  ;                  ;                       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[3]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[3]~DUPLICATE  ;                  ;                       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[5]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[5]~DUPLICATE  ;                  ;                       ;
 ; fsm_top:fsm|frequency_divider_fsm:divider|counter[6]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[6]~DUPLICATE  ;                  ;                       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[7]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[7]~DUPLICATE  ;                  ;                       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[8]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[8]~DUPLICATE  ;                  ;                       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[9]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[9]~DUPLICATE  ;                  ;                       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[12]~DUPLICATE ;                  ;                       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[14] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[14]~DUPLICATE ;                  ;                       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[10] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[10]~DUPLICATE ;                  ;                       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[11] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[11]~DUPLICATE ;                  ;                       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[13] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[13]~DUPLICATE ;                  ;                       ;
 ; fsm_top:fsm|frequency_divider_fsm:divider|counter[18] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[18]~DUPLICATE ;                  ;                       ;
 ; fsm_top:fsm|frequency_divider_fsm:divider|counter[19] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[19]~DUPLICATE ;                  ;                       ;
 ; fsm_top:fsm|frequency_divider_fsm:divider|counter[20] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[20]~DUPLICATE ;                  ;                       ;
 ; fsm_top:fsm|frequency_divider_fsm:divider|counter[21] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[21]~DUPLICATE ;                  ;                       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[23] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[23]~DUPLICATE ;                  ;                       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[25] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[25]~DUPLICATE ;                  ;                       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[26] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[26]~DUPLICATE ;                  ;                       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[27] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; fsm_top:fsm|frequency_divider_fsm:divider|counter[27]~DUPLICATE ;                  ;                       ;
 ; random:rnd|rng:random|flip_flop_D_ENL:ffD2|q[0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; random:rnd|rng:random|flip_flop_D_ENL:ffD2|q[0]~DUPLICATE       ;                  ;                       ;
 +-------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------------------------------+------------------+-----------------------+
 
@@ -239,7 +236,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/FPGA Projects/Lab5/VGA/output_files/VGA.pin.
+The pin-out file can be found in /home/ema0898/Programas/Quartus/Lab5/VGAMkII/output_files/VGA.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -247,24 +244,24 @@ The pin-out file can be found in D:/FPGA Projects/Lab5/VGA/output_files/VGA.pin.
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 278 / 32,070       ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 278                ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 287 / 32,070       ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 34                 ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 277 / 32,070       ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 277                ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 286 / 32,070       ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 31                 ;       ;
 ;         [b] ALMs used for LUT logic                         ; 245                ;       ;
-;         [c] ALMs used for registers                         ; 8                  ;       ;
+;         [c] ALMs used for registers                         ; 10                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 10 / 32,070        ; < 1 % ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 32,070         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 9 / 32,070         ; < 1 % ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
-;         [c] Due to LAB input limits                         ; 1                  ;       ;
+;         [c] Due to LAB input limits                         ; 0                  ;       ;
 ;         [d] Due to virtual I/Os                             ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 31 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 31                 ;       ;
+; Total LABs:  partially or completely used                   ; 33 / 3,207         ; 1 %   ;
+;     -- Logic LABs                                           ; 33                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 422                ;       ;
@@ -273,7 +270,7 @@ The pin-out file can be found in D:/FPGA Projects/Lab5/VGA/output_files/VGA.pin.
 ;     -- 5 input functions                                    ; 87                 ;       ;
 ;     -- 4 input functions                                    ; 65                 ;       ;
 ;     -- <=3 input functions                                  ; 135                ;       ;
-; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
+; Combinational ALUT usage for route-throughs                 ; 1                  ;       ;
 ;                                                             ;                    ;       ;
 ; Dedicated logic registers                                   ; 110                ;       ;
 ;     -- By type:                                             ;                    ;       ;
@@ -336,12 +333,12 @@ The pin-out file can be found in D:/FPGA Projects/Lab5/VGA/output_files/VGA.pin.
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.3% / 0.2% / 0.3% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 4.6% / 4.7% / 4.2% ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.3% / 0.3% / 0.3% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 4.3% / 4.3% / 4.3% ;       ;
 ; Maximum fan-out                                             ; 90                 ;       ;
 ; Highest non-global fan-out                                  ; 90                 ;       ;
-; Total fan-out                                               ; 2328               ;       ;
-; Average fan-out                                             ; 3.78               ;       ;
+; Total fan-out                                               ; 2329               ;       ;
+; Average fan-out                                             ; 3.77               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -350,24 +347,24 @@ The pin-out file can be found in D:/FPGA Projects/Lab5/VGA/output_files/VGA.pin.
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 278 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 278                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 287 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 34                    ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 277 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 277                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 286 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 31                    ; 0                              ;
 ;         [b] ALMs used for LUT logic                         ; 245                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 8                     ; 0                              ;
+;         [c] ALMs used for registers                         ; 10                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 10 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 32070 ( < 1 % )   ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 9 / 32070 ( < 1 % )   ; 0 / 32070 ( 0 % )              ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )     ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
-;         [c] Due to LAB input limits                         ; 1                     ; 0                              ;
+;         [c] Due to LAB input limits                         ; 0                     ; 0                              ;
 ;         [d] Due to virtual I/Os                             ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 31 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 31                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 33 / 3207 ( 1 % )     ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 33                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Combinational ALUT usage for logic                          ; 422                   ; 0                              ;
@@ -376,7 +373,7 @@ The pin-out file can be found in D:/FPGA Projects/Lab5/VGA/output_files/VGA.pin.
 ;     -- 5 input functions                                    ; 87                    ; 0                              ;
 ;     -- 4 input functions                                    ; 65                    ; 0                              ;
 ;     -- <=3 input functions                                  ; 135                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 0                     ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 1                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
@@ -404,8 +401,8 @@ The pin-out file can be found in D:/FPGA Projects/Lab5/VGA/output_files/VGA.pin.
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 2328                  ; 0                              ;
-;     -- Registered Connections                               ; 659                   ; 0                              ;
+;     -- Total Connections                                    ; 2329                  ; 0                              ;
+;     -- Registered Connections                               ; 660                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -437,7 +434,7 @@ The pin-out file can be found in D:/FPGA Projects/Lab5/VGA/output_files/VGA.pin.
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; btn[0] ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 4                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; btn[0] ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 3                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; btn[1] ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; clk    ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 12                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; reset  ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 90                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
@@ -1470,31 +1467,31 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node            ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Entity Name           ; Library Name ;
 +---------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------+-----------------------+--------------+
-; |VGA                                  ; 278.0 (0.8)          ; 285.5 (0.8)                      ; 8.0 (0.0)                                         ; 0.5 (0.0)                        ; 0.0 (0.0)            ; 422 (2)             ; 110 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 41   ; 0            ; |VGA                                                                  ; VGA                   ; work         ;
-;    |ClkDivisor:VGAClkDivisor|         ; 1.2 (1.2)            ; 1.2 (1.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|ClkDivisor:VGAClkDivisor                                         ; ClkDivisor            ; work         ;
-;    |ControllerSync:VGASync|           ; 22.5 (22.5)          ; 22.9 (22.9)                      ; 0.5 (0.5)                                         ; 0.2 (0.2)                        ; 0.0 (0.0)            ; 35 (35)             ; 25 (25)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|ControllerSync:VGASync                                           ; ControllerSync        ; work         ;
-;    |DecoSeg:deco|                     ; 2.8 (2.8)            ; 2.8 (2.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|DecoSeg:deco                                                     ; DecoSeg               ; work         ;
-;    |PixelGenerator:pixel|             ; 196.2 (11.4)         ; 199.5 (12.1)                     ; 3.6 (0.8)                                         ; 0.3 (0.0)                        ; 0.0 (0.0)            ; 279 (26)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel                                             ; PixelGenerator        ; work         ;
-;       |Sprite:sprite|                 ; 112.3 (68.5)         ; 112.3 (68.4)                     ; 0.2 (0.0)                                         ; 0.2 (0.1)                        ; 0.0 (0.0)            ; 148 (96)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|Sprite:sprite                               ; Sprite                ; work         ;
-;          |mux_4_x_1:mux0|             ; 43.3 (0.0)           ; 43.8 (0.0)                       ; 0.7 (0.0)                                         ; 0.1 (0.0)                        ; 0.0 (0.0)            ; 52 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0                ; mux_4_x_1             ; work         ;
-;             |mux_2_x_1:mux2|          ; 43.3 (43.3)          ; 43.8 (43.8)                      ; 0.7 (0.7)                                         ; 0.1 (0.1)                        ; 0.0 (0.0)            ; 52 (52)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux2 ; mux_2_x_1             ; work         ;
-;       |mux_2_x_1:mux3|                ; 18.1 (18.1)          ; 19.5 (19.5)                      ; 1.5 (1.5)                                         ; 0.1 (0.1)                        ; 0.0 (0.0)            ; 27 (27)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|mux_2_x_1:mux3                              ; mux_2_x_1             ; work         ;
+; |VGA                                  ; 276.5 (0.8)          ; 285.5 (1.2)                      ; 9.0 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 422 (2)             ; 110 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 41   ; 0            ; |VGA                                                                  ; VGA                   ; work         ;
+;    |ClkDivisor:VGAClkDivisor|         ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|ClkDivisor:VGAClkDivisor                                         ; ClkDivisor            ; work         ;
+;    |ControllerSync:VGASync|           ; 22.8 (22.8)          ; 24.9 (24.9)                      ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 35 (35)             ; 28 (28)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|ControllerSync:VGASync                                           ; ControllerSync        ; work         ;
+;    |DecoSeg:deco|                     ; 3.0 (3.0)            ; 3.0 (3.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|DecoSeg:deco                                                     ; DecoSeg               ; work         ;
+;    |PixelGenerator:pixel|             ; 194.4 (11.2)         ; 196.4 (11.6)                     ; 2.0 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 279 (26)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel                                             ; PixelGenerator        ; work         ;
+;       |Sprite:sprite|                 ; 111.1 (67.9)         ; 111.6 (68.4)                     ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 148 (96)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|Sprite:sprite                               ; Sprite                ; work         ;
+;          |mux_4_x_1:mux0|             ; 43.2 (0.0)           ; 43.2 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 52 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0                ; mux_4_x_1             ; work         ;
+;             |mux_2_x_1:mux2|          ; 43.2 (43.2)          ; 43.2 (43.2)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 52 (52)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux2 ; mux_2_x_1             ; work         ;
+;       |mux_2_x_1:mux3|                ; 18.0 (18.0)          ; 19.5 (19.5)                      ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 27 (27)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|mux_2_x_1:mux3                              ; mux_2_x_1             ; work         ;
 ;       |mux_4_x_1:sqMux|               ; 1.0 (0.0)            ; 1.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|mux_4_x_1:sqMux                             ; mux_4_x_1             ; work         ;
 ;          |mux_2_x_1:mux2|             ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|mux_4_x_1:sqMux|mux_2_x_1:mux2              ; mux_2_x_1             ; work         ;
-;       |wordSprite:word|               ; 53.5 (53.5)          ; 54.7 (54.7)                      ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 77 (77)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|wordSprite:word                             ; wordSprite            ; work         ;
-;    |animation:anm|                    ; 15.3 (4.8)           ; 15.3 (4.8)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (12)             ; 12 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|animation:anm                                                    ; animation             ; work         ;
+;       |wordSprite:word|               ; 52.7 (52.7)          ; 52.7 (52.7)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 77 (77)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|wordSprite:word                             ; wordSprite            ; work         ;
+;    |animation:anm|                    ; 15.3 (4.4)           ; 15.3 (4.4)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (12)             ; 12 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|animation:anm                                                    ; animation             ; work         ;
 ;       |counter:count|                 ; 2.2 (2.2)            ; 2.2 (2.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|animation:anm|counter:count                                      ; counter               ; work         ;
-;       |moveCounter:moveCnt|           ; 8.3 (8.3)            ; 8.3 (8.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|animation:anm|moveCounter:moveCnt                                ; moveCounter           ; work         ;
-;    |counterBtn:count|                 ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|counterBtn:count                                                 ; counterBtn            ; work         ;
-;    |frequency_divider:divider|        ; 3.5 (3.5)            ; 5.3 (5.3)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|frequency_divider:divider                                        ; frequency_divider     ; work         ;
-;    |fsm_top:fsm|                      ; 26.8 (0.3)           ; 29.4 (0.3)                       ; 2.7 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 48 (1)              ; 53 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm                                                      ; fsm_top               ; work         ;
-;       |counter_fsm:counter|           ; 1.2 (1.2)            ; 1.8 (1.8)                        ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm|counter_fsm:counter                                  ; counter_fsm           ; work         ;
-;       |frequency_divider_fsm:divider| ; 19.7 (19.7)          ; 20.8 (20.8)                      ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 35 (35)             ; 44 (44)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm|frequency_divider_fsm:divider                        ; frequency_divider_fsm ; work         ;
-;       |fsm:fsm|                       ; 5.7 (5.7)            ; 6.4 (6.4)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 10 (10)             ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm|fsm:fsm                                              ; fsm                   ; work         ;
-;    |mux_8_x_1:muxX|                   ; 3.2 (0.0)            ; 3.2 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxX                                                   ; mux_8_x_1             ; work         ;
-;       |mux_2_x_1:mux6|                ; 3.2 (3.2)            ; 3.2 (3.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxX|mux_2_x_1:mux6                                    ; mux_2_x_1             ; work         ;
-;    |mux_8_x_1:muxY|                   ; 2.5 (0.0)            ; 2.7 (0.0)                        ; 0.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxY                                                   ; mux_8_x_1             ; work         ;
-;       |mux_2_x_1:mux6|                ; 2.5 (2.5)            ; 2.7 (2.7)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxY|mux_2_x_1:mux6                                    ; mux_2_x_1             ; work         ;
+;       |moveCounter:moveCnt|           ; 8.3 (8.3)            ; 8.7 (8.7)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|animation:anm|moveCounter:moveCnt                                ; moveCounter           ; work         ;
+;    |counterBtn:count|                 ; 0.7 (0.7)            ; 0.8 (0.8)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|counterBtn:count                                                 ; counterBtn            ; work         ;
+;    |frequency_divider:divider|        ; 3.8 (3.8)            ; 5.8 (5.8)                        ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|frequency_divider:divider                                        ; frequency_divider     ; work         ;
+;    |fsm_top:fsm|                      ; 26.6 (0.2)           ; 28.8 (0.3)                       ; 2.3 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 48 (1)              ; 51 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm                                                      ; fsm_top               ; work         ;
+;       |counter_fsm:counter|           ; 1.0 (1.0)            ; 2.3 (2.3)                        ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm|counter_fsm:counter                                  ; counter_fsm           ; work         ;
+;       |frequency_divider_fsm:divider| ; 19.7 (19.7)          ; 20.5 (20.5)                      ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 35 (35)             ; 41 (41)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm|frequency_divider_fsm:divider                        ; frequency_divider_fsm ; work         ;
+;       |fsm:fsm|                       ; 5.7 (5.7)            ; 5.7 (5.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 10 (10)             ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm|fsm:fsm                                              ; fsm                   ; work         ;
+;    |mux_8_x_1:muxX|                   ; 4.7 (0.0)            ; 4.8 (0.0)                        ; 0.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxX                                                   ; mux_8_x_1             ; work         ;
+;       |mux_2_x_1:mux6|                ; 4.7 (4.7)            ; 4.8 (4.8)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxX|mux_2_x_1:mux6                                    ; mux_2_x_1             ; work         ;
+;    |mux_8_x_1:muxY|                   ; 2.0 (0.0)            ; 2.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxY                                                   ; mux_8_x_1             ; work         ;
+;       |mux_2_x_1:mux6|                ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxY|mux_2_x_1:mux6                                    ; mux_2_x_1             ; work         ;
 ;    |random:rnd|                       ; 1.3 (0.0)            ; 1.5 (0.0)                        ; 0.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (0)               ; 4 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|random:rnd                                                       ; random                ; work         ;
 ;       |rng:random|                    ; 1.3 (0.3)            ; 1.5 (0.3)                        ; 0.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 4 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|random:rnd|rng:random                                            ; rng                   ; work         ;
 ;          |flip_flop_D_ENL:ffD0|       ; 0.3 (0.3)            ; 0.3 (0.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA|random:rnd|rng:random|flip_flop_D_ENL:ffD0                       ; flip_flop_D_ENL       ; work         ;
@@ -1559,54 +1556,54 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                    ; Pad To Core Index ; Setting ;
 +------------------------------------------------------------------------+-------------------+---------+
 ; reset                                                                  ;                   ;         ;
-;      - ControllerSync:VGASync|hCounter[5]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|hCounter[2]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|hCounter[0]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|hCounter[3]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|hCounter[7]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|hCounter[6]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|hCounter[8]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|hCounter[4]                              ; 0                 ; 0       ;
 ;      - ControllerSync:VGASync|hCounter[1]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[2]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[3]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[4]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[5]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[6]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[7]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[8]                              ; 0                 ; 0       ;
 ;      - ControllerSync:VGASync|hCounter[9]                              ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[22]           ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[23]           ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[24]           ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[25]           ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[0]                              ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[5]            ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[27]           ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[26]           ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[4]            ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[25]           ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[24]           ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[3]            ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[14]           ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[6]            ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[7]            ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[8]            ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[9]            ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[10]           ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[11]           ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[12]           ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[13]           ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[14]           ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[2]            ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[15]           ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[16]           ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[17]           ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[18]           ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[7]            ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[20]           ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[6]            ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[21]           ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[5]            ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[8]            ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[4]            ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[2]            ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[1]            ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[0]            ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[19]           ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|vCounter[2]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|vCounter[0]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|vCounter[1]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|vCounter[9]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|vCounter[8]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|vCounter[7]                              ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|vCounter[6]                              ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[20]           ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[0]            ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[1]            ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[21]           ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[22]           ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[23]           ; 0                 ; 0       ;
 ;      - ControllerSync:VGASync|vCounter[5]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|vCounter[6]                              ; 0                 ; 0       ;
 ;      - ControllerSync:VGASync|vCounter[4]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|vCounter[7]                              ; 0                 ; 0       ;
 ;      - ControllerSync:VGASync|vCounter[3]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|vCounter[2]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|vCounter[1]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|vCounter[0]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|vCounter[8]                              ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|vCounter[9]                              ; 0                 ; 0       ;
 ;      - animation:anm|counter:count|q[1]                                ; 0                 ; 0       ;
 ;      - fsm_top:fsm|fsm:fsm|state.100                                   ; 0                 ; 0       ;
 ;      - fsm_top:fsm|fsm:fsm|state.011                                   ; 0                 ; 0       ;
@@ -1615,7 +1612,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - frequency_divider:divider|clk_out                               ; 0                 ; 0       ;
 ;      - animation:anm|counter:count|q[0]~1                              ; 0                 ; 0       ;
 ;      - animation:anm|rst~3                                             ; 0                 ; 0       ;
-;      - animation:anm|moveCounter:moveCnt|q[5]~0                        ; 0                 ; 0       ;
+;      - animation:anm|moveCounter:moveCnt|q[1]~0                        ; 0                 ; 0       ;
 ;      - fsm_top:fsm|fsm:fsm|state~11                                    ; 0                 ; 0       ;
 ;      - fsm_top:fsm|fsm:fsm|state~12                                    ; 0                 ; 0       ;
 ;      - fsm_top:fsm|fsm:fsm|state~13                                    ; 0                 ; 0       ;
@@ -1625,30 +1622,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - frequency_divider:divider|counter[1]                            ; 0                 ; 0       ;
 ;      - frequency_divider:divider|counter[0]                            ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|clk_out               ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|hCounter[5]~DUPLICATE                    ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|hCounter[6]~DUPLICATE                    ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[9]~DUPLICATE                    ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[4]~DUPLICATE                    ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[3]~DUPLICATE                    ; 0                 ; 0       ;
 ;      - ControllerSync:VGASync|hCounter[1]~DUPLICATE                    ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|vCounter[0]~DUPLICATE                    ; 0                 ; 0       ;
-;      - ControllerSync:VGASync|vCounter[1]~DUPLICATE                    ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[1]~DUPLICATE  ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[0]~DUPLICATE  ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[2]~DUPLICATE                    ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|vCounter[3]~DUPLICATE                    ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|vCounter[2]~DUPLICATE                    ; 0                 ; 0       ;
+;      - ControllerSync:VGASync|hCounter[0]~DUPLICATE                    ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[21]~DUPLICATE ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[18]~DUPLICATE ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[19]~DUPLICATE ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[20]~DUPLICATE ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[0]~DUPLICATE  ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[10]~DUPLICATE ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[11]~DUPLICATE ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[13]~DUPLICATE ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[5]~DUPLICATE  ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[27]~DUPLICATE ; 0                 ; 0       ;
+;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[26]~DUPLICATE ; 0                 ; 0       ;
 ;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[6]~DUPLICATE  ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[21]~DUPLICATE ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[8]~DUPLICATE  ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[14]~DUPLICATE ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[18]~DUPLICATE ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[7]~DUPLICATE  ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[23]~DUPLICATE ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[25]~DUPLICATE ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[3]~DUPLICATE  ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[9]~DUPLICATE  ; 0                 ; 0       ;
-;      - fsm_top:fsm|frequency_divider_fsm:divider|counter[12]~DUPLICATE ; 0                 ; 0       ;
+;      - frequency_divider:divider|counter[4]~DUPLICATE                  ; 0                 ; 0       ;
 ;      - frequency_divider:divider|counter[3]~DUPLICATE                  ; 0                 ; 0       ;
 ;      - frequency_divider:divider|counter[2]~DUPLICATE                  ; 0                 ; 0       ;
 ;      - frequency_divider:divider|counter[1]~DUPLICATE                  ; 0                 ; 0       ;
-;      - frequency_divider:divider|counter[0]~DUPLICATE                  ; 0                 ; 0       ;
 ; btn[1]                                                                 ;                   ;         ;
 ;      - fsm_top:fsm|fsm:fsm|state~11                                    ; 1                 ; 0       ;
 ;      - fsm_top:fsm|fsm:fsm|Selector1~0                                 ; 1                 ; 0       ;
@@ -1665,20 +1662,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+----------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                               ; Location             ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------+----------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                  ; FF_X35_Y74_N32       ; 90      ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; ControllerSync:VGASync|Equal0~1                    ; LABCELL_X33_Y76_N45  ; 25      ; Clock enable, Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; ControllerSync:VGASync|refreshVSync                ; LABCELL_X33_Y76_N42  ; 12      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; animation:anm|counter:count|q[0]~1                 ; MLABCELL_X34_Y76_N21 ; 1       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; animation:anm|moveCounter:moveCnt|q[5]~0           ; LABCELL_X35_Y76_N24  ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; animation:anm|rst~3                                ; LABCELL_X35_Y76_N39  ; 10      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; btn[0]                                             ; PIN_AA14             ; 4       ; Clock                      ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                  ; FF_X35_Y74_N8        ; 90      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; ControllerSync:VGASync|Equal0~1                    ; LABCELL_X36_Y75_N54  ; 28      ; Clock enable, Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; ControllerSync:VGASync|refreshVSync                ; LABCELL_X35_Y75_N9   ; 12      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; animation:anm|counter:count|q[0]~1                 ; LABCELL_X35_Y76_N51  ; 1       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; animation:anm|moveCounter:moveCnt|q[1]~0           ; LABCELL_X35_Y76_N57  ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; animation:anm|rst~3                                ; LABCELL_X35_Y76_N24  ; 10      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; btn[0]                                             ; PIN_AA14             ; 3       ; Clock                      ; yes    ; Global Clock         ; GCLK7            ; --                        ;
 ; clk                                                ; PIN_AF14             ; 3       ; Clock                      ; no     ; --                   ; --               ; --                        ;
 ; clk                                                ; PIN_AF14             ; 10      ; Clock                      ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; comb~0                                             ; LABCELL_X36_Y74_N0   ; 8       ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; frequency_divider:divider|clk_out                  ; FF_X35_Y74_N41       ; 3       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|Equal0~5 ; LABCELL_X36_Y77_N12  ; 43      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out  ; FF_X37_Y77_N59       ; 4       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; fsm_top:fsm|rst~0                                  ; LABCELL_X36_Y74_N39  ; 3       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; comb~0                                             ; MLABCELL_X34_Y73_N48 ; 7       ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; frequency_divider:divider|clk_out                  ; FF_X35_Y74_N17       ; 3       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|Equal0~5 ; MLABCELL_X34_Y76_N0  ; 40      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out  ; FF_X34_Y76_N11       ; 5       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; fsm_top:fsm|rst~0                                  ; MLABCELL_X34_Y73_N45 ; 4       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
 ; reset                                              ; PIN_Y16              ; 90      ; Async. clear, Sync. clear  ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------------+----------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
@@ -1688,7 +1685,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+----------+---------+----------------------+------------------+---------------------------+
 ; Name   ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------+----------+---------+----------------------+------------------+---------------------------+
-; btn[0] ; PIN_AA14 ; 4       ; Global Clock         ; GCLK7            ; --                        ;
+; btn[0] ; PIN_AA14 ; 3       ; Global Clock         ; GCLK7            ; --                        ;
 ; clk    ; PIN_AF14 ; 10      ; Global Clock         ; GCLK6            ; --                        ;
 +--------+----------+---------+----------------------+------------------+---------------------------+
 
@@ -1698,14 +1695,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 668 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 42 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 199 / 119,108 ( < 1 % ) ;
-; C4 interconnects                            ; 215 / 56,300 ( < 1 % )  ;
+; Block interconnects                         ; 712 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 38 / 13,420 ( < 1 % )   ;
+; C2 interconnects                            ; 223 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 212 / 56,300 ( < 1 % )  ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 66 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 63 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 2 / 16 ( 13 % )         ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1761,12 +1758,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 246 / 84,580 ( < 1 % )  ;
+; Local interconnects                         ; 218 / 84,580 ( < 1 % )  ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 65 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 104 / 20,720 ( < 1 % )  ;
-; R3 interconnects                            ; 286 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 404 / 266,960 ( < 1 % ) ;
+; R14 interconnects                           ; 89 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 121 / 20,720 ( < 1 % )  ;
+; R3 interconnects                            ; 316 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 405 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 2 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1790,33 +1787,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
 ; Status       ; ID        ; Category                          ; Rule Description                                                                   ; Severity ; Information                                                              ; Area                ; Extra Information ;
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
-; Pass         ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available. ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000002 ; Capacity Checks                   ; Number of clocks in an I/O bank should not exceed the number of clocks available.  ; Critical ; No Global Signal assignments found.                                      ; I/O                 ;                   ;
 ; Pass         ; IO_000003 ; Capacity Checks                   ; Number of pins in a Vrefgroup should not exceed the number of locations available. ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Pass         ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available. ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000004 ; Voltage Compatibility Checks      ; The I/O bank should support the requested VCCIO.                                   ; Critical ; No IOBANK_VCCIO assignments found.                                       ; I/O                 ;                   ;
 ; Inapplicable ; IO_000005 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VREF values.                                ; Critical ; No VREF I/O Standard assignments found.                                  ; I/O                 ;                   ;
 ; Pass         ; IO_000006 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VCCIO values.                               ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Pass         ; IO_000007 ; Valid Location Checks             ; Checks for unavailable locations.                                                  ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000008 ; Valid Location Checks             ; Checks for reserved locations.                                                     ; Critical ; No reserved LogicLock region found.                                      ; I/O                 ;                   ;
-; Pass         ; IO_000009 ; I/O Properties Checks for One I/O ; The location should support the requested I/O standard.                            ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Pass         ; IO_000010 ; I/O Properties Checks for One I/O ; The location should support the requested I/O direction.                           ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000011 ; I/O Properties Checks for One I/O ; The location should support the requested Current Strength.                        ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
-; Pass         ; IO_000012 ; I/O Properties Checks for One I/O ; The location should support the requested On Chip Termination value.               ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000013 ; I/O Properties Checks for One I/O ; The location should support the requested Bus Hold value.                          ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                 ;                   ;
-; Inapplicable ; IO_000014 ; I/O Properties Checks for One I/O ; The location should support the requested Weak Pull Up value.                      ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
-; Inapplicable ; IO_000015 ; I/O Properties Checks for One I/O ; The location should support the requested PCI Clamp Diode.                         ; Critical ; No Clamping Diode assignments found.                                     ; I/O                 ;                   ;
-; Inapplicable ; IO_000018 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Current Strength.                    ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
-; Pass         ; IO_000019 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested On Chip Termination value.           ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000020 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested PCI Clamp Diode.                     ; Critical ; No Clamping Diode assignments found.                                     ; I/O                 ;                   ;
-; Inapplicable ; IO_000021 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Weak Pull Up value.                  ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
 ; Inapplicable ; IO_000022 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Bus Hold value.                      ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                 ;                   ;
+; Inapplicable ; IO_000021 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Weak Pull Up value.                  ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
+; Inapplicable ; IO_000046 ; I/O Properties Checks for One I/O ; The location should support the requested Slew Rate value.                         ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
 ; Inapplicable ; IO_000023 ; I/O Properties Checks for One I/O ; The I/O standard should support the Open Drain value.                              ; Critical ; No open drain assignments found.                                         ; I/O                 ;                   ;
 ; Pass         ; IO_000024 ; I/O Properties Checks for One I/O ; The I/O direction should support the On Chip Termination value.                    ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000026 ; I/O Properties Checks for One I/O ; On Chip Termination and Current Strength should not be used at the same time.      ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000027 ; I/O Properties Checks for One I/O ; Weak Pull Up and Bus Hold should not be used at the same time.                     ; Critical ; No Enable Bus-Hold Circuitry or Weak Pull-Up Resistor assignments found. ; I/O                 ;                   ;
 ; Inapplicable ; IO_000045 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Slew Rate value.                     ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
-; Inapplicable ; IO_000046 ; I/O Properties Checks for One I/O ; The location should support the requested Slew Rate value.                         ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
 ; Inapplicable ; IO_000047 ; I/O Properties Checks for One I/O ; On Chip Termination and Slew Rate should not be used at the same time.             ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
+; Inapplicable ; IO_000020 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested PCI Clamp Diode.                     ; Critical ; No Clamping Diode assignments found.                                     ; I/O                 ;                   ;
+; Pass         ; IO_000019 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested On Chip Termination value.           ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000018 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Current Strength.                    ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000015 ; I/O Properties Checks for One I/O ; The location should support the requested PCI Clamp Diode.                         ; Critical ; No Clamping Diode assignments found.                                     ; I/O                 ;                   ;
+; Inapplicable ; IO_000014 ; I/O Properties Checks for One I/O ; The location should support the requested Weak Pull Up value.                      ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
+; Inapplicable ; IO_000013 ; I/O Properties Checks for One I/O ; The location should support the requested Bus Hold value.                          ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                 ;                   ;
+; Pass         ; IO_000012 ; I/O Properties Checks for One I/O ; The location should support the requested On Chip Termination value.               ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000011 ; I/O Properties Checks for One I/O ; The location should support the requested Current Strength.                        ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
+; Pass         ; IO_000010 ; I/O Properties Checks for One I/O ; The location should support the requested I/O direction.                           ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Pass         ; IO_000009 ; I/O Properties Checks for One I/O ; The location should support the requested I/O standard.                            ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000034 ; SI Related Distance Checks        ; Single-ended outputs should be 0 LAB row(s) away from a differential I/O.          ; High     ; No Differential I/O Standard assignments found.                          ; I/O                 ;                   ;
 ; ----         ; ----      ; Disclaimer                        ; OCT rules are checked but not reported.                                            ; None     ; ----                                                                     ; On Chip Termination ;                   ;
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
@@ -1824,55 +1821,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                     ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Total Pass         ; 41        ; 0            ; 41        ; 0            ; 0            ; 41        ; 41        ; 0            ; 41        ; 41        ; 0            ; 37           ; 0            ; 0            ; 0            ; 0            ; 37           ; 0            ; 0            ; 0            ; 0            ; 37           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 41           ; 0         ; 41           ; 41           ; 0         ; 0         ; 41           ; 0         ; 0         ; 41           ; 4            ; 41           ; 41           ; 41           ; 41           ; 4            ; 41           ; 41           ; 41           ; 41           ; 4            ; 41           ; 41           ; 41           ; 41           ; 41           ; 41           ;
-; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; vga_hs             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; vga_vs             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; red[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; red[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; red[2]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; red[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; red[4]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; red[5]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; red[6]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; red[7]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; green[0]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; green[1]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; green[2]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; green[3]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; green[4]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; green[5]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; green[6]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; green[7]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; blue[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; blue[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; blue[2]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; blue[3]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; blue[4]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; blue[5]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; blue[6]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; blue[7]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; vga_blank_n        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; clockVGA           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; display[0]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; display[1]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; display[2]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; display[3]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; display[4]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; display[5]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; display[6]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; zone[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; zone[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; reset              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; btn[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; btn[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; clk                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
++--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
+; Pin/Rules          ; IO_000002    ; IO_000003 ; IO_000001 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000022    ; IO_000021    ; IO_000046    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000047    ; IO_000020    ; IO_000019    ; IO_000018    ; IO_000015    ; IO_000014    ; IO_000013    ; IO_000012    ; IO_000011    ; IO_000010 ; IO_000009 ; IO_000034    ;
++--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
+; Total Pass         ; 0            ; 41        ; 41        ; 0            ; 0            ; 41        ; 41        ; 0            ; 0            ; 0            ; 0            ; 0            ; 37           ; 0            ; 0            ; 0            ; 0            ; 0            ; 37           ; 0            ; 0            ; 0            ; 0            ; 37           ; 0            ; 41        ; 41        ; 0            ;
+; Total Unchecked    ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0            ;
+; Total Inapplicable ; 41           ; 0         ; 0         ; 41           ; 41           ; 0         ; 0         ; 41           ; 41           ; 41           ; 41           ; 41           ; 4            ; 41           ; 41           ; 41           ; 41           ; 41           ; 4            ; 41           ; 41           ; 41           ; 41           ; 4            ; 41           ; 0         ; 0         ; 41           ;
+; Total Fail         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0            ;
+; vga_hs             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; vga_vs             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; red[0]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; red[1]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; red[2]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; red[3]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; red[4]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; red[5]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; red[6]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; red[7]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; green[0]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; green[1]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; green[2]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; green[3]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; green[4]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; green[5]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; green[6]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; green[7]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; blue[0]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; blue[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; blue[2]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; blue[3]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; blue[4]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; blue[5]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; blue[6]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; blue[7]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; vga_blank_n        ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; clockVGA           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; display[0]         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; display[1]         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; display[2]         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; display[3]         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; display[4]         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; display[5]         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; display[6]         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; zone[0]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; zone[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; reset              ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; btn[1]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; btn[0]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; clk                ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
++--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -1918,19 +1915,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary                                                                             ;
-+---------------------------------------------------+---------------------------------------------------+-------------------+
-; Source Clock(s)                                   ; Destination Clock(s)                              ; Delay Added in ns ;
-+---------------------------------------------------+---------------------------------------------------+-------------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 22.0              ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz,btn[0]          ; 21.9              ;
-; clk                                               ; clk                                               ; 21.9              ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 6.4               ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; btn[0]                                            ; 4.7               ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; I/O                                               ; 1.5               ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 1.4               ;
-+---------------------------------------------------+---------------------------------------------------+-------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                                                                                   ;
++---------------------------------------------------+-------------------------------------------------------------------------+-------------------+
+; Source Clock(s)                                   ; Destination Clock(s)                                                    ; Delay Added in ns ;
++---------------------------------------------------+-------------------------------------------------------------------------+-------------------+
+; clk                                               ; clk                                                                     ; 22.3              ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz,btn[0]                                ; 22.0              ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz                                       ; 16.8              ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; btn[0]                                                                  ; 4.9               ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out                       ; 2.7               ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; ClkDivisor:VGAClkDivisor|clk25Mhz                                       ; 2.4               ;
+; clk                                               ; ClkDivisor:VGAClkDivisor|clk25Mhz                                       ; 1.7               ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; frequency_divider:divider|clk_out                                       ; 1.3               ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz,frequency_divider:divider|clk_out,I/O ; 1.0               ;
++---------------------------------------------------+-------------------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
@@ -1940,98 +1939,99 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------------------------------+---------------------------------------------------+-------------------+
 ; Source Register                                       ; Destination Register                              ; Delay Added in ns ;
 +-------------------------------------------------------+---------------------------------------------------+-------------------+
-; fsm_top:fsm|fsm:fsm|state.101                         ; counterBtn:count|q[0]                             ; 9.280             ;
-; fsm_top:fsm|fsm:fsm|state.000                         ; counterBtn:count|q[0]                             ; 9.233             ;
-; fsm_top:fsm|fsm:fsm|state.100                         ; counterBtn:count|q[0]                             ; 9.218             ;
-; fsm_top:fsm|fsm:fsm|state.011                         ; counterBtn:count|q[0]                             ; 8.833             ;
-; fsm_top:fsm|fsm:fsm|state.010                         ; counterBtn:count|q[0]                             ; 8.823             ;
-; frequency_divider:divider|clk_out                     ; frequency_divider:divider|clk_out                 ; 7.076             ;
-; ClkDivisor:VGAClkDivisor|counter                      ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 3.355             ;
-; frequency_divider:divider|counter[2]                  ; frequency_divider:divider|clk_out                 ; 2.704             ;
-; frequency_divider:divider|counter[3]                  ; frequency_divider:divider|clk_out                 ; 2.701             ;
-; frequency_divider:divider|counter[4]                  ; frequency_divider:divider|clk_out                 ; 2.641             ;
-; frequency_divider:divider|counter[1]                  ; frequency_divider:divider|clk_out                 ; 2.595             ;
-; frequency_divider:divider|counter[0]                  ; frequency_divider:divider|clk_out                 ; 2.491             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out     ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 1.850             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[0]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 1.060             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[6]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 1.054             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[1]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 1.037             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[3]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 1.002             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[7]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.970             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[27] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[25] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[24] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[23] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[22] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[21] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[20] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[19] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[18] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[17] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[16] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[15] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[14] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[12] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[11] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[10] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[9]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[8]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[5]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[4]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[2]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[26] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|frequency_divider_fsm:divider|counter[13] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.932             ;
-; fsm_top:fsm|counter_fsm:counter|q[0]                  ; fsm_top:fsm|fsm:fsm|state.001                     ; 0.882             ;
-; fsm_top:fsm|counter_fsm:counter|q[1]                  ; fsm_top:fsm|fsm:fsm|state.100                     ; 0.880             ;
-; random:rnd|rng:random|flip_flop_D_ENL:ffD1|q[0]       ; fsm_top:fsm|fsm:fsm|state.011                     ; 0.797             ;
-; ControllerSync:VGASync|hCounter[7]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.609             ;
-; ControllerSync:VGASync|hCounter[3]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.592             ;
-; ControllerSync:VGASync|hCounter[9]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.579             ;
-; ControllerSync:VGASync|hCounter[4]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.577             ;
-; ControllerSync:VGASync|hCounter[2]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.576             ;
-; animation:anm|counter:count|q[0]                      ; animation:anm|counter:count|q[1]                  ; 0.556             ;
-; fsm_top:fsm|fsm:fsm|state.001                         ; fsm_top:fsm|fsm:fsm|state.010                     ; 0.511             ;
-; ControllerSync:VGASync|hCounter[5]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.468             ;
-; random:rnd|rng:random|flip_flop_D_ENL:ffD2|q[0]       ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.442             ;
-; btn[1]                                                ; fsm_top:fsm|fsm:fsm|state.001                     ; 0.438             ;
-; animation:anm|moveCounter:moveCnt|q[5]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.385             ;
-; animation:anm|moveCounter:moveCnt|q[4]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.385             ;
-; animation:anm|moveCounter:moveCnt|q[3]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.385             ;
-; counterBtn:count|q[0]                                 ; counterBtn:count|q[1]                             ; 0.340             ;
-; ControllerSync:VGASync|hCounter[8]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.311             ;
-; ControllerSync:VGASync|hCounter[6]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.311             ;
-; ControllerSync:VGASync|hCounter[1]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.311             ;
-; ControllerSync:VGASync|hCounter[0]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.311             ;
-; ControllerSync:VGASync|vCounter[0]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.294             ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                     ; animation:anm|moveCounter:moveCnt|q[1]            ; 0.278             ;
-; animation:anm|counter:count|q[1]                      ; animation:anm|counter:count|q[1]                  ; 0.278             ;
-; ControllerSync:VGASync|vCounter[1]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.268             ;
-; reset                                                 ; fsm_top:fsm|fsm:fsm|state.000                     ; 0.250             ;
-; ControllerSync:VGASync|vCounter[8]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.243             ;
-; ControllerSync:VGASync|vCounter[9]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.232             ;
-; animation:anm|moveCounter:moveCnt|q[6]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.224             ;
-; ControllerSync:VGASync|vCounter[4]                    ; ControllerSync:VGASync|vCounter[3]                ; 0.220             ;
-; ControllerSync:VGASync|vCounter[2]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.197             ;
-; ControllerSync:VGASync|vCounter[3]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.197             ;
-; animation:anm|moveCounter:moveCnt|q[8]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.176             ;
-; animation:anm|moveCounter:moveCnt|q[7]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.176             ;
-; ControllerSync:VGASync|vCounter[7]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.166             ;
-; ControllerSync:VGASync|vCounter[6]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.166             ;
-; ControllerSync:VGASync|vCounter[5]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.166             ;
-; random:rnd|rng:random|flip_flop_D_ENL:ffD0|q[0]       ; random:rnd|rng:random|flip_flop_D_ENL:ffD2|q[0]   ; 0.155             ;
-; animation:anm|moveCounter:moveCnt|q[9]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.104             ;
-; animation:anm|moveCounter:moveCnt|q[1]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.060             ;
-; animation:anm|moveCounter:moveCnt|q[2]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.014             ;
-; animation:anm|moveCounter:moveCnt|q[0]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.014             ;
+; fsm_top:fsm|fsm:fsm|state.101                         ; counterBtn:count|q[0]                             ; 9.294             ;
+; fsm_top:fsm|fsm:fsm|state.010                         ; counterBtn:count|q[0]                             ; 9.249             ;
+; fsm_top:fsm|fsm:fsm|state.000                         ; counterBtn:count|q[0]                             ; 9.249             ;
+; fsm_top:fsm|fsm:fsm|state.011                         ; counterBtn:count|q[0]                             ; 9.236             ;
+; fsm_top:fsm|fsm:fsm|state.100                         ; counterBtn:count|q[0]                             ; 9.233             ;
+; frequency_divider:divider|clk_out                     ; frequency_divider:divider|clk_out                 ; 7.088             ;
+; ClkDivisor:VGAClkDivisor|counter                      ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 2.981             ;
+; frequency_divider:divider|counter[2]                  ; frequency_divider:divider|clk_out                 ; 2.653             ;
+; frequency_divider:divider|counter[3]                  ; frequency_divider:divider|clk_out                 ; 2.651             ;
+; frequency_divider:divider|counter[4]                  ; frequency_divider:divider|clk_out                 ; 2.590             ;
+; frequency_divider:divider|counter[1]                  ; frequency_divider:divider|clk_out                 ; 2.550             ;
+; frequency_divider:divider|counter[0]                  ; frequency_divider:divider|clk_out                 ; 2.445             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out     ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 1.531             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[4]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 1.045             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[1]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 1.038             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[6]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 1.024             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[7]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.966             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[3]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.951             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[5]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.845             ;
+; random:rnd|rng:random|flip_flop_D_ENL:ffD1|q[0]       ; fsm_top:fsm|fsm:fsm|state.011                     ; 0.784             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[27] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[26] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[25] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[23] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[22] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[21] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[20] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[19] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[18] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[17] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[16] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[15] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[14] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[13] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[12] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[11] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[10] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[8]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[2]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[0]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[24] ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; fsm_top:fsm|frequency_divider_fsm:divider|counter[9]  ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.775             ;
+; ControllerSync:VGASync|vCounter[5]                    ; animation:anm|counter:count|q[0]                  ; 0.654             ;
+; ControllerSync:VGASync|vCounter[4]                    ; animation:anm|counter:count|q[0]                  ; 0.649             ;
+; ControllerSync:VGASync|vCounter[8]                    ; animation:anm|counter:count|q[0]                  ; 0.648             ;
+; ControllerSync:VGASync|vCounter[9]                    ; animation:anm|counter:count|q[0]                  ; 0.631             ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                     ; fsm_top:fsm|fsm:fsm|state.001                     ; 0.596             ;
+; ControllerSync:VGASync|vCounter[6]                    ; animation:anm|counter:count|q[0]                  ; 0.570             ;
+; fsm_top:fsm|counter_fsm:counter|q[1]                  ; fsm_top:fsm|fsm:fsm|state.011                     ; 0.495             ;
+; fsm_top:fsm|counter_fsm:counter|q[0]                  ; fsm_top:fsm|counter_fsm:counter|q[1]              ; 0.481             ;
+; ControllerSync:VGASync|hCounter[9]                    ; animation:anm|counter:count|q[0]                  ; 0.466             ;
+; ControllerSync:VGASync|hCounter[4]                    ; animation:anm|counter:count|q[0]                  ; 0.465             ;
+; ControllerSync:VGASync|vCounter[7]                    ; animation:anm|counter:count|q[0]                  ; 0.464             ;
+; random:rnd|rng:random|flip_flop_D_ENL:ffD2|q[0]       ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.458             ;
+; ControllerSync:VGASync|hCounter[7]                    ; animation:anm|counter:count|q[0]                  ; 0.455             ;
+; ControllerSync:VGASync|vCounter[3]                    ; animation:anm|counter:count|q[0]                  ; 0.449             ;
+; ControllerSync:VGASync|vCounter[2]                    ; animation:anm|counter:count|q[0]                  ; 0.442             ;
+; ControllerSync:VGASync|vCounter[1]                    ; animation:anm|counter:count|q[0]                  ; 0.409             ;
+; ControllerSync:VGASync|hCounter[3]                    ; animation:anm|counter:count|q[0]                  ; 0.398             ;
+; ControllerSync:VGASync|hCounter[2]                    ; animation:anm|counter:count|q[0]                  ; 0.398             ;
+; animation:anm|moveCounter:moveCnt|q[5]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.394             ;
+; animation:anm|moveCounter:moveCnt|q[4]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.394             ;
+; animation:anm|moveCounter:moveCnt|q[3]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.394             ;
+; random:rnd|rng:random|flip_flop_D_ENL:ffD0|q[0]       ; random:rnd|rng:random|flip_flop_D_ENL:ffD2|q[0]   ; 0.394             ;
+; ControllerSync:VGASync|vCounter[0]                    ; animation:anm|counter:count|q[0]                  ; 0.364             ;
+; counterBtn:count|q[0]                                 ; counterBtn:count|q[1]                             ; 0.320             ;
+; animation:anm|counter:count|q[0]                      ; animation:anm|counter:count|q[1]                  ; 0.254             ;
+; fsm_top:fsm|fsm:fsm|state.001                         ; fsm_top:fsm|fsm:fsm|state.010                     ; 0.249             ;
+; animation:anm|moveCounter:moveCnt|q[6]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.226             ;
+; ControllerSync:VGASync|hCounter[8]                    ; ControllerSync:VGASync|hCounter[7]                ; 0.183             ;
+; animation:anm|moveCounter:moveCnt|q[8]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.181             ;
+; animation:anm|moveCounter:moveCnt|q[7]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.181             ;
+; btn[1]                                                ; fsm_top:fsm|fsm:fsm|state.001                     ; 0.166             ;
+; ControllerSync:VGASync|hCounter[5]                    ; ControllerSync:VGASync|hCounter[7]                ; 0.155             ;
+; ControllerSync:VGASync|hCounter[1]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.135             ;
+; ControllerSync:VGASync|hCounter[6]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.135             ;
+; reset                                                 ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.135             ;
+; ControllerSync:VGASync|hCounter[0]                    ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.135             ;
+; animation:anm|counter:count|q[1]                      ; animation:anm|counter:count|q[1]                  ; 0.127             ;
+; animation:anm|moveCounter:moveCnt|q[9]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.115             ;
+; counterBtn:count|q[1]                                 ; fsm_top:fsm|fsm:fsm|state.011                     ; 0.079             ;
+; animation:anm|moveCounter:moveCnt|q[2]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.017             ;
+; animation:anm|moveCounter:moveCnt|q[1]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.017             ;
+; animation:anm|moveCounter:moveCnt|q[0]                ; animation:anm|moveCounter:moveCnt|q[0]            ; 0.017             ;
 +-------------------------------------------------------+---------------------------------------------------+-------------------+
-Note: This table only shows the top 83 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 84 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device 5CSEMA5F31C6 for design "VGA"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -2055,7 +2055,7 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:15
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
@@ -2068,23 +2068,16 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:06
-Info (11888): Total time spent on timing analysis during the Fitter is 0.64 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.96 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
-Info (144001): Generated suppressed messages file D:/FPGA Projects/Lab5/VGA/output_files/VGA.fit.smsg
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6644 megabytes
-    Info: Processing ended: Thu May 02 21:51:27 2019
-    Info: Elapsed time: 00:00:43
-    Info: Total CPU time (on all processors): 00:01:16
-
-
-+----------------------------+
-; Fitter Suppressed Messages ;
-+----------------------------+
-The suppressed messages can be found in D:/FPGA Projects/Lab5/VGA/output_files/VGA.fit.smsg.
+    Info: Peak virtual memory: 2169 megabytes
+    Info: Processing ended: Fri May  3 01:15:55 2019
+    Info: Elapsed time: 00:00:53
+    Info: Total CPU time (on all processors): 00:01:26
 
 

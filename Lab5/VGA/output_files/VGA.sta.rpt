@@ -1,5 +1,5 @@
 Timing Analyzer report for VGA
-Thu May 02 21:51:42 2019
+Fri May  3 01:16:10 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -99,16 +99,14 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.24        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.15        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   7.9%      ;
-;     Processor 3            ;   7.9%      ;
-;     Processor 4            ;   7.7%      ;
+;     Processor 2            ;  15.0%      ;
 +----------------------------+-------------+
 
 
@@ -130,11 +128,11 @@ refer to the applicable agreement for further details.
 +------------+-----------------+---------------------------------------------------+------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                        ; Note                                           ;
 +------------+-----------------+---------------------------------------------------+------------------------------------------------+
-; 123.79 MHz ; 123.79 MHz      ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ;                                                ;
-; 237.25 MHz ; 237.25 MHz      ; clk                                               ;                                                ;
-; 467.95 MHz ; 467.95 MHz      ; frequency_divider:divider|clk_out                 ;                                                ;
-; 484.73 MHz ; 484.73 MHz      ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ;                                                ;
-; 757.58 MHz ; 717.36 MHz      ; btn[0]                                            ; limit due to minimum period restriction (tmin) ;
+; 135.21 MHz ; 135.21 MHz      ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ;                                                ;
+; 246.67 MHz ; 246.67 MHz      ; clk                                               ;                                                ;
+; 366.7 MHz  ; 366.7 MHz       ; frequency_divider:divider|clk_out                 ;                                                ;
+; 445.83 MHz ; 445.83 MHz      ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ;                                                ;
+; 758.15 MHz ; 717.36 MHz      ; btn[0]                                            ; limit due to minimum period restriction (tmin) ;
 +------------+-----------------+---------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -150,11 +148,11 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -8.285 ; -287.722      ;
-; clk                                               ; -5.732 ; -13.248       ;
-; frequency_divider:divider|clk_out                 ; -2.437 ; -4.776        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.063 ; -2.935        ;
-; btn[0]                                            ; -0.320 ; -1.102        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -9.133 ; -288.605      ;
+; clk                                               ; -5.199 ; -12.758       ;
+; frequency_divider:divider|clk_out                 ; -2.643 ; -5.138        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.243 ; -3.645        ;
+; btn[0]                                            ; -0.319 ; -0.949        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -163,11 +161,11 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------+-------+---------------+
 ; Clock                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------+-------+---------------+
-; btn[0]                                            ; 0.264 ; 0.000         ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.387 ; 0.000         ;
-; clk                                               ; 0.388 ; 0.000         ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.705 ; 0.000         ;
-; frequency_divider:divider|clk_out                 ; 0.811 ; 0.000         ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.055 ; 0.000         ;
+; btn[0]                                            ; 0.314 ; 0.000         ;
+; clk                                               ; 0.381 ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.566 ; 0.000         ;
+; frequency_divider:divider|clk_out                 ; 0.786 ; 0.000         ;
 +---------------------------------------------------+-------+---------------+
 
 
@@ -176,8 +174,8 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; btn[0]                                            ; -7.092 ; -28.358       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.726 ; -5.168        ;
+; btn[0]                                            ; -6.084 ; -18.242       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.591 ; -6.353        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -186,8 +184,8 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------+-------+---------------+
 ; Clock                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------+-------+---------------+
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.676 ; 0.000         ;
-; btn[0]                                            ; 2.368 ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.678 ; 0.000         ;
+; btn[0]                                            ; 1.145 ; 0.000         ;
 +---------------------------------------------------+-------+---------------+
 
 
@@ -196,11 +194,11 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; clk                                               ; -0.888 ; -8.253        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.394 ; -54.882       ;
-; btn[0]                                            ; -0.394 ; -2.157        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.394 ; -1.659        ;
-; frequency_divider:divider|clk_out                 ; -0.394 ; -1.128        ;
+; clk                                               ; -0.887 ; -8.261        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.394 ; -51.336       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.394 ; -2.467        ;
+; btn[0]                                            ; -0.394 ; -1.622        ;
+; frequency_divider:divider|clk_out                 ; -0.394 ; -1.096        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -215,11 +213,11 @@ No synchronizer chains to report.
 +------------+-----------------+---------------------------------------------------+------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                        ; Note                                           ;
 +------------+-----------------+---------------------------------------------------+------------------------------------------------+
-; 130.8 MHz  ; 130.8 MHz       ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ;                                                ;
-; 223.81 MHz ; 223.81 MHz      ; clk                                               ;                                                ;
-; 466.85 MHz ; 466.85 MHz      ; frequency_divider:divider|clk_out                 ;                                                ;
-; 484.73 MHz ; 484.73 MHz      ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ;                                                ;
-; 760.46 MHz ; 717.36 MHz      ; btn[0]                                            ; limit due to minimum period restriction (tmin) ;
+; 141.4 MHz  ; 141.4 MHz       ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ;                                                ;
+; 233.1 MHz  ; 233.1 MHz       ; clk                                               ;                                                ;
+; 375.09 MHz ; 375.09 MHz      ; frequency_divider:divider|clk_out                 ;                                                ;
+; 444.05 MHz ; 444.05 MHz      ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ;                                                ;
+; 761.04 MHz ; 717.36 MHz      ; btn[0]                                            ; limit due to minimum period restriction (tmin) ;
 +------------+-----------------+---------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -229,11 +227,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -8.238 ; -282.268      ;
-; clk                                               ; -5.650 ; -13.396       ;
-; frequency_divider:divider|clk_out                 ; -2.347 ; -4.660        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.063 ; -2.923        ;
-; btn[0]                                            ; -0.315 ; -1.080        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -9.081 ; -283.525      ;
+; clk                                               ; -5.076 ; -13.136       ;
+; frequency_divider:divider|clk_out                 ; -2.519 ; -4.890        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.252 ; -3.660        ;
+; btn[0]                                            ; -0.314 ; -0.932        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -242,11 +240,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+-------+---------------+
 ; Clock                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------+-------+---------------+
-; btn[0]                                            ; 0.289 ; 0.000         ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.364 ; 0.000         ;
-; clk                                               ; 0.403 ; 0.000         ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.664 ; 0.000         ;
-; frequency_divider:divider|clk_out                 ; 0.786 ; 0.000         ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.146 ; 0.000         ;
+; btn[0]                                            ; 0.329 ; 0.000         ;
+; clk                                               ; 0.391 ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.548 ; 0.000         ;
+; frequency_divider:divider|clk_out                 ; 0.744 ; 0.000         ;
 +---------------------------------------------------+-------+---------------+
 
 
@@ -255,8 +253,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; btn[0]                                            ; -6.520 ; -26.070       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.654 ; -4.952        ;
+; btn[0]                                            ; -5.478 ; -16.424       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.493 ; -5.960        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -265,8 +263,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+-------+---------------+
 ; Clock                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------+-------+---------------+
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.583 ; 0.000         ;
-; btn[0]                                            ; 1.982 ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.627 ; 0.000         ;
+; btn[0]                                            ; 0.820 ; 0.000         ;
 +---------------------------------------------------+-------+---------------+
 
 
@@ -275,11 +273,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; clk                                               ; -0.877 ; -8.784        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.394 ; -54.637       ;
-; btn[0]                                            ; -0.394 ; -2.138        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.394 ; -1.617        ;
-; frequency_divider:divider|clk_out                 ; -0.394 ; -1.119        ;
+; clk                                               ; -0.875 ; -8.911        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.394 ; -50.222       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.394 ; -2.408        ;
+; btn[0]                                            ; -0.394 ; -1.612        ;
+; frequency_divider:divider|clk_out                 ; -0.394 ; -1.085        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -294,25 +292,25 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -4.840 ; -144.695      ;
-; clk                                               ; -4.570 ; -6.556        ;
-; frequency_divider:divider|clk_out                 ; -1.080 ; -2.145        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.369 ; -0.936        ;
-; btn[0]                                            ; 0.304  ; 0.000         ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -5.283 ; -144.383      ;
+; clk                                               ; -4.180 ; -6.102        ;
+; frequency_divider:divider|clk_out                 ; -1.217 ; -2.430        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.450 ; -1.083        ;
+; btn[0]                                            ; 0.263  ; 0.000         ;
 +---------------------------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                                        ;
-+---------------------------------------------------+-------+---------------+
-; Clock                                             ; Slack ; End Point TNS ;
-+---------------------------------------------------+-------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.093 ; 0.000         ;
-; btn[0]                                            ; 0.157 ; 0.000         ;
-; clk                                               ; 0.188 ; 0.000         ;
-; frequency_divider:divider|clk_out                 ; 0.222 ; 0.000         ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.379 ; 0.000         ;
-+---------------------------------------------------+-------+---------------+
++----------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                         ;
++---------------------------------------------------+--------+---------------+
+; Clock                                             ; Slack  ; End Point TNS ;
++---------------------------------------------------+--------+---------------+
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.160 ; -0.212        ;
+; btn[0]                                            ; 0.183  ; 0.000         ;
+; clk                                               ; 0.186  ; 0.000         ;
+; frequency_divider:divider|clk_out                 ; 0.259  ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.292  ; 0.000         ;
++---------------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------------+
@@ -320,8 +318,8 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; btn[0]                                            ; -4.855 ; -19.416       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.706 ; -2.114        ;
+; btn[0]                                            ; -4.070 ; -12.206       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.681 ; -2.721        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -330,8 +328,8 @@ No synchronizer chains to report.
 +---------------------------------------------------+-------+---------------+
 ; Clock                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------+-------+---------------+
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.094 ; 0.000         ;
-; btn[0]                                            ; 2.180 ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.107 ; 0.000         ;
+; btn[0]                                            ; 1.231 ; 0.000         ;
 +---------------------------------------------------+-------+---------------+
 
 
@@ -340,11 +338,11 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; clk                                               ; -0.786 ; -3.207        ;
-; btn[0]                                            ; -0.306 ; -1.421        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.044 ; -0.979        ;
-; frequency_divider:divider|clk_out                 ; 0.057  ; 0.000         ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.060  ; 0.000         ;
+; clk                                               ; -0.785 ; -3.211        ;
+; btn[0]                                            ; -0.308 ; -1.122        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.007 ; -0.076        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.003  ; 0.000         ;
+; frequency_divider:divider|clk_out                 ; 0.053  ; 0.000         ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -359,25 +357,25 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -4.730 ; -127.947      ;
-; clk                                               ; -3.944 ; -5.735        ;
-; frequency_divider:divider|clk_out                 ; -0.960 ; -1.883        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.310 ; -0.772        ;
-; btn[0]                                            ; 0.336  ; 0.000         ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -5.147 ; -127.458      ;
+; clk                                               ; -3.587 ; -5.356        ;
+; frequency_divider:divider|clk_out                 ; -1.050 ; -2.091        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.380 ; -0.863        ;
+; btn[0]                                            ; 0.324  ; 0.000         ;
 +---------------------------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                                         ;
-+---------------------------------------------------+-------+---------------+
-; Clock                                             ; Slack ; End Point TNS ;
-+---------------------------------------------------+-------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.043 ; 0.000         ;
-; btn[0]                                            ; 0.162 ; 0.000         ;
-; frequency_divider:divider|clk_out                 ; 0.164 ; 0.000         ;
-; clk                                               ; 0.179 ; 0.000         ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.340 ; 0.000         ;
-+---------------------------------------------------+-------+---------------+
++----------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                          ;
++---------------------------------------------------+--------+---------------+
+; Clock                                             ; Slack  ; End Point TNS ;
++---------------------------------------------------+--------+---------------+
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.151 ; -0.277        ;
+; clk                                               ; 0.176  ; 0.000         ;
+; btn[0]                                            ; 0.186  ; 0.000         ;
+; frequency_divider:divider|clk_out                 ; 0.203  ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.265  ; 0.000         ;
++---------------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------------+
@@ -385,8 +383,8 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; btn[0]                                            ; -3.916 ; -15.660       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.591 ; -1.769        ;
+; btn[0]                                            ; -3.175 ; -9.521        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.539 ; -2.153        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -395,8 +393,8 @@ No synchronizer chains to report.
 +---------------------------------------------------+-------+---------------+
 ; Clock                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------+-------+---------------+
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.030 ; 0.000         ;
-; btn[0]                                            ; 1.495 ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.055 ; 0.000         ;
+; btn[0]                                            ; 0.681 ; 0.000         ;
 +---------------------------------------------------+-------+---------------+
 
 
@@ -405,11 +403,11 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; clk                                               ; -0.737 ; -3.072        ;
-; btn[0]                                            ; -0.301 ; -1.380        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.004 ; -0.038        ;
-; frequency_divider:divider|clk_out                 ; 0.078  ; 0.000         ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.087  ; 0.000         ;
+; clk                                               ; -0.736 ; -3.038        ;
+; btn[0]                                            ; -0.301 ; -1.080        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.023  ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.039  ; 0.000         ;
+; frequency_divider:divider|clk_out                 ; 0.081  ; 0.000         ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -419,24 +417,24 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                              ;
-+----------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Clock                                              ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+----------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                   ; -8.285   ; 0.043 ; -7.092   ; 0.030   ; -0.888              ;
-;  ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -8.285   ; 0.043 ; N/A      ; N/A     ; -0.394              ;
-;  btn[0]                                            ; -0.320   ; 0.157 ; -7.092   ; 1.495   ; -0.394              ;
-;  clk                                               ; -5.732   ; 0.179 ; N/A      ; N/A     ; -0.888              ;
-;  frequency_divider:divider|clk_out                 ; -2.437   ; 0.164 ; N/A      ; N/A     ; -0.394              ;
-;  fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.063   ; 0.340 ; -1.726   ; 0.030   ; -0.394              ;
-; Design-wide TNS                                    ; -309.783 ; 0.0   ; -33.526  ; 0.0     ; -68.295             ;
-;  ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -287.722 ; 0.000 ; N/A      ; N/A     ; -54.882             ;
-;  btn[0]                                            ; -1.102   ; 0.000 ; -28.358  ; 0.000   ; -2.157              ;
-;  clk                                               ; -13.396  ; 0.000 ; N/A      ; N/A     ; -8.784              ;
-;  frequency_divider:divider|clk_out                 ; -4.776   ; 0.000 ; N/A      ; N/A     ; -1.128              ;
-;  fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -2.935   ; 0.000 ; -5.168   ; 0.000   ; -1.659              ;
-+----------------------------------------------------+----------+-------+----------+---------+---------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                               ;
++----------------------------------------------------+----------+--------+----------+---------+---------------------+
+; Clock                                              ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++----------------------------------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack                                   ; -9.133   ; -0.160 ; -6.084   ; 0.055   ; -0.887              ;
+;  ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -9.133   ; -0.160 ; N/A      ; N/A     ; -0.394              ;
+;  btn[0]                                            ; -0.319   ; 0.183  ; -6.084   ; 0.681   ; -0.394              ;
+;  clk                                               ; -5.199   ; 0.176  ; N/A      ; N/A     ; -0.887              ;
+;  frequency_divider:divider|clk_out                 ; -2.643   ; 0.203  ; N/A      ; N/A     ; -0.394              ;
+;  fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.252   ; 0.265  ; -1.591   ; 0.055   ; -0.394              ;
+; Design-wide TNS                                    ; -311.095 ; -0.277 ; -24.595  ; 0.0     ; -64.782             ;
+;  ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -288.605 ; -0.277 ; N/A      ; N/A     ; -51.336             ;
+;  btn[0]                                            ; -0.949   ; 0.000  ; -18.242  ; 0.000   ; -1.622              ;
+;  clk                                               ; -13.136  ; 0.000  ; N/A      ; N/A     ; -8.911              ;
+;  frequency_divider:divider|clk_out                 ; -5.138   ; 0.000  ; N/A      ; N/A     ; -1.096              ;
+;  fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -3.660   ; 0.000  ; -6.353   ; 0.000   ; -2.467              ;
++----------------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -681,15 +679,15 @@ No synchronizer chains to report.
 +---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                        ; To Clock                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
-; btn[0]                                            ; btn[0]                                            ; 0        ; 0        ; 0        ; 6        ;
+; btn[0]                                            ; btn[0]                                            ; 0        ; 0        ; 0        ; 4        ;
 ; clk                                               ; clk                                               ; 50       ; 0        ; 0        ; 0        ;
 ; frequency_divider:divider|clk_out                 ; clk                                               ; 1        ; 1        ; 0        ; 0        ;
 ; btn[0]                                            ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0        ; 4        ; 0        ; 0        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 3843     ; 0        ; 0        ; 0        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 3790     ; 0        ; 0        ; 0        ;
 ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 11       ; 1        ; 0        ; 0        ;
 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; frequency_divider:divider|clk_out                 ; 40       ; 0        ; 0        ; 0        ;
 ; frequency_divider:divider|clk_out                 ; frequency_divider:divider|clk_out                 ; 3        ; 0        ; 0        ; 0        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 5        ; 0        ; 0        ; 0        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 6        ; 0        ; 0        ; 0        ;
 +---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -699,15 +697,15 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                        ; To Clock                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
-; btn[0]                                            ; btn[0]                                            ; 0        ; 0        ; 0        ; 6        ;
+; btn[0]                                            ; btn[0]                                            ; 0        ; 0        ; 0        ; 4        ;
 ; clk                                               ; clk                                               ; 50       ; 0        ; 0        ; 0        ;
 ; frequency_divider:divider|clk_out                 ; clk                                               ; 1        ; 1        ; 0        ; 0        ;
 ; btn[0]                                            ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0        ; 4        ; 0        ; 0        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 3843     ; 0        ; 0        ; 0        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 3790     ; 0        ; 0        ; 0        ;
 ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 11       ; 1        ; 0        ; 0        ;
 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; frequency_divider:divider|clk_out                 ; 40       ; 0        ; 0        ; 0        ;
 ; frequency_divider:divider|clk_out                 ; frequency_divider:divider|clk_out                 ; 3        ; 0        ; 0        ; 0        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 5        ; 0        ; 0        ; 0        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 6        ; 0        ; 0        ; 0        ;
 +---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -717,8 +715,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                        ; To Clock                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------+---------------------------------------------------+----------+----------+----------+----------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz ; btn[0]                                            ; 0        ; 0        ; 20       ; 0        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 15       ; 0        ; 0        ; 0        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz ; btn[0]                                            ; 0        ; 0        ; 15       ; 0        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 20       ; 0        ; 0        ; 0        ;
 +-----------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -728,8 +726,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                        ; To Clock                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------+---------------------------------------------------+----------+----------+----------+----------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz ; btn[0]                                            ; 0        ; 0        ; 20       ; 0        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 15       ; 0        ; 0        ; 0        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz ; btn[0]                                            ; 0        ; 0        ; 15       ; 0        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 20       ; 0        ; 0        ; 0        ;
 +-----------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -756,7 +754,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 2     ; 2    ;
 ; Unconstrained Input Port Paths  ; 99    ; 99   ;
 ; Unconstrained Output Ports      ; 37    ; 37   ;
-; Unconstrained Output Port Paths ; 1106  ; 1106 ;
+; Unconstrained Output Port Paths ; 1249  ; 1249 ;
 +---------------------------------+-------+------+
 
 
@@ -889,11 +887,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 02 21:51:35 2019
+    Info: Processing started: Fri May  3 01:16:04 2019
 Info: Command: quartus_sta VGA -c VGA
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'VGA.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -901,8 +899,8 @@ Info (332142): No user constrained base clocks found in the design. Calling "der
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name ClkDivisor:VGAClkDivisor|clk25Mhz ClkDivisor:VGAClkDivisor|clk25Mhz
     Info (332105): create_clock -period 1.000 -name clk clk
-    Info (332105): create_clock -period 1.000 -name btn[0] btn[0]
     Info (332105): create_clock -period 1.000 -name fsm_top:fsm|frequency_divider_fsm:divider|clk_out fsm_top:fsm|frequency_divider_fsm:divider|clk_out
+    Info (332105): create_clock -period 1.000 -name btn[0] btn[0]
     Info (332105): create_clock -period 1.000 -name frequency_divider:divider|clk_out frequency_divider:divider|clk_out
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
@@ -910,164 +908,164 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.285
+Info (332146): Worst-case setup slack is -9.133
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.285            -287.722 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -5.732             -13.248 clk 
-    Info (332119):    -2.437              -4.776 frequency_divider:divider|clk_out 
-    Info (332119):    -1.063              -2.935 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):    -0.320              -1.102 btn[0] 
-Info (332146): Worst-case hold slack is 0.264
+    Info (332119):    -9.133            -288.605 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -5.199             -12.758 clk 
+    Info (332119):    -2.643              -5.138 frequency_divider:divider|clk_out 
+    Info (332119):    -1.243              -3.645 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):    -0.319              -0.949 btn[0] 
+Info (332146): Worst-case hold slack is 0.055
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.264               0.000 btn[0] 
-    Info (332119):     0.387               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.388               0.000 clk 
-    Info (332119):     0.705               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     0.811               0.000 frequency_divider:divider|clk_out 
-Info (332146): Worst-case recovery slack is -7.092
+    Info (332119):     0.055               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.314               0.000 btn[0] 
+    Info (332119):     0.381               0.000 clk 
+    Info (332119):     0.566               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.786               0.000 frequency_divider:divider|clk_out 
+Info (332146): Worst-case recovery slack is -6.084
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.092             -28.358 btn[0] 
-    Info (332119):    -1.726              -5.168 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case removal slack is 0.676
+    Info (332119):    -6.084             -18.242 btn[0] 
+    Info (332119):    -1.591              -6.353 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+Info (332146): Worst-case removal slack is 0.678
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.676               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     2.368               0.000 btn[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.888
+    Info (332119):     0.678               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     1.145               0.000 btn[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.887
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.888              -8.253 clk 
-    Info (332119):    -0.394             -54.882 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.394              -2.157 btn[0] 
-    Info (332119):    -0.394              -1.659 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):    -0.394              -1.128 frequency_divider:divider|clk_out 
+    Info (332119):    -0.887              -8.261 clk 
+    Info (332119):    -0.394             -51.336 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.394              -2.467 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):    -0.394              -1.622 btn[0] 
+    Info (332119):    -0.394              -1.096 frequency_divider:divider|clk_out 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.238
+Info (332146): Worst-case setup slack is -9.081
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.238            -282.268 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -5.650             -13.396 clk 
-    Info (332119):    -2.347              -4.660 frequency_divider:divider|clk_out 
-    Info (332119):    -1.063              -2.923 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):    -0.315              -1.080 btn[0] 
-Info (332146): Worst-case hold slack is 0.289
+    Info (332119):    -9.081            -283.525 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -5.076             -13.136 clk 
+    Info (332119):    -2.519              -4.890 frequency_divider:divider|clk_out 
+    Info (332119):    -1.252              -3.660 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):    -0.314              -0.932 btn[0] 
+Info (332146): Worst-case hold slack is 0.146
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.289               0.000 btn[0] 
-    Info (332119):     0.364               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.403               0.000 clk 
-    Info (332119):     0.664               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     0.786               0.000 frequency_divider:divider|clk_out 
-Info (332146): Worst-case recovery slack is -6.520
+    Info (332119):     0.146               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.329               0.000 btn[0] 
+    Info (332119):     0.391               0.000 clk 
+    Info (332119):     0.548               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.744               0.000 frequency_divider:divider|clk_out 
+Info (332146): Worst-case recovery slack is -5.478
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.520             -26.070 btn[0] 
-    Info (332119):    -1.654              -4.952 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case removal slack is 0.583
+    Info (332119):    -5.478             -16.424 btn[0] 
+    Info (332119):    -1.493              -5.960 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+Info (332146): Worst-case removal slack is 0.627
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.583               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     1.982               0.000 btn[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.877
+    Info (332119):     0.627               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.820               0.000 btn[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.875
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.877              -8.784 clk 
-    Info (332119):    -0.394             -54.637 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.394              -2.138 btn[0] 
-    Info (332119):    -0.394              -1.617 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):    -0.394              -1.119 frequency_divider:divider|clk_out 
+    Info (332119):    -0.875              -8.911 clk 
+    Info (332119):    -0.394             -50.222 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.394              -2.408 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):    -0.394              -1.612 btn[0] 
+    Info (332119):    -0.394              -1.085 frequency_divider:divider|clk_out 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.840
+Info (332146): Worst-case setup slack is -5.283
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.840            -144.695 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -4.570              -6.556 clk 
-    Info (332119):    -1.080              -2.145 frequency_divider:divider|clk_out 
-    Info (332119):    -0.369              -0.936 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     0.304               0.000 btn[0] 
-Info (332146): Worst-case hold slack is 0.093
+    Info (332119):    -5.283            -144.383 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -4.180              -6.102 clk 
+    Info (332119):    -1.217              -2.430 frequency_divider:divider|clk_out 
+    Info (332119):    -0.450              -1.083 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.263               0.000 btn[0] 
+Info (332146): Worst-case hold slack is -0.160
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.093               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.157               0.000 btn[0] 
-    Info (332119):     0.188               0.000 clk 
-    Info (332119):     0.222               0.000 frequency_divider:divider|clk_out 
-    Info (332119):     0.379               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case recovery slack is -4.855
+    Info (332119):    -0.160              -0.212 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.183               0.000 btn[0] 
+    Info (332119):     0.186               0.000 clk 
+    Info (332119):     0.259               0.000 frequency_divider:divider|clk_out 
+    Info (332119):     0.292               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+Info (332146): Worst-case recovery slack is -4.070
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.855             -19.416 btn[0] 
-    Info (332119):    -0.706              -2.114 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case removal slack is 0.094
+    Info (332119):    -4.070             -12.206 btn[0] 
+    Info (332119):    -0.681              -2.721 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+Info (332146): Worst-case removal slack is 0.107
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.094               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     2.180               0.000 btn[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.786
+    Info (332119):     0.107               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     1.231               0.000 btn[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.785
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.786              -3.207 clk 
-    Info (332119):    -0.306              -1.421 btn[0] 
-    Info (332119):    -0.044              -0.979 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.057               0.000 frequency_divider:divider|clk_out 
-    Info (332119):     0.060               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):    -0.785              -3.211 clk 
+    Info (332119):    -0.308              -1.122 btn[0] 
+    Info (332119):    -0.007              -0.076 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.003               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.053               0.000 frequency_divider:divider|clk_out 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.730
+Info (332146): Worst-case setup slack is -5.147
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.730            -127.947 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -3.944              -5.735 clk 
-    Info (332119):    -0.960              -1.883 frequency_divider:divider|clk_out 
-    Info (332119):    -0.310              -0.772 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     0.336               0.000 btn[0] 
-Info (332146): Worst-case hold slack is 0.043
+    Info (332119):    -5.147            -127.458 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -3.587              -5.356 clk 
+    Info (332119):    -1.050              -2.091 frequency_divider:divider|clk_out 
+    Info (332119):    -0.380              -0.863 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.324               0.000 btn[0] 
+Info (332146): Worst-case hold slack is -0.151
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.043               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.162               0.000 btn[0] 
-    Info (332119):     0.164               0.000 frequency_divider:divider|clk_out 
-    Info (332119):     0.179               0.000 clk 
-    Info (332119):     0.340               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case recovery slack is -3.916
+    Info (332119):    -0.151              -0.277 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.176               0.000 clk 
+    Info (332119):     0.186               0.000 btn[0] 
+    Info (332119):     0.203               0.000 frequency_divider:divider|clk_out 
+    Info (332119):     0.265               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+Info (332146): Worst-case recovery slack is -3.175
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.916             -15.660 btn[0] 
-    Info (332119):    -0.591              -1.769 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case removal slack is 0.030
+    Info (332119):    -3.175              -9.521 btn[0] 
+    Info (332119):    -0.539              -2.153 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+Info (332146): Worst-case removal slack is 0.055
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.030               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     1.495               0.000 btn[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.737
+    Info (332119):     0.055               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.681               0.000 btn[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.736
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.737              -3.072 clk 
-    Info (332119):    -0.301              -1.380 btn[0] 
-    Info (332119):    -0.004              -0.038 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.078               0.000 frequency_divider:divider|clk_out 
-    Info (332119):     0.087               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):    -0.736              -3.038 clk 
+    Info (332119):    -0.301              -1.080 btn[0] 
+    Info (332119):     0.023               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.039               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.081               0.000 frequency_divider:divider|clk_out 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5157 megabytes
-    Info: Processing ended: Thu May 02 21:51:42 2019
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 1181 megabytes
+    Info: Processing ended: Fri May  3 01:16:10 2019
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 
 

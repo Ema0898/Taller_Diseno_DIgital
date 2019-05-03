@@ -1,0 +1,8 @@
+module VGA_test()
+	
+	logic clk, reset, vga_hs, vga_vs, vga_blank_n, clockVGA;
+	logic [1:0] btn, zone;
+	logic [6:0] display;
+	logic [7:0] red, green, blue;
+	
+endmodule 
