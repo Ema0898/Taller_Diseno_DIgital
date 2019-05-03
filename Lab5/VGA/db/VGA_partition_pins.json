@@ -144,7 +144,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "btn[0]",
+					"name" : "zone[0]",
+					"strict" : false
+				},
+				{
+					"name" : "zone[1]",
 					"strict" : false
 				},
 				{
@@ -152,11 +156,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "btn[2]",
-					"strict" : false
-				},
-				{
-					"name" : "btn[3]",
+					"name" : "btn[0]",
 					"strict" : false
 				},
 				{

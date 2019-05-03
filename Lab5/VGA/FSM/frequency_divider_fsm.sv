@@ -10,7 +10,7 @@ module frequency_divider_fsm
 					counter <= 28'd0;
 					clk_out <= 1'b0;
 				end
-			else if(counter == 28'd50000000)
+			else if(counter == 28'd25000000)
 				begin
 					counter <= 28'd0;
 					clk_out <= ~clk_out;

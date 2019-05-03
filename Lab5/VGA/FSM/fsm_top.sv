@@ -1,9 +1,7 @@
-module fsm_top(input logic [3:0] button, input logic clk, reset, guess, output logic[2:0] out);
+module fsm_top(input logic button, input logic clk, reset, guess, output logic[2:0] out);
 
-	logic low_clock, btn, rst, seg3;
+	logic low_clock, rst, seg3;
 	logic [2:0] outCounter;
-	
-	assign btn = |(button);
 	
 	assign rst = ((~out[1] & out[0] & ~out[2]) | ((~out[0] & out[1] & ~out[2])) | (out[2] & ~out[1] & out[0]));
 	
@@ -12,6 +10,6 @@ module fsm_top(input logic [3:0] button, input logic clk, reset, guess, output l
 	
 	assign seg3 = (outCounter == 3);		
 	
-	fsm fsm(seg3, btn, guess, clk, reset, out);
+	fsm fsm(seg3, button, guess, clk, reset, out);
 	
 endmodule 

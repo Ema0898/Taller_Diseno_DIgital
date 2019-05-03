@@ -1,5 +1,5 @@
 Timing Analyzer report for VGA
-Thu May 02 04:46:59 2019
+Thu May 02 21:33:46 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -101,14 +101,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.24        ;
+; Average used               ; 1.26        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   8.3%      ;
-;     Processor 3            ;   8.1%      ;
-;     Processor 4            ;   8.0%      ;
+;     Processor 2            ;   9.0%      ;
+;     Processor 3            ;   8.8%      ;
+;     Processor 4            ;   8.6%      ;
 +----------------------------+-------------+
 
 
@@ -117,6 +117,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------------------+
 ; Clock Name                                        ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                               ;
 +---------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------------------+
+; btn[0]                                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { btn[0] }                                            ;
 ; clk                                               ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                               ;
 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ClkDivisor:VGAClkDivisor|clk25Mhz }                 ;
 ; frequency_divider:divider|clk_out                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { frequency_divider:divider|clk_out }                 ;
@@ -125,17 +126,18 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                                                      ;
-+------------+-----------------+---------------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                        ; Note ;
-+------------+-----------------+---------------------------------------------------+------+
-; 157.41 MHz ; 157.41 MHz      ; clk                                               ;      ;
-; 192.01 MHz ; 192.01 MHz      ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ;      ;
-; 426.8 MHz  ; 426.8 MHz       ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ;      ;
-; 455.58 MHz ; 455.58 MHz      ; frequency_divider:divider|clk_out                 ;      ;
-; 550.66 MHz ; 550.66 MHz      ; frequency_divider_deb:fddeb|clk_out               ;      ;
-+------------+-----------------+---------------------------------------------------+------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                                                                                       ;
++------------+-----------------+---------------------------------------------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                                        ; Note                                                  ;
++------------+-----------------+---------------------------------------------------+-------------------------------------------------------+
+; 89.29 MHz  ; 89.29 MHz       ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ;                                                       ;
+; 165.54 MHz ; 165.54 MHz      ; clk                                               ;                                                       ;
+; 452.9 MHz  ; 452.9 MHz       ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ;                                                       ;
+; 454.96 MHz ; 454.96 MHz      ; frequency_divider:divider|clk_out                 ;                                                       ;
+; 515.2 MHz  ; 515.2 MHz       ; frequency_divider_deb:fddeb|clk_out               ;                                                       ;
+; 761.04 MHz ; 643.5 MHz       ; btn[0]                                            ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+---------------------------------------------------+-------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -145,17 +147,18 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+----------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary                                        ;
-+---------------------------------------------------+--------+---------------+
-; Clock                                             ; Slack  ; End Point TNS ;
-+---------------------------------------------------+--------+---------------+
-; clk                                               ; -5.353 ; -111.635      ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -4.208 ; -257.501      ;
-; frequency_divider:divider|clk_out                 ; -2.733 ; -5.466        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.343 ; -2.154        ;
-; frequency_divider_deb:fddeb|clk_out               ; -0.816 ; -1.631        ;
-+---------------------------------------------------+--------+---------------+
++-----------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                                         ;
++---------------------------------------------------+---------+---------------+
+; Clock                                             ; Slack   ; End Point TNS ;
++---------------------------------------------------+---------+---------------+
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -10.200 ; -306.439      ;
+; clk                                               ; -5.041  ; -121.993      ;
+; frequency_divider:divider|clk_out                 ; -2.689  ; -5.378        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.208  ; -3.036        ;
+; frequency_divider_deb:fddeb|clk_out               ; -0.941  ; -0.941        ;
+; btn[0]                                            ; -0.314  ; -1.111        ;
++---------------------------------------------------+---------+---------------+
 
 
 +---------------------------------------------------------------------------+
@@ -163,11 +166,12 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------+-------+---------------+
 ; Clock                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------+-------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.289 ; 0.000         ;
-; clk                                               ; 0.442 ; 0.000         ;
-; frequency_divider:divider|clk_out                 ; 0.603 ; 0.000         ;
-; frequency_divider_deb:fddeb|clk_out               ; 0.706 ; 0.000         ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.750 ; 0.000         ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.288 ; 0.000         ;
+; btn[0]                                            ; 0.325 ; 0.000         ;
+; clk                                               ; 0.431 ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.536 ; 0.000         ;
+; frequency_divider:divider|clk_out                 ; 0.729 ; 0.000         ;
+; frequency_divider_deb:fddeb|clk_out               ; 0.792 ; 0.000         ;
 +---------------------------------------------------+-------+---------------+
 
 
@@ -176,8 +180,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -2.142 ; -138.116      ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.588 ; -3.135        ;
+; btn[0]                                            ; -5.798 ; -23.188       ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -1.940 ; -112.275      ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.704 ; -5.102        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -186,8 +191,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------+-------+---------------+
 ; Clock                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------+-------+---------------+
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.643 ; 0.000         ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.872 ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.625 ; 0.000         ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.648 ; 0.000         ;
+; btn[0]                                            ; 1.238 ; 0.000         ;
 +---------------------------------------------------+-------+---------------+
 
 
@@ -196,11 +202,12 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; clk                                               ; -0.900 ; -28.056       ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.394 ; -49.750       ;
-; frequency_divider_deb:fddeb|clk_out               ; -0.394 ; -1.791        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.394 ; -1.269        ;
-; frequency_divider:divider|clk_out                 ; -0.394 ; -1.158        ;
+; clk                                               ; -0.912 ; -32.350       ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.394 ; -48.830       ;
+; btn[0]                                            ; -0.394 ; -2.677        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.394 ; -1.596        ;
+; frequency_divider:divider|clk_out                 ; -0.394 ; -1.116        ;
+; frequency_divider_deb:fddeb|clk_out               ; -0.394 ; -1.101        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -210,17 +217,18 @@ HTML report is unavailable in plain text report export.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                                                       ;
-+------------+-----------------+---------------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                        ; Note ;
-+------------+-----------------+---------------------------------------------------+------+
-; 152.32 MHz ; 152.32 MHz      ; clk                                               ;      ;
-; 193.8 MHz  ; 193.8 MHz       ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ;      ;
-; 422.48 MHz ; 422.48 MHz      ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ;      ;
-; 454.13 MHz ; 454.13 MHz      ; frequency_divider:divider|clk_out                 ;      ;
-; 553.1 MHz  ; 553.1 MHz       ; frequency_divider_deb:fddeb|clk_out               ;      ;
-+------------+-----------------+---------------------------------------------------+------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                                                                                 ;
++------------+-----------------+---------------------------------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                                        ; Note                                           ;
++------------+-----------------+---------------------------------------------------+------------------------------------------------+
+; 94.34 MHz  ; 94.34 MHz       ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ;                                                ;
+; 158.5 MHz  ; 158.5 MHz       ; clk                                               ;                                                ;
+; 447.83 MHz ; 447.83 MHz      ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ;                                                ;
+; 453.51 MHz ; 453.51 MHz      ; frequency_divider:divider|clk_out                 ;                                                ;
+; 518.4 MHz  ; 518.4 MHz       ; frequency_divider_deb:fddeb|clk_out               ;                                                ;
+; 761.61 MHz ; 717.36 MHz      ; btn[0]                                            ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+---------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -229,11 +237,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; clk                                               ; -5.565 ; -108.895      ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -4.160 ; -253.352      ;
-; frequency_divider:divider|clk_out                 ; -2.642 ; -5.284        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.367 ; -2.166        ;
-; frequency_divider_deb:fddeb|clk_out               ; -0.808 ; -1.614        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -9.600 ; -300.740      ;
+; clk                                               ; -5.309 ; -121.682      ;
+; frequency_divider:divider|clk_out                 ; -2.605 ; -5.210        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.233 ; -3.075        ;
+; frequency_divider_deb:fddeb|clk_out               ; -0.929 ; -0.929        ;
+; btn[0]                                            ; -0.313 ; -1.105        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -242,11 +251,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+-------+---------------+
 ; Clock                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------+-------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.320 ; 0.000         ;
-; clk                                               ; 0.458 ; 0.000         ;
-; frequency_divider:divider|clk_out                 ; 0.573 ; 0.000         ;
-; frequency_divider_deb:fddeb|clk_out               ; 0.703 ; 0.000         ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.714 ; 0.000         ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.290 ; 0.000         ;
+; btn[0]                                            ; 0.373 ; 0.000         ;
+; clk                                               ; 0.439 ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.517 ; 0.000         ;
+; frequency_divider:divider|clk_out                 ; 0.671 ; 0.000         ;
+; frequency_divider_deb:fddeb|clk_out               ; 0.773 ; 0.000         ;
 +---------------------------------------------------+-------+---------------+
 
 
@@ -255,8 +265,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -2.041 ; -131.395      ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.512 ; -2.990        ;
+; btn[0]                                            ; -5.295 ; -21.170       ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -1.845 ; -106.835      ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.689 ; -5.057        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -265,8 +276,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+-------+---------------+
 ; Clock                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------+-------+---------------+
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.603 ; 0.000         ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.782 ; 0.000         ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.556 ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.588 ; 0.000         ;
+; btn[0]                                            ; 0.971 ; 0.000         ;
 +---------------------------------------------------+-------+---------------+
 
 
@@ -275,11 +287,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; clk                                               ; -0.892 ; -30.339       ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.394 ; -48.717       ;
-; frequency_divider_deb:fddeb|clk_out               ; -0.394 ; -1.761        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.394 ; -1.236        ;
-; frequency_divider:divider|clk_out                 ; -0.394 ; -1.120        ;
+; clk                                               ; -0.908 ; -35.806       ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.394 ; -47.295       ;
+; btn[0]                                            ; -0.394 ; -2.146        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.394 ; -1.578        ;
+; frequency_divider_deb:fddeb|clk_out               ; -0.394 ; -1.097        ;
+; frequency_divider:divider|clk_out                 ; -0.394 ; -1.078        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -294,11 +307,12 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; clk                                               ; -4.054 ; -53.899       ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -2.110 ; -122.758      ;
-; frequency_divider:divider|clk_out                 ; -1.285 ; -2.570        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.519 ; -0.742        ;
-; frequency_divider_deb:fddeb|clk_out               ; -0.266 ; -0.531        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -6.590 ; -160.442      ;
+; clk                                               ; -4.035 ; -53.263       ;
+; frequency_divider:divider|clk_out                 ; -1.222 ; -2.444        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.411 ; -0.931        ;
+; frequency_divider_deb:fddeb|clk_out               ; -0.337 ; -0.337        ;
+; btn[0]                                            ; 0.283  ; 0.000         ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -307,11 +321,12 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.012 ; -0.012        ;
-; frequency_divider:divider|clk_out                 ; 0.170  ; 0.000         ;
-; clk                                               ; 0.202  ; 0.000         ;
-; frequency_divider_deb:fddeb|clk_out               ; 0.363  ; 0.000         ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.401  ; 0.000         ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.078 ; -0.142        ;
+; btn[0]                                            ; 0.176  ; 0.000         ;
+; frequency_divider:divider|clk_out                 ; 0.179  ; 0.000         ;
+; clk                                               ; 0.198  ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.289  ; 0.000         ;
+; frequency_divider_deb:fddeb|clk_out               ; 0.403  ; 0.000         ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -320,8 +335,9 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -1.061 ; -67.477       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.702 ; -1.365        ;
+; btn[0]                                            ; -3.951 ; -15.799       ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.895 ; -49.200       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.710 ; -2.126        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -330,8 +346,9 @@ No synchronizer chains to report.
 +---------------------------------------------------+-------+---------------+
 ; Clock                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------+-------+---------------+
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.071 ; 0.000         ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.298 ; 0.000         ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.094 ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.135 ; 0.000         ;
+; btn[0]                                            ; 1.336 ; 0.000         ;
 +---------------------------------------------------+-------+---------------+
 
 
@@ -340,11 +357,12 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; clk                                               ; -0.794 ; -7.210        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.012 ; -0.022        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.008  ; 0.000         ;
-; frequency_divider_deb:fddeb|clk_out               ; 0.012  ; 0.000         ;
-; frequency_divider:divider|clk_out                 ; 0.043  ; 0.000         ;
+; clk                                               ; -0.790 ; -7.770        ;
+; btn[0]                                            ; -0.312 ; -1.445        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.022 ; -0.249        ;
+; frequency_divider_deb:fddeb|clk_out               ; 0.054  ; 0.000         ;
+; frequency_divider:divider|clk_out                 ; 0.056  ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.117  ; 0.000         ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -359,11 +377,12 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; clk                                               ; -3.508 ; -45.844       ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -1.893 ; -108.797      ;
-; frequency_divider:divider|clk_out                 ; -1.112 ; -2.224        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.433 ; -0.608        ;
-; frequency_divider_deb:fddeb|clk_out               ; -0.198 ; -0.395        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -5.682 ; -142.485      ;
+; clk                                               ; -3.522 ; -46.380       ;
+; frequency_divider:divider|clk_out                 ; -1.063 ; -2.126        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.359 ; -0.790        ;
+; frequency_divider_deb:fddeb|clk_out               ; -0.259 ; -0.259        ;
+; btn[0]                                            ; 0.328  ; 0.000         ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -372,11 +391,12 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.044 ; -0.044        ;
-; frequency_divider:divider|clk_out                 ; 0.122  ; 0.000         ;
-; clk                                               ; 0.195  ; 0.000         ;
-; frequency_divider_deb:fddeb|clk_out               ; 0.332  ; 0.000         ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.356  ; 0.000         ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.102 ; -0.261        ;
+; frequency_divider:divider|clk_out                 ; 0.126  ; 0.000         ;
+; btn[0]                                            ; 0.183  ; 0.000         ;
+; clk                                               ; 0.189  ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.257  ; 0.000         ;
+; frequency_divider_deb:fddeb|clk_out               ; 0.365  ; 0.000         ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -385,8 +405,9 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.896 ; -57.119       ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.574 ; -1.116        ;
+; btn[0]                                            ; -3.083 ; -12.330       ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -0.755 ; -41.169       ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -0.620 ; -1.856        ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -395,8 +416,9 @@ No synchronizer chains to report.
 +---------------------------------------------------+-------+---------------+
 ; Clock                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------+-------+---------------+
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.024 ; 0.000         ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.215 ; 0.000         ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.031 ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.085 ; 0.000         ;
+; btn[0]                                            ; 0.749 ; 0.000         ;
 +---------------------------------------------------+-------+---------------+
 
 
@@ -405,11 +427,12 @@ No synchronizer chains to report.
 +---------------------------------------------------+--------+---------------+
 ; Clock                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------+--------+---------------+
-; clk                                               ; -0.746 ; -7.143        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.029  ; 0.000         ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.044  ; 0.000         ;
-; frequency_divider_deb:fddeb|clk_out               ; 0.051  ; 0.000         ;
-; frequency_divider:divider|clk_out                 ; 0.073  ; 0.000         ;
+; clk                                               ; -0.755 ; -7.687        ;
+; btn[0]                                            ; -0.311 ; -1.421        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0.022  ; 0.000         ;
+; frequency_divider_deb:fddeb|clk_out               ; 0.079  ; 0.000         ;
+; frequency_divider:divider|clk_out                 ; 0.084  ; 0.000         ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 0.130  ; 0.000         ;
 +---------------------------------------------------+--------+---------------+
 
 
@@ -424,18 +447,20 @@ No synchronizer chains to report.
 +----------------------------------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                                              ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                   ; -5.565   ; -0.044 ; -2.142   ; 0.024   ; -0.900              ;
-;  ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -4.208   ; -0.044 ; -2.142   ; 0.215   ; -0.394              ;
-;  clk                                               ; -5.565   ; 0.195  ; N/A      ; N/A     ; -0.900              ;
-;  frequency_divider:divider|clk_out                 ; -2.733   ; 0.122  ; N/A      ; N/A     ; -0.394              ;
-;  frequency_divider_deb:fddeb|clk_out               ; -0.816   ; 0.332  ; N/A      ; N/A     ; -0.394              ;
-;  fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.367   ; 0.356  ; -1.588   ; 0.024   ; -0.394              ;
-; Design-wide TNS                                    ; -378.387 ; -0.044 ; -141.251 ; 0.0     ; -83.173             ;
-;  ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -257.501 ; -0.044 ; -138.116 ; 0.000   ; -49.750             ;
-;  clk                                               ; -111.635 ; 0.000  ; N/A      ; N/A     ; -30.339             ;
-;  frequency_divider:divider|clk_out                 ; -5.466   ; 0.000  ; N/A      ; N/A     ; -1.158              ;
-;  frequency_divider_deb:fddeb|clk_out               ; -1.631   ; 0.000  ; N/A      ; N/A     ; -1.791              ;
-;  fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -2.166   ; 0.000  ; -3.135   ; 0.000   ; -1.269              ;
+; Worst-case Slack                                   ; -10.200  ; -0.102 ; -5.798   ; 0.031   ; -0.912              ;
+;  ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -10.200  ; -0.102 ; -1.940   ; 0.031   ; -0.394              ;
+;  btn[0]                                            ; -0.314   ; 0.176  ; -5.798   ; 0.749   ; -0.394              ;
+;  clk                                               ; -5.309   ; 0.189  ; N/A      ; N/A     ; -0.912              ;
+;  frequency_divider:divider|clk_out                 ; -2.689   ; 0.126  ; N/A      ; N/A     ; -0.394              ;
+;  frequency_divider_deb:fddeb|clk_out               ; -0.941   ; 0.365  ; N/A      ; N/A     ; -0.394              ;
+;  fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -1.233   ; 0.257  ; -1.704   ; 0.085   ; -0.394              ;
+; Design-wide TNS                                    ; -438.898 ; -0.261 ; -140.565 ; 0.0     ; -89.0               ;
+;  ClkDivisor:VGAClkDivisor|clk25Mhz                 ; -306.439 ; -0.261 ; -112.275 ; 0.000   ; -48.830             ;
+;  btn[0]                                            ; -1.111   ; 0.000  ; -23.188  ; 0.000   ; -2.677              ;
+;  clk                                               ; -121.993 ; 0.000  ; N/A      ; N/A     ; -35.806             ;
+;  frequency_divider:divider|clk_out                 ; -5.378   ; 0.000  ; N/A      ; N/A     ; -1.116              ;
+;  frequency_divider_deb:fddeb|clk_out               ; -0.941   ; 0.000  ; N/A      ; N/A     ; -1.101              ;
+;  fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; -3.075   ; 0.000  ; -5.102   ; 0.000   ; -1.596              ;
 +----------------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -479,6 +504,8 @@ No synchronizer chains to report.
 ; display[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; display[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; display[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; zone[0]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; zone[1]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +-------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
@@ -487,10 +514,8 @@ No synchronizer chains to report.
 +--------+--------------+-----------------+-----------------+
 ; Pin    ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +--------+--------------+-----------------+-----------------+
-; btn[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; btn[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; btn[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; btn[3] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; btn[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clk    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; reset  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +--------+--------------+-----------------+-----------------+
@@ -536,6 +561,8 @@ No synchronizer chains to report.
 ; display[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; display[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; display[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; zone[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; zone[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -579,6 +606,8 @@ No synchronizer chains to report.
 ; display[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; display[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; display[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; zone[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; zone[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -622,6 +651,8 @@ No synchronizer chains to report.
 ; display[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; display[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; display[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; zone[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; zone[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -665,6 +696,8 @@ No synchronizer chains to report.
 ; display[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; display[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 ; display[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; zone[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; zone[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -673,17 +706,19 @@ No synchronizer chains to report.
 +---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                        ; To Clock                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
-; clk                                               ; clk                                               ; 1626     ; 0        ; 0        ; 0        ;
+; btn[0]                                            ; btn[0]                                            ; 0        ; 0        ; 0        ; 6        ;
+; clk                                               ; clk                                               ; 1868     ; 0        ; 0        ; 0        ;
 ; frequency_divider:divider|clk_out                 ; clk                                               ; 1        ; 1        ; 0        ; 0        ;
 ; frequency_divider_deb:fddeb|clk_out               ; clk                                               ; 1        ; 1        ; 0        ; 0        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 3726     ; 0        ; 0        ; 0        ;
+; btn[0]                                            ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0        ; 4        ; 0        ; 0        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 3741     ; 0        ; 0        ; 0        ;
 ; frequency_divider_deb:fddeb|clk_out               ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 52       ; 0        ; 0        ; 0        ;
 ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 11       ; 1        ; 0        ; 0        ;
 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; frequency_divider:divider|clk_out                 ; 40       ; 0        ; 0        ; 0        ;
 ; frequency_divider:divider|clk_out                 ; frequency_divider:divider|clk_out                 ; 3        ; 0        ; 0        ; 0        ;
 ; frequency_divider_deb:fddeb|clk_out               ; frequency_divider:divider|clk_out                 ; 8        ; 0        ; 0        ; 0        ;
-; frequency_divider_deb:fddeb|clk_out               ; frequency_divider_deb:fddeb|clk_out               ; 2        ; 0        ; 0        ; 0        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 3        ; 0        ; 0        ; 0        ;
+; frequency_divider_deb:fddeb|clk_out               ; frequency_divider_deb:fddeb|clk_out               ; 1        ; 0        ; 0        ; 0        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 5        ; 0        ; 0        ; 0        ;
 +---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -693,17 +728,19 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                        ; To Clock                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
-; clk                                               ; clk                                               ; 1626     ; 0        ; 0        ; 0        ;
+; btn[0]                                            ; btn[0]                                            ; 0        ; 0        ; 0        ; 6        ;
+; clk                                               ; clk                                               ; 1868     ; 0        ; 0        ; 0        ;
 ; frequency_divider:divider|clk_out                 ; clk                                               ; 1        ; 1        ; 0        ; 0        ;
 ; frequency_divider_deb:fddeb|clk_out               ; clk                                               ; 1        ; 1        ; 0        ; 0        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 3726     ; 0        ; 0        ; 0        ;
+; btn[0]                                            ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 0        ; 4        ; 0        ; 0        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 3741     ; 0        ; 0        ; 0        ;
 ; frequency_divider_deb:fddeb|clk_out               ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 52       ; 0        ; 0        ; 0        ;
 ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 11       ; 1        ; 0        ; 0        ;
 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; frequency_divider:divider|clk_out                 ; 40       ; 0        ; 0        ; 0        ;
 ; frequency_divider:divider|clk_out                 ; frequency_divider:divider|clk_out                 ; 3        ; 0        ; 0        ; 0        ;
 ; frequency_divider_deb:fddeb|clk_out               ; frequency_divider:divider|clk_out                 ; 8        ; 0        ; 0        ; 0        ;
-; frequency_divider_deb:fddeb|clk_out               ; frequency_divider_deb:fddeb|clk_out               ; 2        ; 0        ; 0        ; 0        ;
-; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 3        ; 0        ; 0        ; 0        ;
+; frequency_divider_deb:fddeb|clk_out               ; frequency_divider_deb:fddeb|clk_out               ; 1        ; 0        ; 0        ; 0        ;
+; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 5        ; 0        ; 0        ; 0        ;
 +---------------------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -713,8 +750,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                          ; To Clock                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
-; frequency_divider_deb:fddeb|clk_out ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 134      ; 0        ; 0        ; 0        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz   ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 10       ; 0        ; 0        ; 0        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz   ; btn[0]                                            ; 0        ; 0        ; 20       ; 0        ;
+; frequency_divider_deb:fddeb|clk_out ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 130      ; 0        ; 0        ; 0        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz   ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 15       ; 0        ; 0        ; 0        ;
 +-------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -724,8 +762,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                          ; To Clock                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
-; frequency_divider_deb:fddeb|clk_out ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 134      ; 0        ; 0        ; 0        ;
-; ClkDivisor:VGAClkDivisor|clk25Mhz   ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 10       ; 0        ; 0        ; 0        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz   ; btn[0]                                            ; 0        ; 0        ; 20       ; 0        ;
+; frequency_divider_deb:fddeb|clk_out ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; 130      ; 0        ; 0        ; 0        ;
+; ClkDivisor:VGAClkDivisor|clk25Mhz   ; fsm_top:fsm|frequency_divider_fsm:divider|clk_out ; 15       ; 0        ; 0        ; 0        ;
 +-------------------------------------+---------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -749,10 +788,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 63    ; 63   ;
-; Unconstrained Output Ports      ; 35    ; 35   ;
-; Unconstrained Output Port Paths ; 1100  ; 1100 ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 57    ; 57   ;
+; Unconstrained Output Ports      ; 37    ; 37   ;
+; Unconstrained Output Port Paths ; 1130  ; 1130 ;
 +---------------------------------+-------+------+
 
 
@@ -762,6 +801,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Target                                            ; Clock                                             ; Type ; Status      ;
 +---------------------------------------------------+---------------------------------------------------+------+-------------+
 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; ClkDivisor:VGAClkDivisor|clk25Mhz                 ; Base ; Constrained ;
+; btn[0]                                            ; btn[0]                                            ; Base ; Constrained ;
 ; clk                                               ; clk                                               ; Base ; Constrained ;
 ; frequency_divider:divider|clk_out                 ; frequency_divider:divider|clk_out                 ; Base ; Constrained ;
 ; frequency_divider_deb:fddeb|clk_out               ; frequency_divider_deb:fddeb|clk_out               ; Base ; Constrained ;
@@ -774,10 +814,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; btn[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; btn[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; btn[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; btn[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
@@ -822,6 +859,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; vga_blank_n ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_hs      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_vs      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; zone[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; zone[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -830,10 +869,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; btn[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; btn[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; btn[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; btn[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
@@ -878,6 +914,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; vga_blank_n ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_hs      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_vs      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; zone[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; zone[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -887,7 +925,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 02 04:46:53 2019
+    Info: Processing started: Thu May 02 21:33:40 2019
 Info: Command: quartus_sta VGA -c VGA
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -900,6 +938,7 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name ClkDivisor:VGAClkDivisor|clk25Mhz ClkDivisor:VGAClkDivisor|clk25Mhz
     Info (332105): create_clock -period 1.000 -name clk clk
     Info (332105): create_clock -period 1.000 -name frequency_divider_deb:fddeb|clk_out frequency_divider_deb:fddeb|clk_out
+    Info (332105): create_clock -period 1.000 -name btn[0] btn[0]
     Info (332105): create_clock -period 1.000 -name fsm_top:fsm|frequency_divider_fsm:divider|clk_out fsm_top:fsm|frequency_divider_fsm:divider|clk_out
     Info (332105): create_clock -period 1.000 -name frequency_divider:divider|clk_out frequency_divider:divider|clk_out
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -908,163 +947,183 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.353
+Info (332146): Worst-case setup slack is -10.200
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.353            -111.635 clk 
-    Info (332119):    -4.208            -257.501 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -2.733              -5.466 frequency_divider:divider|clk_out 
-    Info (332119):    -1.343              -2.154 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):    -0.816              -1.631 frequency_divider_deb:fddeb|clk_out 
-Info (332146): Worst-case hold slack is 0.289
+    Info (332119):   -10.200            -306.439 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -5.041            -121.993 clk 
+    Info (332119):    -2.689              -5.378 frequency_divider:divider|clk_out 
+    Info (332119):    -1.208              -3.036 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):    -0.941              -0.941 frequency_divider_deb:fddeb|clk_out 
+    Info (332119):    -0.314              -1.111 btn[0] 
+Info (332146): Worst-case hold slack is 0.288
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.289               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.442               0.000 clk 
-    Info (332119):     0.603               0.000 frequency_divider:divider|clk_out 
-    Info (332119):     0.706               0.000 frequency_divider_deb:fddeb|clk_out 
-    Info (332119):     0.750               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case recovery slack is -2.142
+    Info (332119):     0.288               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.325               0.000 btn[0] 
+    Info (332119):     0.431               0.000 clk 
+    Info (332119):     0.536               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.729               0.000 frequency_divider:divider|clk_out 
+    Info (332119):     0.792               0.000 frequency_divider_deb:fddeb|clk_out 
+Info (332146): Worst-case recovery slack is -5.798
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.142            -138.116 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -1.588              -3.135 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case removal slack is 0.643
+    Info (332119):    -5.798             -23.188 btn[0] 
+    Info (332119):    -1.940            -112.275 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -1.704              -5.102 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+Info (332146): Worst-case removal slack is 0.625
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.643               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     0.872               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332146): Worst-case minimum pulse width slack is -0.900
+    Info (332119):     0.625               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.648               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     1.238               0.000 btn[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.912
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.900             -28.056 clk 
-    Info (332119):    -0.394             -49.750 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.394              -1.791 frequency_divider_deb:fddeb|clk_out 
-    Info (332119):    -0.394              -1.269 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):    -0.394              -1.158 frequency_divider:divider|clk_out 
+    Info (332119):    -0.912             -32.350 clk 
+    Info (332119):    -0.394             -48.830 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.394              -2.677 btn[0] 
+    Info (332119):    -0.394              -1.596 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):    -0.394              -1.116 frequency_divider:divider|clk_out 
+    Info (332119):    -0.394              -1.101 frequency_divider_deb:fddeb|clk_out 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.565
+Info (332146): Worst-case setup slack is -9.600
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.565            -108.895 clk 
-    Info (332119):    -4.160            -253.352 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -2.642              -5.284 frequency_divider:divider|clk_out 
-    Info (332119):    -1.367              -2.166 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):    -0.808              -1.614 frequency_divider_deb:fddeb|clk_out 
-Info (332146): Worst-case hold slack is 0.320
+    Info (332119):    -9.600            -300.740 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -5.309            -121.682 clk 
+    Info (332119):    -2.605              -5.210 frequency_divider:divider|clk_out 
+    Info (332119):    -1.233              -3.075 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):    -0.929              -0.929 frequency_divider_deb:fddeb|clk_out 
+    Info (332119):    -0.313              -1.105 btn[0] 
+Info (332146): Worst-case hold slack is 0.290
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.320               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.458               0.000 clk 
-    Info (332119):     0.573               0.000 frequency_divider:divider|clk_out 
-    Info (332119):     0.703               0.000 frequency_divider_deb:fddeb|clk_out 
-    Info (332119):     0.714               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case recovery slack is -2.041
+    Info (332119):     0.290               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.373               0.000 btn[0] 
+    Info (332119):     0.439               0.000 clk 
+    Info (332119):     0.517               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.671               0.000 frequency_divider:divider|clk_out 
+    Info (332119):     0.773               0.000 frequency_divider_deb:fddeb|clk_out 
+Info (332146): Worst-case recovery slack is -5.295
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.041            -131.395 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -1.512              -2.990 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case removal slack is 0.603
+    Info (332119):    -5.295             -21.170 btn[0] 
+    Info (332119):    -1.845            -106.835 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -1.689              -5.057 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+Info (332146): Worst-case removal slack is 0.556
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.603               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     0.782               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332146): Worst-case minimum pulse width slack is -0.892
+    Info (332119):     0.556               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.588               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.971               0.000 btn[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.908
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.892             -30.339 clk 
-    Info (332119):    -0.394             -48.717 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.394              -1.761 frequency_divider_deb:fddeb|clk_out 
-    Info (332119):    -0.394              -1.236 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):    -0.394              -1.120 frequency_divider:divider|clk_out 
+    Info (332119):    -0.908             -35.806 clk 
+    Info (332119):    -0.394             -47.295 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.394              -2.146 btn[0] 
+    Info (332119):    -0.394              -1.578 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):    -0.394              -1.097 frequency_divider_deb:fddeb|clk_out 
+    Info (332119):    -0.394              -1.078 frequency_divider:divider|clk_out 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.054
+Info (332146): Worst-case setup slack is -6.590
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.054             -53.899 clk 
-    Info (332119):    -2.110            -122.758 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -1.285              -2.570 frequency_divider:divider|clk_out 
-    Info (332119):    -0.519              -0.742 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):    -0.266              -0.531 frequency_divider_deb:fddeb|clk_out 
-Info (332146): Worst-case hold slack is -0.012
+    Info (332119):    -6.590            -160.442 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -4.035             -53.263 clk 
+    Info (332119):    -1.222              -2.444 frequency_divider:divider|clk_out 
+    Info (332119):    -0.411              -0.931 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):    -0.337              -0.337 frequency_divider_deb:fddeb|clk_out 
+    Info (332119):     0.283               0.000 btn[0] 
+Info (332146): Worst-case hold slack is -0.078
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.012              -0.012 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.170               0.000 frequency_divider:divider|clk_out 
-    Info (332119):     0.202               0.000 clk 
-    Info (332119):     0.363               0.000 frequency_divider_deb:fddeb|clk_out 
-    Info (332119):     0.401               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case recovery slack is -1.061
+    Info (332119):    -0.078              -0.142 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.176               0.000 btn[0] 
+    Info (332119):     0.179               0.000 frequency_divider:divider|clk_out 
+    Info (332119):     0.198               0.000 clk 
+    Info (332119):     0.289               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.403               0.000 frequency_divider_deb:fddeb|clk_out 
+Info (332146): Worst-case recovery slack is -3.951
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.061             -67.477 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.702              -1.365 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case removal slack is 0.071
+    Info (332119):    -3.951             -15.799 btn[0] 
+    Info (332119):    -0.895             -49.200 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.710              -2.126 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+Info (332146): Worst-case removal slack is 0.094
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.071               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     0.298               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332146): Worst-case minimum pulse width slack is -0.794
+    Info (332119):     0.094               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.135               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     1.336               0.000 btn[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.790
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.794              -7.210 clk 
-    Info (332119):    -0.012              -0.022 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     0.008               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.012               0.000 frequency_divider_deb:fddeb|clk_out 
-    Info (332119):     0.043               0.000 frequency_divider:divider|clk_out 
+    Info (332119):    -0.790              -7.770 clk 
+    Info (332119):    -0.312              -1.445 btn[0] 
+    Info (332119):    -0.022              -0.249 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.054               0.000 frequency_divider_deb:fddeb|clk_out 
+    Info (332119):     0.056               0.000 frequency_divider:divider|clk_out 
+    Info (332119):     0.117               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.508
+Info (332146): Worst-case setup slack is -5.682
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.508             -45.844 clk 
-    Info (332119):    -1.893            -108.797 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -1.112              -2.224 frequency_divider:divider|clk_out 
-    Info (332119):    -0.433              -0.608 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):    -0.198              -0.395 frequency_divider_deb:fddeb|clk_out 
-Info (332146): Worst-case hold slack is -0.044
+    Info (332119):    -5.682            -142.485 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -3.522             -46.380 clk 
+    Info (332119):    -1.063              -2.126 frequency_divider:divider|clk_out 
+    Info (332119):    -0.359              -0.790 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):    -0.259              -0.259 frequency_divider_deb:fddeb|clk_out 
+    Info (332119):     0.328               0.000 btn[0] 
+Info (332146): Worst-case hold slack is -0.102
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.044              -0.044 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.122               0.000 frequency_divider:divider|clk_out 
-    Info (332119):     0.195               0.000 clk 
-    Info (332119):     0.332               0.000 frequency_divider_deb:fddeb|clk_out 
-    Info (332119):     0.356               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case recovery slack is -0.896
+    Info (332119):    -0.102              -0.261 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.126               0.000 frequency_divider:divider|clk_out 
+    Info (332119):     0.183               0.000 btn[0] 
+    Info (332119):     0.189               0.000 clk 
+    Info (332119):     0.257               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.365               0.000 frequency_divider_deb:fddeb|clk_out 
+Info (332146): Worst-case recovery slack is -3.083
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.896             -57.119 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.574              -1.116 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-Info (332146): Worst-case removal slack is 0.024
+    Info (332119):    -3.083             -12.330 btn[0] 
+    Info (332119):    -0.755             -41.169 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.620              -1.856 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+Info (332146): Worst-case removal slack is 0.031
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.024               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     0.215               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332146): Worst-case minimum pulse width slack is -0.746
+    Info (332119):     0.031               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.085               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
+    Info (332119):     0.749               0.000 btn[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.755
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.746              -7.143 clk 
-    Info (332119):     0.029               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
-    Info (332119):     0.044               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.051               0.000 frequency_divider_deb:fddeb|clk_out 
-    Info (332119):     0.073               0.000 frequency_divider:divider|clk_out 
+    Info (332119):    -0.755              -7.687 clk 
+    Info (332119):    -0.311              -1.421 btn[0] 
+    Info (332119):     0.022               0.000 ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.079               0.000 frequency_divider_deb:fddeb|clk_out 
+    Info (332119):     0.084               0.000 frequency_divider:divider|clk_out 
+    Info (332119):     0.130               0.000 fsm_top:fsm|frequency_divider_fsm:divider|clk_out 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5160 megabytes
-    Info: Processing ended: Thu May 02 04:46:59 2019
+    Info: Peak virtual memory: 5158 megabytes
+    Info: Processing ended: Thu May 02 21:33:46 2019
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 

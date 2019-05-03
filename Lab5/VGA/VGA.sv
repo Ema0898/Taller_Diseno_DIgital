@@ -1,7 +1,7 @@
 module VGA (
     input clk,  // Clock FPGA
     input reset,
-	 input logic [3:0] btn,
+	 input logic [1:0] btn,
     output vga_hs,
     output vga_vs,
     output logic [7:0] red,
@@ -9,7 +9,8 @@ module VGA (
     output logic [7:0] blue,
     output vga_blank_n,
     output clockVGA, 
-	 output logic [6:0] display
+	 output logic [6:0] display,
+	 output logic [1:0] zone
     );
     
     logic [9:0] hCounter, vCounter, limitX, finalPosX, finalPosY;	 
@@ -21,7 +22,7 @@ module VGA (
 	 
 	 logic [3:0] nBtn;
 	 
-	 logic [1:0] zone;
+	 logic [1:0] counterSelect;
 	 logic [2:0] state;
 	 	 
 	 logic refreshDraw, low_clock, slower_clock, d_reset, guess;
@@ -31,8 +32,6 @@ module VGA (
 	 
 	 assign nBtn[0] = ~btn[0];
 	 assign nBtn[1] = ~btn[1];
-	 assign nBtn[2] = ~btn[2];
-	 assign nBtn[3] = ~btn[3];
 	     
     ClkDivisor VGAClkDivisor(clk,clockVGA);
 	 frequency_divider divider(clk, reset, low_clock);
@@ -53,10 +52,11 @@ module VGA (
 									refreshDraw
 									
 									);
-		 
+	
+	counterBtn count(clk, ~state[0] & ~state[1] & ~state[2], nBtn[0], counterSelect);
 	random rnd(clockVGA, d_reset, state, zone, rposX, rposY, limitX);
-	win_module win(nBtn, zone, guess);
-	fsm_top fsm(nBtn, clockVGA, d_reset, guess, state);
+	win_module win(counterSelect, zone, guess);
+	fsm_top fsm(nBtn[1], clockVGA, d_reset, guess, state);
 	
 	//animation anm(clockVGA, low_clock, d_reset, refreshDraw, posX, s, newPosX);
 	
@@ -64,7 +64,7 @@ module VGA (
 
 	mux_8_x_1 #(24) muxX(posX, rposX, rposX, newPosX, newPosX, posX, 'b0, 'b0, state, finalPosX);
 	mux_8_x_1 #(24) muxY(posY, rposY, rposY, rposY, rposY, posY, 'b0, 'b0, state, finalPosY);	
-	PixelGenerator pixel(finalPosY, finalPosX, vCounter, hCounter, s, state, RGB);		  
+	PixelGenerator pixel(finalPosY, finalPosX, vCounter, hCounter, s, counterSelect ,state, RGB);		  
 	 
 	
 	assign red = RGB[23:16];

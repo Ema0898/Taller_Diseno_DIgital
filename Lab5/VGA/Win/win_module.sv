@@ -1,8 +1,5 @@
-module win_module(input logic [3:0] buttons, input logic [1:0] randomPos,  output logic win);
-
-		logic [1:0] zone;
+module win_module(input logic [1:0] pos, input logic [1:0] randomPos,  output logic win);
 		
-		decoButtons deco(buttons, zone);		
-		assign win = (zone == randomPos);
+		assign win = (pos == randomPos);
 		
 endmodule 
