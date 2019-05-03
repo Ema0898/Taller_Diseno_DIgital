@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA
-Thu May 02 21:32:48 2019
+Thu May 02 21:50:43 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -17,54 +17,53 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   9. Registers Removed During Synthesis
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: debouncing:deb|flip_flop_D:ffD1
- 13. Parameter Settings for User Entity Instance: debouncing:deb|flip_flop_D:ffD2
- 14. Parameter Settings for User Entity Instance: random:rnd|rng:random|flip_flop_D_ENL:ffD2
- 15. Parameter Settings for User Entity Instance: random:rnd|rng:random|flip_flop_D_ENL:ffD1
- 16. Parameter Settings for User Entity Instance: random:rnd|rng:random|flip_flop_D_ENL:ffD0
- 17. Parameter Settings for User Entity Instance: mux_8_x_1:muxX
- 18. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux0
- 19. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux1
- 20. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux2
- 21. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux3
- 22. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux4
- 23. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux5
- 24. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux6
- 25. Parameter Settings for User Entity Instance: mux_8_x_1:muxY
- 26. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux0
- 27. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux1
- 28. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux2
- 29. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux3
- 30. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux4
- 31. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux5
- 32. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux6
- 33. Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0
- 34. Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux0
- 35. Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux1
- 36. Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux2
- 37. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_4_x_1:sqMux
- 38. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_4_x_1:sqMux|mux_2_x_1:mux0
- 39. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_4_x_1:sqMux|mux_2_x_1:mux1
- 40. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_4_x_1:sqMux|mux_2_x_1:mux2
- 41. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux0
- 42. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux1
- 43. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux2
- 44. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux3
- 45. Port Connectivity Checks: "DecoSeg:deco"
- 46. Port Connectivity Checks: "PixelGenerator:pixel|mux_2_x_1:mux1"
- 47. Port Connectivity Checks: "PixelGenerator:pixel|mux_2_x_1:mux0"
- 48. Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word|wordSpriteDeco:deco"
- 49. Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word"
- 50. Port Connectivity Checks: "mux_8_x_1:muxY"
- 51. Port Connectivity Checks: "mux_8_x_1:muxX"
- 52. Port Connectivity Checks: "fsm_top:fsm|counter_fsm:counter"
- 53. Port Connectivity Checks: "random:rnd|rng:random|flip_flop_D_ENL:ffD0"
- 54. Port Connectivity Checks: "random:rnd|rng:random|flip_flop_D_ENL:ffD1"
- 55. Port Connectivity Checks: "random:rnd|rng:random|flip_flop_D_ENL:ffD2"
- 56. Post-Synthesis Netlist Statistics for Top Partition
- 57. Elapsed Time Per Partition
- 58. Analysis & Synthesis Messages
- 59. Analysis & Synthesis Suppressed Messages
+ 12. Parameter Settings for User Entity Instance: random:rnd|rng:random|flip_flop_D_ENL:ffD2
+ 13. Parameter Settings for User Entity Instance: random:rnd|rng:random|flip_flop_D_ENL:ffD1
+ 14. Parameter Settings for User Entity Instance: random:rnd|rng:random|flip_flop_D_ENL:ffD0
+ 15. Parameter Settings for User Entity Instance: mux_8_x_1:muxX
+ 16. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux0
+ 17. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux1
+ 18. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux2
+ 19. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux3
+ 20. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux4
+ 21. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux5
+ 22. Parameter Settings for User Entity Instance: mux_8_x_1:muxX|mux_2_x_1:mux6
+ 23. Parameter Settings for User Entity Instance: mux_8_x_1:muxY
+ 24. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux0
+ 25. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux1
+ 26. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux2
+ 27. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux3
+ 28. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux4
+ 29. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux5
+ 30. Parameter Settings for User Entity Instance: mux_8_x_1:muxY|mux_2_x_1:mux6
+ 31. Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0
+ 32. Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux0
+ 33. Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux1
+ 34. Parameter Settings for User Entity Instance: PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux2
+ 35. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_4_x_1:sqMux
+ 36. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_4_x_1:sqMux|mux_2_x_1:mux0
+ 37. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_4_x_1:sqMux|mux_2_x_1:mux1
+ 38. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_4_x_1:sqMux|mux_2_x_1:mux2
+ 39. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux0
+ 40. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux1
+ 41. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux2
+ 42. Parameter Settings for User Entity Instance: PixelGenerator:pixel|mux_2_x_1:mux3
+ 43. Port Connectivity Checks: "DecoSeg:deco"
+ 44. Port Connectivity Checks: "PixelGenerator:pixel|mux_2_x_1:mux1"
+ 45. Port Connectivity Checks: "PixelGenerator:pixel|mux_2_x_1:mux0"
+ 46. Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word|wordSpriteDeco:deco"
+ 47. Port Connectivity Checks: "PixelGenerator:pixel|wordSprite:word"
+ 48. Port Connectivity Checks: "mux_8_x_1:muxY"
+ 49. Port Connectivity Checks: "mux_8_x_1:muxX"
+ 50. Port Connectivity Checks: "fsm_top:fsm|counter_fsm:counter"
+ 51. Port Connectivity Checks: "random:rnd|rng:random|flip_flop_D_ENL:ffD0"
+ 52. Port Connectivity Checks: "random:rnd|rng:random|flip_flop_D_ENL:ffD1"
+ 53. Port Connectivity Checks: "random:rnd|rng:random|flip_flop_D_ENL:ffD2"
+ 54. Port Connectivity Checks: "frequency_divider_deb:fddeb"
+ 55. Post-Synthesis Netlist Statistics for Top Partition
+ 56. Elapsed Time Per Partition
+ 57. Analysis & Synthesis Messages
+ 58. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -90,13 +89,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 02 21:32:48 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu May 02 21:50:43 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; VGA                                         ;
 ; Top-level Entity Name           ; VGA                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 113                                         ;
+; Total registers                 ; 82                                          ;
 ; Total pins                      ; 41                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -222,7 +221,6 @@ refer to the applicable agreement for further details.
 +----------------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
 ; DecoSeg.vhd                            ; yes             ; User VHDL File               ; D:/FPGA Projects/Lab5/VGA/DecoSeg.vhd                            ;         ;
 ; mux_8_x_1.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/mux_8_x_1.sv                           ;         ;
-; flip_flop_D.sv                         ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/flip_flop_D.sv                         ;         ;
 ; Painter/wordSpriteDeco.sv              ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Painter/wordSpriteDeco.sv              ;         ;
 ; Painter/wordSprite.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Painter/wordSprite.sv                  ;         ;
 ; Random/decoPostionX.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Random/decoPostionX.sv                 ;         ;
@@ -246,7 +244,6 @@ refer to the applicable agreement for further details.
 ; Random/decoLimitX.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Random/decoLimitX.sv                   ;         ;
 ; Random/random.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Random/random.sv                       ;         ;
 ; Win/win_module.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Win/win_module.sv                      ;         ;
-; debouncing.sv                          ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/debouncing.sv                          ;         ;
 ; frequency_divider_deb.sv               ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/frequency_divider_deb.sv               ;         ;
 ; Random/rng.sv                          ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Random/rng.sv                          ;         ;
 ; Random/flip_flop_D_ENL.sv              ; yes             ; User SystemVerilog HDL File  ; D:/FPGA Projects/Lab5/VGA/Random/flip_flop_D_ENL.sv              ;         ;
@@ -259,16 +256,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------------------------------------+
 ; Resource                                    ; Usage                                     ;
 +---------------------------------------------+-------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 304                                       ;
+; Estimate of Logic utilization (ALMs needed) ; 279                                       ;
 ;                                             ;                                           ;
-; Combinational ALUT usage for logic          ; 461                                       ;
-;     -- 7 input functions                    ; 12                                        ;
-;     -- 6 input functions                    ; 133                                       ;
+; Combinational ALUT usage for logic          ; 421                                       ;
+;     -- 7 input functions                    ; 17                                        ;
+;     -- 6 input functions                    ; 118                                       ;
 ;     -- 5 input functions                    ; 87                                        ;
-;     -- 4 input functions                    ; 66                                        ;
-;     -- <=3 input functions                  ; 163                                       ;
+;     -- 4 input functions                    ; 65                                        ;
+;     -- <=3 input functions                  ; 134                                       ;
 ;                                             ;                                           ;
-; Dedicated logic registers                   ; 113                                       ;
+; Dedicated logic registers                   ; 82                                        ;
 ;                                             ;                                           ;
 ; I/O pins                                    ; 41                                        ;
 ;                                             ;                                           ;
@@ -276,8 +273,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                           ;
 ; Maximum fan-out node                        ; PixelGenerator:pixel|Sprite:sprite|Add2~5 ;
 ; Maximum fan-out                             ; 71                                        ;
-; Total fan-out                               ; 2452                                      ;
-; Average fan-out                             ; 3.74                                      ;
+; Total fan-out                               ; 2220                                      ;
+; Average fan-out                             ; 3.79                                      ;
 +---------------------------------------------+-------------------------------------------+
 
 
@@ -286,14 +283,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Entity Name           ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------------+--------------+
-; |VGA                                  ; 461 (1)             ; 113 (0)                   ; 0                 ; 0          ; 41   ; 0            ; |VGA                                                                  ; VGA                   ; work         ;
+; |VGA                                  ; 421 (1)             ; 82 (0)                    ; 0                 ; 0          ; 41   ; 0            ; |VGA                                                                  ; VGA                   ; work         ;
 ;    |ClkDivisor:VGAClkDivisor|         ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|ClkDivisor:VGAClkDivisor                                         ; ClkDivisor            ; work         ;
 ;    |ControllerSync:VGASync|           ; 35 (35)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|ControllerSync:VGASync                                           ; ControllerSync        ; work         ;
 ;    |DecoSeg:deco|                     ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|DecoSeg:deco                                                     ; DecoSeg               ; work         ;
-;    |PixelGenerator:pixel|             ; 281 (27)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel                                             ; PixelGenerator        ; work         ;
-;       |Sprite:sprite|                 ; 149 (95)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|Sprite:sprite                               ; Sprite                ; work         ;
-;          |mux_4_x_1:mux0|             ; 54 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0                ; mux_4_x_1             ; work         ;
-;             |mux_2_x_1:mux2|          ; 54 (54)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux2 ; mux_2_x_1             ; work         ;
+;    |PixelGenerator:pixel|             ; 279 (26)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel                                             ; PixelGenerator        ; work         ;
+;       |Sprite:sprite|                 ; 148 (96)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|Sprite:sprite                               ; Sprite                ; work         ;
+;          |mux_4_x_1:mux0|             ; 52 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0                ; mux_4_x_1             ; work         ;
+;             |mux_2_x_1:mux2|          ; 52 (52)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|Sprite:sprite|mux_4_x_1:mux0|mux_2_x_1:mux2 ; mux_2_x_1             ; work         ;
 ;       |mux_2_x_1:mux3|                ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|mux_2_x_1:mux3                              ; mux_2_x_1             ; work         ;
 ;       |mux_4_x_1:sqMux|               ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|mux_4_x_1:sqMux                             ; mux_4_x_1             ; work         ;
 ;          |mux_2_x_1:mux2|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PixelGenerator:pixel|mux_4_x_1:sqMux|mux_2_x_1:mux2              ; mux_2_x_1             ; work         ;
@@ -302,17 +299,13 @@ refer to the applicable agreement for further details.
 ;       |counter:count|                 ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|animation:anm|counter:count                                      ; counter               ; work         ;
 ;       |moveCounter:moveCnt|           ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|animation:anm|moveCounter:moveCnt                                ; moveCounter           ; work         ;
 ;    |counterBtn:count|                 ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|counterBtn:count                                                 ; counterBtn            ; work         ;
-;    |debouncing:deb|                   ; 1 (1)               ; 2 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|debouncing:deb                                                   ; debouncing            ; work         ;
-;       |flip_flop_D:ffD1|              ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|debouncing:deb|flip_flop_D:ffD1                                  ; flip_flop_D           ; work         ;
-;       |flip_flop_D:ffD2|              ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|debouncing:deb|flip_flop_D:ffD2                                  ; flip_flop_D           ; work         ;
 ;    |frequency_divider:divider|        ; 6 (6)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|frequency_divider:divider                                        ; frequency_divider     ; work         ;
-;    |frequency_divider_deb:fddeb|      ; 35 (35)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|frequency_divider_deb:fddeb                                      ; frequency_divider_deb ; work         ;
-;    |fsm_top:fsm|                      ; 49 (1)              ; 37 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm                                                      ; fsm_top               ; work         ;
+;    |fsm_top:fsm|                      ; 48 (1)              ; 37 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm                                                      ; fsm_top               ; work         ;
 ;       |counter_fsm:counter|           ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm|counter_fsm:counter                                  ; counter_fsm           ; work         ;
 ;       |frequency_divider_fsm:divider| ; 35 (35)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm|frequency_divider_fsm:divider                        ; frequency_divider_fsm ; work         ;
-;       |fsm:fsm|                       ; 11 (11)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm|fsm:fsm                                              ; fsm                   ; work         ;
-;    |mux_8_x_1:muxX|                   ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxX                                                   ; mux_8_x_1             ; work         ;
-;       |mux_2_x_1:mux6|                ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxX|mux_2_x_1:mux6                                    ; mux_2_x_1             ; work         ;
+;       |fsm:fsm|                       ; 10 (10)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|fsm_top:fsm|fsm:fsm                                              ; fsm                   ; work         ;
+;    |mux_8_x_1:muxX|                   ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxX                                                   ; mux_8_x_1             ; work         ;
+;       |mux_2_x_1:mux6|                ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxX|mux_2_x_1:mux6                                    ; mux_2_x_1             ; work         ;
 ;    |mux_8_x_1:muxY|                   ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxY                                                   ; mux_8_x_1             ; work         ;
 ;       |mux_2_x_1:mux6|                ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|mux_8_x_1:muxY|mux_2_x_1:mux6                                    ; mux_2_x_1             ; work         ;
 ;    |random:rnd|                       ; 1 (0)               ; 3 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|random:rnd                                                       ; random                ; work         ;
@@ -356,12 +349,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 113   ;
-; Number of registers using Synchronous Clear  ; 86    ;
+; Total registers                              ; 82    ;
+; Number of registers using Synchronous Clear  ; 62    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 88    ;
+; Number of registers using Asynchronous Clear ; 59    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 25    ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -371,36 +364,16 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |VGA|ControllerSync:VGASync|vCounter[8]        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |VGA|ControllerSync:VGASync|vCounter[2]        ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VGA|animation:anm|counter:count|q[0]          ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |VGA|animation:anm|moveCounter:moveCnt|q[8]    ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |VGA|animation:anm|moveCounter:moveCnt|q[5]    ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |VGA|mux_8_x_1:muxY|mux_2_x_1:mux6|z[2]        ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |VGA|PixelGenerator:pixel|mux_2_x_1:mux3|z[12] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |VGA|PixelGenerator:pixel|mux_2_x_1:mux3|z[16] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |VGA|PixelGenerator:pixel|mux_2_x_1:mux3|z[21] ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |VGA|mux_8_x_1:muxY|mux_2_x_1:mux6|z[8]        ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; No         ; |VGA|mux_8_x_1:muxX|mux_2_x_1:mux6|z[1]        ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; No         ; |VGA|mux_8_x_1:muxX|mux_2_x_1:mux6|z[0]        ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |VGA|mux_8_x_1:muxX|mux_2_x_1:mux6|z[3]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: debouncing:deb|flip_flop_D:ffD1 ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; N              ; 1     ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: debouncing:deb|flip_flop_D:ffD2 ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; N              ; 1     ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------+
@@ -864,39 +837,49 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "frequency_divider_deb:fddeb"                                                           ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; clk_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 113                         ;
-;     CLR               ; 12                          ;
-;     CLR SCLR          ; 66                          ;
-;     ENA               ; 5                           ;
+; arriav_ff             ; 82                          ;
+;     CLR               ; 11                          ;
+;     CLR SCLR          ; 38                          ;
+;     ENA               ; 3                           ;
 ;     ENA CLR SCLR      ; 10                          ;
-;     ENA SCLR          ; 10                          ;
-;     plain             ; 10                          ;
-; arriav_lcell_comb     ; 462                         ;
-;     arith             ; 132                         ;
+;     ENA SCLR          ; 11                          ;
+;     SCLR              ; 3                           ;
+;     plain             ; 6                           ;
+; arriav_lcell_comb     ; 422                         ;
+;     arith             ; 104                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 100                         ;
+;         1 data inputs ; 72                          ;
 ;         2 data inputs ; 11                          ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 7                           ;
 ;         5 data inputs ; 11                          ;
-;     extend            ; 12                          ;
-;         7 data inputs ; 12                          ;
-;     normal            ; 318                         ;
+;     extend            ; 17                          ;
+;         7 data inputs ; 17                          ;
+;     normal            ; 301                         ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 17                          ;
+;         2 data inputs ; 16                          ;
 ;         3 data inputs ; 28                          ;
-;         4 data inputs ; 59                          ;
+;         4 data inputs ; 58                          ;
 ;         5 data inputs ; 76                          ;
-;         6 data inputs ; 133                         ;
+;         6 data inputs ; 118                         ;
 ; boundary_port         ; 41                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.90                        ;
-; Average LUT depth     ; 5.90                        ;
+; Average LUT depth     ; 6.38                        ;
 +-----------------------+-----------------------------+
 
 
@@ -915,7 +898,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 02 21:32:36 2019
+    Info: Processing started: Thu May 02 21:50:31 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -987,13 +970,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file random/
 Info (12021): Found 1 design units, including 1 entities, in source file counterbtn.sv
     Info (12023): Found entity 1: counterBtn File: D:/FPGA Projects/Lab5/VGA/counterBtn.sv Line: 1
 Info (12127): Elaborating entity "VGA" for the top level hierarchy
-Info (12128): Elaborating entity "ClkDivisor" for hierarchy "ClkDivisor:VGAClkDivisor" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 36
-Info (12128): Elaborating entity "frequency_divider" for hierarchy "frequency_divider:divider" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 37
+Info (12128): Elaborating entity "ClkDivisor" for hierarchy "ClkDivisor:VGAClkDivisor" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 38
+Info (12128): Elaborating entity "frequency_divider" for hierarchy "frequency_divider:divider" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 39
 Warning (10230): Verilog HDL assignment warning at frequency_divider.sv(20): truncated value with size 32 to match size of target (5) File: D:/FPGA Projects/Lab5/VGA/FrequencyDividers/frequency_divider.sv Line: 20
-Info (12128): Elaborating entity "frequency_divider_deb" for hierarchy "frequency_divider_deb:fddeb" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 39
+Info (12128): Elaborating entity "frequency_divider_deb" for hierarchy "frequency_divider_deb:fddeb" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 41
 Warning (10230): Verilog HDL assignment warning at frequency_divider_deb.sv(20): truncated value with size 32 to match size of target (28) File: D:/FPGA Projects/Lab5/VGA/frequency_divider_deb.sv Line: 20
-Info (12128): Elaborating entity "debouncing" for hierarchy "debouncing:deb" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 41
-Info (12128): Elaborating entity "flip_flop_D" for hierarchy "debouncing:deb|flip_flop_D:ffD1" File: D:/FPGA Projects/Lab5/VGA/debouncing.sv Line: 5
 Info (12128): Elaborating entity "ControllerSync" for hierarchy "ControllerSync:VGASync" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 54
 Info (12128): Elaborating entity "counterBtn" for hierarchy "counterBtn:count" File: D:/FPGA Projects/Lab5/VGA/VGA.sv Line: 56
 Warning (10230): Verilog HDL assignment warning at counterBtn.sv(8): truncated value with size 32 to match size of target (2) File: D:/FPGA Projects/Lab5/VGA/counterBtn.sv Line: 8
@@ -1054,13 +1035,13 @@ Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/FPGA Projects/Lab5/VGA/output_files/VGA.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 506 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 464 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 37 output pins
-    Info (21061): Implemented 465 logic cells
+    Info (21061): Implemented 423 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4886 megabytes
-    Info: Processing ended: Thu May 02 21:32:48 2019
+    Info: Peak virtual memory: 4888 megabytes
+    Info: Processing ended: Thu May 02 21:50:43 2019
     Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:23
 

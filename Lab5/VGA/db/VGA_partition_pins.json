@@ -152,6 +152,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
 					"name" : "btn[1]",
 					"strict" : false
 				},
@@ -161,10 +165,6 @@
 				},
 				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
 					"strict" : false
 				}
 			]

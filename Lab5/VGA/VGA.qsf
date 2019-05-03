@@ -54,7 +54,7 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_F10 -to vga_blank_n
 set_location_assignment PIN_B11 -to vga_hs
 set_location_assignment PIN_D11 -to vga_vs
-set_location_assignment PIN_AB12 -to reset
+set_location_assignment PIN_Y16 -to reset
 set_location_assignment PIN_F13 -to red[0]
 set_location_assignment PIN_E12 -to red[1]
 set_location_assignment PIN_D12 -to red[2]
@@ -84,8 +84,6 @@ set_location_assignment PIN_B13 -to blue[7]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_Y16 -to btn[3]
-set_location_assignment PIN_W15 -to btn[2]
 set_location_assignment PIN_AA15 -to btn[1]
 set_location_assignment PIN_AA14 -to btn[0]
 set_global_assignment -name VHDL_FILE DecoSeg.vhd

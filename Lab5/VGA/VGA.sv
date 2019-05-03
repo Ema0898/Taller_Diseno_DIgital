@@ -32,14 +32,14 @@ module VGA (
 	 
 	 assign nBtn[0] = ~btn[0];
 	 assign nBtn[1] = ~btn[1];
+	 
+	 assign d_reset = ~reset;
 	     
     ClkDivisor VGAClkDivisor(clk,clockVGA);
-	 frequency_divider divider(clk, reset, low_clock);
+	 frequency_divider divider(clk, d_reset, low_clock);
 	
-	 frequency_divider_deb fddeb(clk, reset, slower_clock);
-	 
-	 debouncing deb(slower_clock, reset, d_reset);
-    
+	 frequency_divider_deb fddeb(clk, d_reset, slower_clock);
+	     
     ControllerSync VGASync (
 	 
 									clockVGA,

@@ -1,45 +1,45 @@
 |VGA
 clk => clk.IN4
-reset => reset.IN3
+reset => d_reset.IN6
 btn[0] => nBtn[0].IN1
 btn[1] => nBtn[1].IN1
-vga_hs << ControllerSync:VGASync.port2
-vga_vs << ControllerSync:VGASync.port3
-red[0] << PixelGenerator:pixel.port7
-red[1] << PixelGenerator:pixel.port7
-red[2] << PixelGenerator:pixel.port7
-red[3] << PixelGenerator:pixel.port7
-red[4] << PixelGenerator:pixel.port7
-red[5] << PixelGenerator:pixel.port7
-red[6] << PixelGenerator:pixel.port7
-red[7] << PixelGenerator:pixel.port7
-green[0] << PixelGenerator:pixel.port7
-green[1] << PixelGenerator:pixel.port7
-green[2] << PixelGenerator:pixel.port7
-green[3] << PixelGenerator:pixel.port7
-green[4] << PixelGenerator:pixel.port7
-green[5] << PixelGenerator:pixel.port7
-green[6] << PixelGenerator:pixel.port7
-green[7] << PixelGenerator:pixel.port7
-blue[0] << PixelGenerator:pixel.port7
-blue[1] << PixelGenerator:pixel.port7
-blue[2] << PixelGenerator:pixel.port7
-blue[3] << PixelGenerator:pixel.port7
-blue[4] << PixelGenerator:pixel.port7
-blue[5] << PixelGenerator:pixel.port7
-blue[6] << PixelGenerator:pixel.port7
-blue[7] << PixelGenerator:pixel.port7
-vga_blank_n << ControllerSync:VGASync.port6
-clockVGA << clockVGA.DB_MAX_OUTPUT_PORT_TYPE
-display[0] << DecoSeg:deco.port1
-display[1] << DecoSeg:deco.port1
-display[2] << DecoSeg:deco.port1
-display[3] << DecoSeg:deco.port1
-display[4] << DecoSeg:deco.port1
-display[5] << DecoSeg:deco.port1
-display[6] << DecoSeg:deco.port1
-zone[0] << zone[0].DB_MAX_OUTPUT_PORT_TYPE
-zone[1] << zone[1].DB_MAX_OUTPUT_PORT_TYPE
+vga_hs <= ControllerSync:VGASync.port2
+vga_vs <= ControllerSync:VGASync.port3
+red[0] <= PixelGenerator:pixel.port7
+red[1] <= PixelGenerator:pixel.port7
+red[2] <= PixelGenerator:pixel.port7
+red[3] <= PixelGenerator:pixel.port7
+red[4] <= PixelGenerator:pixel.port7
+red[5] <= PixelGenerator:pixel.port7
+red[6] <= PixelGenerator:pixel.port7
+red[7] <= PixelGenerator:pixel.port7
+green[0] <= PixelGenerator:pixel.port7
+green[1] <= PixelGenerator:pixel.port7
+green[2] <= PixelGenerator:pixel.port7
+green[3] <= PixelGenerator:pixel.port7
+green[4] <= PixelGenerator:pixel.port7
+green[5] <= PixelGenerator:pixel.port7
+green[6] <= PixelGenerator:pixel.port7
+green[7] <= PixelGenerator:pixel.port7
+blue[0] <= PixelGenerator:pixel.port7
+blue[1] <= PixelGenerator:pixel.port7
+blue[2] <= PixelGenerator:pixel.port7
+blue[3] <= PixelGenerator:pixel.port7
+blue[4] <= PixelGenerator:pixel.port7
+blue[5] <= PixelGenerator:pixel.port7
+blue[6] <= PixelGenerator:pixel.port7
+blue[7] <= PixelGenerator:pixel.port7
+vga_blank_n <= ControllerSync:VGASync.port6
+clockVGA <= clockVGA.DB_MAX_OUTPUT_PORT_TYPE
+display[0] <= DecoSeg:deco.port1
+display[1] <= DecoSeg:deco.port1
+display[2] <= DecoSeg:deco.port1
+display[3] <= DecoSeg:deco.port1
+display[4] <= DecoSeg:deco.port1
+display[5] <= DecoSeg:deco.port1
+display[6] <= DecoSeg:deco.port1
+zone[0] <= zone[0].DB_MAX_OUTPUT_PORT_TYPE
+zone[1] <= zone[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |VGA|ClkDivisor:VGAClkDivisor
@@ -124,24 +124,6 @@ reset => counter[25].ACLR
 reset => counter[26].ACLR
 reset => counter[27].ACLR
 clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|VGA|debouncing:deb
-clock => clock.IN2
-pushb => pushb.IN1
-q <= q.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|VGA|debouncing:deb|flip_flop_D:ffD1
-clk => q[0]~reg0.CLK
-d[0] => q[0]~reg0.DATAIN
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|VGA|debouncing:deb|flip_flop_D:ffD2
-clk => q[0]~reg0.CLK
-d[0] => q[0]~reg0.DATAIN
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |VGA|ControllerSync:VGASync

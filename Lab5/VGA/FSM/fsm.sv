@@ -5,7 +5,7 @@ module fsm(input logic seg3, button, guess, clk, reset, output logic[2:0] out);
 	// sequential logic
 	always_ff @(posedge clk) 
 	begin
-		if (reset) state <= 3'b00;
+		if (reset) state <= 3'b000;
 		else state <= next_state;	
 	end
 	
