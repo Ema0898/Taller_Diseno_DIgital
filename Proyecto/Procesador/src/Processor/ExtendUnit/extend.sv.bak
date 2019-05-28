@@ -1,0 +1,4 @@
+module extend(input logic [12:0] imm,
+				  output logic [31:0] imm_ext);
+				  
+endmodule 
