@@ -1,0 +1,1 @@
+module alu_deco(input logic [3:0] cmd, output logic [3:0] alu_control);

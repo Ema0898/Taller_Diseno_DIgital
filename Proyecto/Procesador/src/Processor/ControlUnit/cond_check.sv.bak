@@ -1,0 +1,3 @@
+module cond_check(input logic [3:0] cond, input logic [3:0] flags, output logic cond_ex);
+
+endmodule 

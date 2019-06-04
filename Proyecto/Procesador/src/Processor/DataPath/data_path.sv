@@ -1,25 +1,35 @@
 module data_path(input logic clk, rst,
-					  input logic pc_src, reg_write,
+					  input logic pc_src, reg_write, mem_reg, alu_src,
+					  input logic [1:0] imm_src, reg_src,
 					  input logic [3:0] alu_control,
 					  input logic [31:0] instruction, read_data,
 					  output logic [3:0] alu_flags,
 					  output logic [31:0] pc, direction, write_data);
 					  
   logic carry_out, carry_out1;
-  logic [31:0] rd1, rd2, pc_mux, pc_plus_4, pc_plus_8, imm_ext;
+  logic [3:0] a1, a2;
+  logic [31:0] rd1, rd2, pc_mux, pc_plus_4, pc_plus_8, imm_ext, read_data_mux, rd2_mux;
   
-  adder #(32) adder1(pc, 32'b00000000000000000000000000000100, 1'b0, pc_plus_4, carry_out);
-  adder #(32) adder2(pc_plus_4, 32'b00000000000000000000000000000100, 1'b0, pc_plus_8, carry_out1);
+  adder #(32) adder1(pc, 32'h00000004, 1'b0, pc_plus_4, carry_out);
+  adder #(32) adder2(pc_plus_4, 32'h00000004, 1'b0, pc_plus_8, carry_out1);
   
-  mux_2_x_1 #(32) mux0(pc_plus_4, read_data, pc_src, pc_mux);
+  mux_2_x_1 #(32) mux0(pc_plus_4, read_data_mux, pc_src, pc_mux);
+  mux_2_x_1 #(32) mux1(direction, read_data, mem_reg, read_data_mux);
   
   flip_flop_D #(32) ff(clk, rst, 1'b1, pc_mux, pc);  
   
-  register_file rf(clk, rst, reg_write, instruction[19:16], 4'b0, instruction[15:12], read_data, pc_plus_8, rd1, rd2);
+  mux_2_x_1 #(4) mux_a1(instruction[19:16], 4'b1111, reg_src[0], a1);
+  mux_2_x_1 #(4) mux_a2(instruction[3:0], instruction[15:12], reg_src[1], a2);
   
-  extend ext(instruction[11:0], imm_ext);
+  register_file rf(clk, rst, reg_write, a1, a2, instruction[15:12], read_data_mux, pc_plus_8, rd1, rd2);
   
-  ALU #(32) alu(rd1, imm_ext, alu_control, direction, alu_flags);
+  extend ext(instruction[23:0], imm_src, imm_ext);  
+  
+  mux_2_x_1 #(32) mux_rd2(rd2, imm_ext, alu_src, rd2_mux);
+  
+  ALU #(32) alu(rd1, rd2_mux, alu_control, direction, alu_flags);
+  
+  assign write_data = rd2;
 
 endmodule 
 
