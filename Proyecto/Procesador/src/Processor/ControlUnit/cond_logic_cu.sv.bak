@@ -1,0 +1,7 @@
+module cond_logic_cu(input logic clk, reset,
+							input logic pc_src, reg_write, mem_write,
+							input logic [1:0] flag_write,
+							input logic [3:0] cond, alu_flags,
+							output logic pc_src_p, reg_write_p, mem_write_p);
+							
+endmodule 
