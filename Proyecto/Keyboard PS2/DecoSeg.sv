@@ -1,7 +1,7 @@
 module DecoSeg(hex_digit,seg);
 input [3:0] hex_digit;
 output [6:0] seg;
-reg [6:0] seg;
+logic [6:0] seg;
 
 
 	always @ (hex_digit)

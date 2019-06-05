@@ -1,15 +1,15 @@
-
 module read_And_shift_register
 (input logic ps2_clk_filtered, reset, ps2_data, read, 
 output logic[7:0] scan_code, output scan_ready);
 	
-	reg [3:0] incnt;
-	reg [8:0] shiftin;
-	reg ready_set;
-	reg read_char;
+	logic [3:0] incnt;
+	logic [8:0] shiftin;
+	logic ready_set;
+	logic read_char;
+	logic aux; 
 	
 	//Lee los datos procedentes del teclado
-	always @(posedge ps2_clk_filtered)
+	always_ff @(posedge ps2_clk_filtered)
 	begin
 		if (reset==1)
 		begin
@@ -44,9 +44,12 @@ output logic[7:0] scan_code, output scan_ready);
 	end
 	
 	//Indica si ya el codigo es leido e indica que se puede presionar otra tecla
-	always @ (posedge ready_set or posedge read)
-		if (read == 1) scan_ready <= 0;
-		else scan_ready <= 1;
+	always_ff @ (posedge ready_set or posedge read)
+	begin
+		if (read == 1) aux <= 0;
+		else aux <= 1;
+	end
 	
+	assign scan_ready = aux;
 	
 endmodule 
