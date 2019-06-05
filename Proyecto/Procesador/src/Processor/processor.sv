@@ -6,12 +6,12 @@ module processor(input logic clk,
 					  
   logic [3:0] alu_flags, alu_control;
   logic [1:0] reg_src, imm_src;
-  logic reg_write, alu_src, mem_reg, pc_src, sh_src;
+  logic reg_write, alu_src, mem_reg, pc_src, sh_src, mov_src, mvn_src;
   
   control_unit cu(clk, rst, instruction[4], instruction[6:5], alu_flags, instruction[31:12], reg_write, alu_src, mem_write,
-						mem_reg, pc_src, sh_src, reg_src, imm_src, alu_control);
+						mem_reg, pc_src, sh_src, mov_src, mvn_src, reg_src, imm_src, alu_control);
   
-  data_path path(clk, rst, pc_src, reg_write, mem_reg, alu_src, sh_src, imm_src, reg_src, alu_control, 
-					  instruction, read_data, alu_flags, pc, direction, write_data);
+  data_path path(clk, rst, pc_src, reg_write, mem_reg, alu_src, sh_src, mov_src, mvn_src, imm_src, reg_src,
+					  alu_control, instruction, read_data, alu_flags, pc, direction, write_data);
   
 endmodule 
