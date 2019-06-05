@@ -1,4 +1,4 @@
-module data_memory(input logic clk, rst, we,
+module data_memory(input logic clk, we,
 						 input logic [31:0] a, wd,
 						 output logic [31:0] rd);
 						 
