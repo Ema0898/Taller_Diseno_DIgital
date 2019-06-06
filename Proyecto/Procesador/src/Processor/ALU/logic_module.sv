@@ -9,7 +9,7 @@ module logic_module
 	
 	asl #(N) shift_left_a (a, b, d4);
 	lsr #(N) shift_rigth_a (a, b, d5);
-	ror #(N) rotate_right(a, b, d6);
+	ror #(N) rotate_right(a, b[4:0], d6);
 	
 	
 endmodule
