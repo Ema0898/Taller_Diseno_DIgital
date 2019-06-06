@@ -7,7 +7,7 @@ module video_game(input logic clk, reset, ps2_data, ps2_clk,
   logic [7:0] keyboard_out;
   logic [31:0] pc, instr, data_mem_out, write_data, data_adr, read_data, sprite_in;
   
-  frequency_divider_cpu fdc(clk, ~reset, low_clock);
+  //frequency_divider_cpu fdc(clk, ~reset, low_clock);
   
   ps2_keyboard keyboard(clk, ps2_data, ps2_clk, keyboard_out);  
  
