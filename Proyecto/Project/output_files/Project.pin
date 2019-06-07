@@ -932,7 +932,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : W15       :        :                   :      
 ff_out[1]                    : W16       : output : 2.5 V             :         : 4A        : Y              
 ff_out[4]                    : W17       : output : 2.5 V             :         : 4A        : Y              
 GND                          : W18       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W19       :        :                   :         : 4A        :                
+ff_out[5]                    : W19       : output : 2.5 V             :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : W20       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W21       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W22       :        :                   :         : 5A        :                

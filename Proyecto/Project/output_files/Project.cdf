@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("/home/ema0898/Programas/Quartus/Project/output_files/") File("Project.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("D:/uGit/Taller_Diseno_DIgital/Proyecto/Project/output_files/") File("Project.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

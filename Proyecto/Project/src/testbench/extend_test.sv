@@ -7,7 +7,7 @@ module extend_test();
 	extend DUT(imm, imm_src, imm_ext);
 	
 	initial begin
-	imm = 24'h822D05; imm_src = 2'b00; #10;
+	imm = 24'hA010FA; imm_src = 2'b00; #10;
 	$display("imm = %b, imm_src = %b, imm_ext = %b", imm, imm_src, imm_ext);
 	
 	end

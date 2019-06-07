@@ -1,0 +1,341 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -12.870
+TNS   : -23549.981
+
+Type  : Slow 1100mV 85C Model Setup 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -3.079
+TNS   : -88.027
+
+Type  : Slow 1100mV 85C Model Setup 'ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered'
+Slack : -2.491
+TNS   : -41.748
+
+Type  : Slow 1100mV 85C Model Setup 'VGA:vga|frequency_divider_paint:divider|clk_out'
+Slack : -2.318
+TNS   : -4.568
+
+Type  : Slow 1100mV 85C Model Setup 'ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out'
+Slack : -2.015
+TNS   : -11.622
+
+Type  : Slow 1100mV 85C Model Setup 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux'
+Slack : -1.597
+TNS   : -10.716
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.218
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : 0.731
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'VGA:vga|frequency_divider_paint:divider|clk_out'
+Slack : 0.735
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set'
+Slack : -3.151
+TNS   : -3.151
+
+Type  : Slow 1100mV 85C Model Removal 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set'
+Slack : 2.557
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.407
+TNS   : -1272.643
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -0.394
+TNS   : -18.154
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered'
+Slack : -0.394
+TNS   : -17.672
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out'
+Slack : -0.394
+TNS   : -6.405
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux'
+Slack : -0.394
+TNS   : -5.009
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA:vga|frequency_divider_paint:divider|clk_out'
+Slack : -0.394
+TNS   : -1.160
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set'
+Slack : -0.394
+TNS   : -0.528
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -12.635
+TNS   : -22854.532
+
+Type  : Slow 1100mV 0C Model Setup 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -3.034
+TNS   : -86.927
+
+Type  : Slow 1100mV 0C Model Setup 'ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered'
+Slack : -2.491
+TNS   : -39.558
+
+Type  : Slow 1100mV 0C Model Setup 'VGA:vga|frequency_divider_paint:divider|clk_out'
+Slack : -2.330
+TNS   : -4.500
+
+Type  : Slow 1100mV 0C Model Setup 'ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out'
+Slack : -2.054
+TNS   : -11.634
+
+Type  : Slow 1100mV 0C Model Setup 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux'
+Slack : -1.540
+TNS   : -10.395
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.133
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux'
+Slack : 0.418
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'VGA:vga|frequency_divider_paint:divider|clk_out'
+Slack : 0.668
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : 0.679
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set'
+Slack : -3.244
+TNS   : -3.244
+
+Type  : Slow 1100mV 0C Model Removal 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set'
+Slack : 2.675
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.394
+TNS   : -1380.943
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -0.394
+TNS   : -18.140
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered'
+Slack : -0.394
+TNS   : -17.124
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out'
+Slack : -0.394
+TNS   : -6.331
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux'
+Slack : -0.394
+TNS   : -4.949
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA:vga|frequency_divider_paint:divider|clk_out'
+Slack : -0.394
+TNS   : -1.150
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set'
+Slack : -0.394
+TNS   : -0.517
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -7.421
+TNS   : -13259.037
+
+Type  : Fast 1100mV 85C Model Setup 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -1.535
+TNS   : -42.157
+
+Type  : Fast 1100mV 85C Model Setup 'ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered'
+Slack : -1.214
+TNS   : -18.955
+
+Type  : Fast 1100mV 85C Model Setup 'ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out'
+Slack : -1.045
+TNS   : -4.453
+
+Type  : Fast 1100mV 85C Model Setup 'VGA:vga|frequency_divider_paint:divider|clk_out'
+Slack : -1.036
+TNS   : -1.972
+
+Type  : Fast 1100mV 85C Model Setup 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux'
+Slack : -0.795
+TNS   : -4.729
+
+Type  : Fast 1100mV 85C Model Hold 'ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered'
+Slack : 0.048
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux'
+Slack : 0.069
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out'
+Slack : 0.075
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'VGA:vga|frequency_divider_paint:divider|clk_out'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set'
+Slack : -1.453
+TNS   : -1.453
+
+Type  : Fast 1100mV 85C Model Removal 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set'
+Slack : 1.245
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.387
+TNS   : -125.997
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered'
+Slack : -0.127
+TNS   : -1.530
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux'
+Slack : -0.036
+TNS   : -0.052
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -0.012
+TNS   : -0.139
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA:vga|frequency_divider_paint:divider|clk_out'
+Slack : 0.033
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out'
+Slack : 0.082
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set'
+Slack : 0.118
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -6.625
+TNS   : -11772.733
+
+Type  : Fast 1100mV 0C Model Setup 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : -1.354
+TNS   : -37.208
+
+Type  : Fast 1100mV 0C Model Setup 'ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered'
+Slack : -1.074
+TNS   : -15.588
+
+Type  : Fast 1100mV 0C Model Setup 'ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out'
+Slack : -0.950
+TNS   : -3.636
+
+Type  : Fast 1100mV 0C Model Setup 'VGA:vga|frequency_divider_paint:divider|clk_out'
+Slack : -0.921
+TNS   : -1.726
+
+Type  : Fast 1100mV 0C Model Setup 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux'
+Slack : -0.665
+TNS   : -3.912
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : -0.119
+TNS   : -0.332
+
+Type  : Fast 1100mV 0C Model Hold 'ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered'
+Slack : -0.004
+TNS   : -0.004
+
+Type  : Fast 1100mV 0C Model Hold 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux'
+Slack : 0.018
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out'
+Slack : 0.044
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'VGA:vga|frequency_divider_paint:divider|clk_out'
+Slack : 0.109
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : 0.296
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set'
+Slack : -1.428
+TNS   : -1.428
+
+Type  : Fast 1100mV 0C Model Removal 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set'
+Slack : 1.237
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.375
+TNS   : -162.021
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered'
+Slack : -0.061
+TNS   : -0.303
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux'
+Slack : 0.002
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz'
+Slack : 0.018
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA:vga|frequency_divider_paint:divider|clk_out'
+Slack : 0.063
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out'
+Slack : 0.100
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set'
+Slack : 0.129
+TNS   : 0.000
+
+------------------------------------------------------------

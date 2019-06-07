@@ -24,6 +24,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ff_out[5]",
+					"strict" : false
+				},
+				{
 					"name" : "vga_hs",
 					"strict" : false
 				},
@@ -137,6 +141,14 @@
 				},
 				{
 					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_data",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_clk",
 					"strict" : false
 				}
 			]

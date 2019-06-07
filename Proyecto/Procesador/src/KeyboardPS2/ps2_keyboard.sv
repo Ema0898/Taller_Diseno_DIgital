@@ -15,5 +15,5 @@ module ps2_keyboard(
 	sincronizer sinc(clk_div, ps2_clk, ps2_clk_filtered);
 	
 	read_And_shift_register r_s_register(ps2_clk_filtered, reset, ps2_data, read, scan_code, scan_ready);
-	memory mem( scan_ready, scan_code, register);
+	assign register = scan_code;
 endmodule

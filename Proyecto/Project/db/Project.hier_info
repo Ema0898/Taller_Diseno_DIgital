@@ -3,39 +3,40 @@ clk => clk.IN5
 reset => reset.IN1
 ps2_data => ps2_data.IN1
 ps2_clk => ps2_clk.IN1
-ff_out[0] <= sprite_in[0].DB_MAX_OUTPUT_PORT_TYPE
-ff_out[1] <= sprite_in[1].DB_MAX_OUTPUT_PORT_TYPE
-ff_out[2] <= sprite_in[2].DB_MAX_OUTPUT_PORT_TYPE
-ff_out[3] <= sprite_in[3].DB_MAX_OUTPUT_PORT_TYPE
-ff_out[4] <= sprite_in[4].DB_MAX_OUTPUT_PORT_TYPE
-vga_hs <= VGA:vga.port4
-vga_vs <= VGA:vga.port5
-vga_blank_n <= VGA:vga.port6
-clockVGA <= VGA:vga.port7
-red[0] <= VGA:vga.port8
-red[1] <= VGA:vga.port8
-red[2] <= VGA:vga.port8
-red[3] <= VGA:vga.port8
-red[4] <= VGA:vga.port8
-red[5] <= VGA:vga.port8
-red[6] <= VGA:vga.port8
-red[7] <= VGA:vga.port8
-green[0] <= VGA:vga.port9
-green[1] <= VGA:vga.port9
-green[2] <= VGA:vga.port9
-green[3] <= VGA:vga.port9
-green[4] <= VGA:vga.port9
-green[5] <= VGA:vga.port9
-green[6] <= VGA:vga.port9
-green[7] <= VGA:vga.port9
-blue[0] <= VGA:vga.port10
-blue[1] <= VGA:vga.port10
-blue[2] <= VGA:vga.port10
-blue[3] <= VGA:vga.port10
-blue[4] <= VGA:vga.port10
-blue[5] <= VGA:vga.port10
-blue[6] <= VGA:vga.port10
-blue[7] <= VGA:vga.port10
+ff_out[0] << sprite_in[0].DB_MAX_OUTPUT_PORT_TYPE
+ff_out[1] << sprite_in[1].DB_MAX_OUTPUT_PORT_TYPE
+ff_out[2] << sprite_in[2].DB_MAX_OUTPUT_PORT_TYPE
+ff_out[3] << sprite_in[3].DB_MAX_OUTPUT_PORT_TYPE
+ff_out[4] << sprite_in[4].DB_MAX_OUTPUT_PORT_TYPE
+ff_out[5] << ps2_keyboard:keyboard.port4
+vga_hs << VGA:vga.port4
+vga_vs << VGA:vga.port5
+vga_blank_n << VGA:vga.port6
+clockVGA << VGA:vga.port7
+red[0] << VGA:vga.port8
+red[1] << VGA:vga.port8
+red[2] << VGA:vga.port8
+red[3] << VGA:vga.port8
+red[4] << VGA:vga.port8
+red[5] << VGA:vga.port8
+red[6] << VGA:vga.port8
+red[7] << VGA:vga.port8
+green[0] << VGA:vga.port9
+green[1] << VGA:vga.port9
+green[2] << VGA:vga.port9
+green[3] << VGA:vga.port9
+green[4] << VGA:vga.port9
+green[5] << VGA:vga.port9
+green[6] << VGA:vga.port9
+green[7] << VGA:vga.port9
+blue[0] << VGA:vga.port10
+blue[1] << VGA:vga.port10
+blue[2] << VGA:vga.port10
+blue[3] << VGA:vga.port10
+blue[4] << VGA:vga.port10
+blue[5] << VGA:vga.port10
+blue[6] << VGA:vga.port10
+blue[7] << VGA:vga.port10
 
 
 |video_game|ps2_keyboard:keyboard
@@ -50,6 +51,7 @@ register[4] <= memory:mem.port2
 register[5] <= memory:mem.port2
 register[6] <= memory:mem.port2
 register[7] <= memory:mem.port2
+scan_ready <= scan_ready.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |video_game|ps2_keyboard:keyboard|Debounce:debouncing

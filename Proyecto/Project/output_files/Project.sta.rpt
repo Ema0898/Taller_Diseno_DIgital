@@ -1,5 +1,5 @@
 Timing Analyzer report for Project
-Thu Jun  6 14:42:09 2019
+Thu Jun 06 21:51:37 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -46,15 +46,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  38. Signal Integrity Metrics (Fast 1100mv 85c Model)
  39. Setup Transfers
  40. Hold Transfers
- 41. Report TCCS
- 42. Report RSKM
- 43. Unconstrained Paths Summary
- 44. Clock Status Summary
- 45. Unconstrained Input Ports
- 46. Unconstrained Output Ports
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths Summary
+ 46. Clock Status Summary
  47. Unconstrained Input Ports
  48. Unconstrained Output Ports
- 49. Timing Analyzer Messages
+ 49. Unconstrained Input Ports
+ 50. Unconstrained Output Ports
+ 51. Timing Analyzer Messages
 
 
 
@@ -97,39 +99,45 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.41        ;
-; Maximum used               ; 2           ;
+; Average used               ; 2.05        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  41.1%      ;
+;     Processor 2            ;  35.5%      ;
+;     Processor 3            ;  34.9%      ;
+;     Processor 4            ;  34.2%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                                                           ;
-+-------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------+
-; Clock Name                                      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                             ;
-+-------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------+
-; clk                                             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                             ;
-; frequency_divider_cpu:fdc|clk_out               ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { frequency_divider_cpu:fdc|clk_out }               ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz }       ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA:vga|frequency_divider_paint:divider|clk_out } ;
-+-------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                                     ;
++----------------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------------------------------+
+; Clock Name                                                           ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                                                  ;
++----------------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------------------------------+
+; clk                                                                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                                                  ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out }               ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux }       ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set } ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered }              ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz }                            ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA:vga|frequency_divider_paint:divider|clk_out }                      ;
++----------------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                                                    ;
-+------------+-----------------+-------------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note ;
-+------------+-----------------+-------------------------------------------------+------+
-; 41.78 MHz  ; 41.78 MHz       ; frequency_divider_cpu:fdc|clk_out               ;      ;
-; 252.21 MHz ; 252.21 MHz      ; clk                                             ;      ;
-; 263.57 MHz ; 263.57 MHz      ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ;      ;
-; 403.23 MHz ; 403.23 MHz      ; VGA:vga|frequency_divider_paint:divider|clk_out ;      ;
-+------------+-----------------+-------------------------------------------------+------+
++-----------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                                            ;
++------------+-----------------+---------------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                              ; Note ;
++------------+-----------------+---------------------------------------------------------+------+
+; 37.4 MHz   ; 37.4 MHz        ; clk                                                     ;      ;
+; 245.16 MHz ; 245.16 MHz      ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz               ;      ;
+; 286.45 MHz ; 286.45 MHz      ; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered ;      ;
+; 331.67 MHz ; 331.67 MHz      ; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out  ;      ;
+; 409.67 MHz ; 409.67 MHz      ; VGA:vga|frequency_divider_paint:divider|clk_out         ;      ;
++------------+-----------------+---------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -139,251 +147,314 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+---------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary                                       ;
-+-------------------------------------------------+---------+---------------+
-; Clock                                           ; Slack   ; End Point TNS ;
-+-------------------------------------------------+---------+---------------+
-; frequency_divider_cpu:fdc|clk_out               ; -11.468 ; -2621.382     ;
-; clk                                             ; -10.642 ; -197.062      ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; -3.106  ; -6.142        ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -2.794  ; -80.218       ;
-+-------------------------------------------------+---------+---------------+
++------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                                                      ;
++----------------------------------------------------------------+---------+---------------+
+; Clock                                                          ; Slack   ; End Point TNS ;
++----------------------------------------------------------------+---------+---------------+
+; clk                                                            ; -12.870 ; -23549.981    ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                      ; -3.079  ; -88.027       ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered        ; -2.491  ; -41.748       ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                ; -2.318  ; -4.568        ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out         ; -2.015  ; -11.622       ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux ; -1.597  ; -10.716       ;
++----------------------------------------------------------------+---------+---------------+
 
 
-+--------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                                       ;
-+-------------------------------------------------+--------+---------------+
-; Clock                                           ; Slack  ; End Point TNS ;
-+-------------------------------------------------+--------+---------------+
-; clk                                             ; -0.976 ; -4.153        ;
-; frequency_divider_cpu:fdc|clk_out               ; 0.509  ; 0.000         ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.607  ; 0.000         ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.657  ; 0.000         ;
-+-------------------------------------------------+--------+---------------+
++----------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                                     ;
++----------------------------------------------------------------+-------+---------------+
+; Clock                                                          ; Slack ; End Point TNS ;
++----------------------------------------------------------------+-------+---------------+
+; clk                                                            ; 0.218 ; 0.000         ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered        ; 0.262 ; 0.000         ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out         ; 0.430 ; 0.000         ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux ; 0.452 ; 0.000         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                      ; 0.731 ; 0.000         ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                ; 0.735 ; 0.000         ;
++----------------------------------------------------------------+-------+---------------+
 
 
-------------------------------------------
-; Slow 1100mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Recovery Summary                                                        ;
++----------------------------------------------------------------------+--------+---------------+
+; Clock                                                                ; Slack  ; End Point TNS ;
++----------------------------------------------------------------------+--------+---------------+
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; -3.151 ; -3.151        ;
++----------------------------------------------------------------------+--------+---------------+
 
 
------------------------------------------
-; Slow 1100mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Removal Summary                                                        ;
++----------------------------------------------------------------------+-------+---------------+
+; Clock                                                                ; Slack ; End Point TNS ;
++----------------------------------------------------------------------+-------+---------------+
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; 2.557 ; 0.000         ;
++----------------------------------------------------------------------+-------+---------------+
 
 
-+--------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Minimum Pulse Width Summary                        ;
-+-------------------------------------------------+--------+---------------+
-; Clock                                           ; Slack  ; End Point TNS ;
-+-------------------------------------------------+--------+---------------+
-; frequency_divider_cpu:fdc|clk_out               ; -0.461 ; -179.801      ;
-; clk                                             ; -0.423 ; -28.445       ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -0.394 ; -19.819       ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; -0.394 ; -1.044        ;
-+-------------------------------------------------+--------+---------------+
++-----------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary                                             ;
++----------------------------------------------------------------------+--------+---------------+
+; Clock                                                                ; Slack  ; End Point TNS ;
++----------------------------------------------------------------------+--------+---------------+
+; clk                                                                  ; -0.407 ; -1272.643     ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; -0.394 ; -18.154       ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; -0.394 ; -17.672       ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; -0.394 ; -6.405        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux       ; -0.394 ; -5.009        ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                      ; -0.394 ; -1.160        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; -0.394 ; -0.528        ;
++----------------------------------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
 ; Slow 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
 
 
-+---------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                                                     ;
-+------------+-----------------+-------------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note ;
-+------------+-----------------+-------------------------------------------------+------+
-; 42.93 MHz  ; 42.93 MHz       ; frequency_divider_cpu:fdc|clk_out               ;      ;
-; 260.35 MHz ; 260.35 MHz      ; clk                                             ;      ;
-; 265.96 MHz ; 265.96 MHz      ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ;      ;
-; 407.0 MHz  ; 407.0 MHz       ; VGA:vga|frequency_divider_paint:divider|clk_out ;      ;
-+------------+-----------------+-------------------------------------------------+------+
+
++-----------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                                             ;
++------------+-----------------+---------------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                              ; Note ;
++------------+-----------------+---------------------------------------------------------+------+
+; 38.07 MHz  ; 38.07 MHz       ; clk                                                     ;      ;
+; 247.89 MHz ; 247.89 MHz      ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz               ;      ;
+; 286.45 MHz ; 286.45 MHz      ; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered ;      ;
+; 327.44 MHz ; 327.44 MHz      ; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out  ;      ;
+; 419.82 MHz ; 419.82 MHz      ; VGA:vga|frequency_divider_paint:divider|clk_out         ;      ;
++------------+-----------------+---------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+---------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Setup Summary                                        ;
-+-------------------------------------------------+---------+---------------+
-; Clock                                           ; Slack   ; End Point TNS ;
-+-------------------------------------------------+---------+---------------+
-; frequency_divider_cpu:fdc|clk_out               ; -11.146 ; -2556.835     ;
-; clk                                             ; -10.105 ; -189.157      ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; -3.040  ; -6.059        ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -2.760  ; -77.927       ;
-+-------------------------------------------------+---------+---------------+
++------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                                                       ;
++----------------------------------------------------------------+---------+---------------+
+; Clock                                                          ; Slack   ; End Point TNS ;
++----------------------------------------------------------------+---------+---------------+
+; clk                                                            ; -12.635 ; -22854.532    ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                      ; -3.034  ; -86.927       ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered        ; -2.491  ; -39.558       ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                ; -2.330  ; -4.500        ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out         ; -2.054  ; -11.634       ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux ; -1.540  ; -10.395       ;
++----------------------------------------------------------------+---------+---------------+
 
 
-+--------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                                        ;
-+-------------------------------------------------+--------+---------------+
-; Clock                                           ; Slack  ; End Point TNS ;
-+-------------------------------------------------+--------+---------------+
-; clk                                             ; -1.017 ; -5.863        ;
-; frequency_divider_cpu:fdc|clk_out               ; 0.498  ; 0.000         ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.581  ; 0.000         ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.650  ; 0.000         ;
-+-------------------------------------------------+--------+---------------+
++----------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                                      ;
++----------------------------------------------------------------+-------+---------------+
+; Clock                                                          ; Slack ; End Point TNS ;
++----------------------------------------------------------------+-------+---------------+
+; clk                                                            ; 0.133 ; 0.000         ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered        ; 0.262 ; 0.000         ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux ; 0.418 ; 0.000         ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out         ; 0.459 ; 0.000         ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                ; 0.668 ; 0.000         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                      ; 0.679 ; 0.000         ;
++----------------------------------------------------------------+-------+---------------+
 
 
------------------------------------------
-; Slow 1100mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Recovery Summary                                                         ;
++----------------------------------------------------------------------+--------+---------------+
+; Clock                                                                ; Slack  ; End Point TNS ;
++----------------------------------------------------------------------+--------+---------------+
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; -3.244 ; -3.244        ;
++----------------------------------------------------------------------+--------+---------------+
 
 
-----------------------------------------
-; Slow 1100mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Removal Summary                                                         ;
++----------------------------------------------------------------------+-------+---------------+
+; Clock                                                                ; Slack ; End Point TNS ;
++----------------------------------------------------------------------+-------+---------------+
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; 2.675 ; 0.000         ;
++----------------------------------------------------------------------+-------+---------------+
 
 
-+--------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Minimum Pulse Width Summary                         ;
-+-------------------------------------------------+--------+---------------+
-; Clock                                           ; Slack  ; End Point TNS ;
-+-------------------------------------------------+--------+---------------+
-; clk                                             ; -0.436 ; -30.454       ;
-; frequency_divider_cpu:fdc|clk_out               ; -0.394 ; -160.569      ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -0.394 ; -20.272       ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; -0.394 ; -1.025        ;
-+-------------------------------------------------+--------+---------------+
++-----------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary                                              ;
++----------------------------------------------------------------------+--------+---------------+
+; Clock                                                                ; Slack  ; End Point TNS ;
++----------------------------------------------------------------------+--------+---------------+
+; clk                                                                  ; -0.394 ; -1380.943     ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; -0.394 ; -18.140       ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; -0.394 ; -17.124       ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; -0.394 ; -6.331        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux       ; -0.394 ; -4.949        ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                      ; -0.394 ; -1.150        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; -0.394 ; -0.517        ;
++----------------------------------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
 ; Slow 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
 
 
-+--------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Setup Summary                                      ;
-+-------------------------------------------------+--------+---------------+
-; Clock                                           ; Slack  ; End Point TNS ;
-+-------------------------------------------------+--------+---------------+
-; frequency_divider_cpu:fdc|clk_out               ; -6.914 ; -1563.300     ;
-; clk                                             ; -6.103 ; -102.361      ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; -1.516 ; -3.006        ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -1.384 ; -38.984       ;
-+-------------------------------------------------+--------+---------------+
+
++-----------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                                                     ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; clk                                                            ; -7.421 ; -13259.037    ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                      ; -1.535 ; -42.157       ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered        ; -1.214 ; -18.955       ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out         ; -1.045 ; -4.453        ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                ; -1.036 ; -1.972        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux ; -0.795 ; -4.729        ;
++----------------------------------------------------------------+--------+---------------+
 
 
-+--------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                                       ;
-+-------------------------------------------------+--------+---------------+
-; Clock                                           ; Slack  ; End Point TNS ;
-+-------------------------------------------------+--------+---------------+
-; clk                                             ; -0.682 ; -4.062        ;
-; frequency_divider_cpu:fdc|clk_out               ; 0.229  ; 0.000         ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.320  ; 0.000         ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.336  ; 0.000         ;
-+-------------------------------------------------+--------+---------------+
++----------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                                     ;
++----------------------------------------------------------------+-------+---------------+
+; Clock                                                          ; Slack ; End Point TNS ;
++----------------------------------------------------------------+-------+---------------+
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered        ; 0.048 ; 0.000         ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux ; 0.069 ; 0.000         ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out         ; 0.075 ; 0.000         ;
+; clk                                                            ; 0.127 ; 0.000         ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                ; 0.179 ; 0.000         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                      ; 0.340 ; 0.000         ;
++----------------------------------------------------------------+-------+---------------+
 
 
-------------------------------------------
-; Fast 1100mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Recovery Summary                                                        ;
++----------------------------------------------------------------------+--------+---------------+
+; Clock                                                                ; Slack  ; End Point TNS ;
++----------------------------------------------------------------------+--------+---------------+
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; -1.453 ; -1.453        ;
++----------------------------------------------------------------------+--------+---------------+
 
 
------------------------------------------
-; Fast 1100mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Removal Summary                                                        ;
++----------------------------------------------------------------------+-------+---------------+
+; Clock                                                                ; Slack ; End Point TNS ;
++----------------------------------------------------------------------+-------+---------------+
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; 1.245 ; 0.000         ;
++----------------------------------------------------------------------+-------+---------------+
 
 
-+--------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Minimum Pulse Width Summary                        ;
-+-------------------------------------------------+--------+---------------+
-; Clock                                           ; Slack  ; End Point TNS ;
-+-------------------------------------------------+--------+---------------+
-; clk                                             ; -0.424 ; -5.122        ;
-; frequency_divider_cpu:fdc|clk_out               ; -0.177 ; -16.481       ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -0.079 ; -1.350        ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.131  ; 0.000         ;
-+-------------------------------------------------+--------+---------------+
++-----------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary                                             ;
++----------------------------------------------------------------------+--------+---------------+
+; Clock                                                                ; Slack  ; End Point TNS ;
++----------------------------------------------------------------------+--------+---------------+
+; clk                                                                  ; -0.387 ; -125.997      ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; -0.127 ; -1.530        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux       ; -0.036 ; -0.052        ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; -0.012 ; -0.139        ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                      ; 0.033  ; 0.000         ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; 0.082  ; 0.000         ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; 0.118  ; 0.000         ;
++----------------------------------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
 ; Fast 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
 
 
-+--------------------------------------------------------------------------+
-; Fast 1100mV 0C Model Setup Summary                                       ;
-+-------------------------------------------------+--------+---------------+
-; Clock                                           ; Slack  ; End Point TNS ;
-+-------------------------------------------------+--------+---------------+
-; frequency_divider_cpu:fdc|clk_out               ; -6.182 ; -1394.860     ;
-; clk                                             ; -5.258 ; -87.621       ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; -1.363 ; -2.672        ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -1.207 ; -33.976       ;
-+-------------------------------------------------+--------+---------------+
+
++-----------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                                                      ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; clk                                                            ; -6.625 ; -11772.733    ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                      ; -1.354 ; -37.208       ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered        ; -1.074 ; -15.588       ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out         ; -0.950 ; -3.636        ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                ; -0.921 ; -1.726        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux ; -0.665 ; -3.912        ;
++----------------------------------------------------------------+--------+---------------+
 
 
-+--------------------------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                                        ;
-+-------------------------------------------------+--------+---------------+
-; Clock                                           ; Slack  ; End Point TNS ;
-+-------------------------------------------------+--------+---------------+
-; clk                                             ; -0.856 ; -6.216        ;
-; frequency_divider_cpu:fdc|clk_out               ; 0.203  ; 0.000         ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.286  ; 0.000         ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.306  ; 0.000         ;
-+-------------------------------------------------+--------+---------------+
++-----------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                                       ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; clk                                                            ; -0.119 ; -0.332        ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered        ; -0.004 ; -0.004        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux ; 0.018  ; 0.000         ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out         ; 0.044  ; 0.000         ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                ; 0.109  ; 0.000         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                      ; 0.296  ; 0.000         ;
++----------------------------------------------------------------+--------+---------------+
 
 
------------------------------------------
-; Fast 1100mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Recovery Summary                                                         ;
++----------------------------------------------------------------------+--------+---------------+
+; Clock                                                                ; Slack  ; End Point TNS ;
++----------------------------------------------------------------------+--------+---------------+
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; -1.428 ; -1.428        ;
++----------------------------------------------------------------------+--------+---------------+
 
 
-----------------------------------------
-; Fast 1100mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Removal Summary                                                         ;
++----------------------------------------------------------------------+-------+---------------+
+; Clock                                                                ; Slack ; End Point TNS ;
++----------------------------------------------------------------------+-------+---------------+
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; 1.237 ; 0.000         ;
++----------------------------------------------------------------------+-------+---------------+
 
 
-+--------------------------------------------------------------------------+
-; Fast 1100mV 0C Model Minimum Pulse Width Summary                         ;
-+-------------------------------------------------+--------+---------------+
-; Clock                                           ; Slack  ; End Point TNS ;
-+-------------------------------------------------+--------+---------------+
-; clk                                             ; -0.424 ; -5.378        ;
-; frequency_divider_cpu:fdc|clk_out               ; -0.126 ; -8.760        ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -0.046 ; -0.765        ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.146  ; 0.000         ;
-+-------------------------------------------------+--------+---------------+
++-----------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary                                              ;
++----------------------------------------------------------------------+--------+---------------+
+; Clock                                                                ; Slack  ; End Point TNS ;
++----------------------------------------------------------------------+--------+---------------+
+; clk                                                                  ; -0.375 ; -162.021      ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; -0.061 ; -0.303        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux       ; 0.002  ; 0.000         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; 0.018  ; 0.000         ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                      ; 0.063  ; 0.000         ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; 0.100  ; 0.000         ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; 0.129  ; 0.000         ;
++----------------------------------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
 ; Fast 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                              ;
-+--------------------------------------------------+-----------+--------+----------+---------+---------------------+
-; Clock                                            ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+--------------------------------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                 ; -11.468   ; -1.017 ; N/A      ; N/A     ; -0.461              ;
-;  VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -2.794    ; 0.306  ; N/A      ; N/A     ; -0.394              ;
-;  VGA:vga|frequency_divider_paint:divider|clk_out ; -3.106    ; 0.286  ; N/A      ; N/A     ; -0.394              ;
-;  clk                                             ; -10.642   ; -1.017 ; N/A      ; N/A     ; -0.436              ;
-;  frequency_divider_cpu:fdc|clk_out               ; -11.468   ; 0.203  ; N/A      ; N/A     ; -0.461              ;
-; Design-wide TNS                                  ; -2904.804 ; -6.216 ; 0.0      ; 0.0     ; -229.109            ;
-;  VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -80.218   ; 0.000  ; N/A      ; N/A     ; -20.272             ;
-;  VGA:vga|frequency_divider_paint:divider|clk_out ; -6.142    ; 0.000  ; N/A      ; N/A     ; -1.044              ;
-;  clk                                             ; -197.062  ; -6.216 ; N/A      ; N/A     ; -30.454             ;
-;  frequency_divider_cpu:fdc|clk_out               ; -2621.382 ; 0.000  ; N/A      ; N/A     ; -179.801            ;
-+--------------------------------------------------+-----------+--------+----------+---------+---------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                                    ;
++-----------------------------------------------------------------------+------------+--------+----------+---------+---------------------+
+; Clock                                                                 ; Setup      ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------------------------------------------+------------+--------+----------+---------+---------------------+
+; Worst-case Slack                                                      ; -12.870    ; -0.119 ; -3.244   ; 1.237   ; -0.407              ;
+;  VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; -3.079     ; 0.296  ; N/A      ; N/A     ; -0.394              ;
+;  VGA:vga|frequency_divider_paint:divider|clk_out                      ; -2.330     ; 0.109  ; N/A      ; N/A     ; -0.394              ;
+;  clk                                                                  ; -12.870    ; -0.119 ; N/A      ; N/A     ; -0.407              ;
+;  ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; -2.054     ; 0.044  ; N/A      ; N/A     ; -0.394              ;
+;  ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux       ; -1.597     ; 0.018  ; N/A      ; N/A     ; -0.394              ;
+;  ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; N/A        ; N/A    ; -3.244   ; 1.237   ; -0.394              ;
+;  ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; -2.491     ; -0.004 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS                                                       ; -23706.662 ; -0.336 ; -3.244   ; 0.0     ; -1429.154           ;
+;  VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; -88.027    ; 0.000  ; N/A      ; N/A     ; -18.154             ;
+;  VGA:vga|frequency_divider_paint:divider|clk_out                      ; -4.568     ; 0.000  ; N/A      ; N/A     ; -1.160              ;
+;  clk                                                                  ; -23549.981 ; -0.332 ; N/A      ; N/A     ; -1380.943           ;
+;  ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; -11.634    ; 0.000  ; N/A      ; N/A     ; -6.405              ;
+;  ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux       ; -10.716    ; 0.000  ; N/A      ; N/A     ; -5.009              ;
+;  ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; N/A        ; N/A    ; -3.244   ; 0.000   ; -0.528              ;
+;  ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; -41.748    ; -0.004 ; N/A      ; N/A     ; -17.672             ;
++-----------------------------------------------------------------------+------------+--------+----------+---------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -396,6 +467,7 @@ No synchronizer chains to report.
 ; ff_out[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ff_out[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ff_out[4]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ff_out[5]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; vga_hs      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; vga_vs      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; vga_blank_n ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -432,10 +504,10 @@ No synchronizer chains to report.
 +----------+--------------+-----------------+-----------------+
 ; Pin      ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +----------+--------------+-----------------+-----------------+
-; ps2_data ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ps2_clk  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clk      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; reset    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ps2_data ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ps2_clk  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +----------+--------------+-----------------+-----------------+
 
 
@@ -449,6 +521,7 @@ No synchronizer chains to report.
 ; ff_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; ff_out[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; ff_out[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
+; ff_out[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; vga_hs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; vga_vs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; vga_blank_n ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
@@ -490,6 +563,7 @@ No synchronizer chains to report.
 ; ff_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; ff_out[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; ff_out[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
+; ff_out[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; vga_hs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; vga_vs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; vga_blank_n ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
@@ -531,6 +605,7 @@ No synchronizer chains to report.
 ; ff_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; ff_out[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; ff_out[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; ff_out[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; vga_hs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; vga_vs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; vga_blank_n ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
@@ -572,6 +647,7 @@ No synchronizer chains to report.
 ; ff_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; ff_out[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; ff_out[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; ff_out[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; vga_hs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 ; vga_vs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; vga_blank_n ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
@@ -603,35 +679,65 @@ No synchronizer chains to report.
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                                                               ;
-+-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
-; From Clock                                      ; To Clock                                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
-; clk                                             ; clk                                             ; 1214     ; 0        ; 0        ; 0        ;
-; frequency_divider_cpu:fdc|clk_out               ; clk                                             ; 1        ; 1        ; 22238088 ; 635610   ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; clk                                             ; 1        ; 1        ; 0        ; 0        ;
-; frequency_divider_cpu:fdc|clk_out               ; frequency_divider_cpu:fdc|clk_out               ; 2231911  ; 63775    ; 15622682 ; 446425   ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 763      ; 0        ; 0        ; 0        ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; VGA:vga|frequency_divider_paint:divider|clk_out ; 40       ; 0        ; 0        ; 0        ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; VGA:vga|frequency_divider_paint:divider|clk_out ; 3        ; 0        ; 0        ; 0        ;
-+-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                                                   ;
++----------------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                                           ; To Clock                                                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
+; clk                                                                  ; clk                                                            ; 75       ; 0        ; 48908814 ; 4064366  ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; clk                                                            ; 1        ; 1        ; 0        ; 0        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux       ; clk                                                            ; 2        ; 2        ; 16       ; 0        ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                      ; clk                                                            ; 1        ; 1        ; 0        ; 0        ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out         ; 23       ; 0        ; 0        ; 0        ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out         ; 1        ; 1        ; 0        ; 0        ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux ; 8        ; 0        ; 0        ; 0        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered        ; 1        ; 1        ; 0        ; 0        ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered        ; 145      ; 0        ; 0        ; 0        ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                      ; 774      ; 0        ; 0        ; 0        ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; VGA:vga|frequency_divider_paint:divider|clk_out                ; 40       ; 0        ; 0        ; 0        ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                      ; VGA:vga|frequency_divider_paint:divider|clk_out                ; 3        ; 0        ; 0        ; 0        ;
++----------------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                                                                ;
-+-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
-; From Clock                                      ; To Clock                                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
-; clk                                             ; clk                                             ; 1214     ; 0        ; 0        ; 0        ;
-; frequency_divider_cpu:fdc|clk_out               ; clk                                             ; 1        ; 1        ; 22238088 ; 635610   ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; clk                                             ; 1        ; 1        ; 0        ; 0        ;
-; frequency_divider_cpu:fdc|clk_out               ; frequency_divider_cpu:fdc|clk_out               ; 2231911  ; 63775    ; 15622682 ; 446425   ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 763      ; 0        ; 0        ; 0        ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; VGA:vga|frequency_divider_paint:divider|clk_out ; 40       ; 0        ; 0        ; 0        ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; VGA:vga|frequency_divider_paint:divider|clk_out ; 3        ; 0        ; 0        ; 0        ;
-+-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                                                    ;
++----------------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                                           ; To Clock                                                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
+; clk                                                                  ; clk                                                            ; 75       ; 0        ; 48908814 ; 4064366  ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; clk                                                            ; 1        ; 1        ; 0        ; 0        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux       ; clk                                                            ; 2        ; 2        ; 16       ; 0        ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                      ; clk                                                            ; 1        ; 1        ; 0        ; 0        ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out         ; 23       ; 0        ; 0        ; 0        ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out         ; 1        ; 1        ; 0        ; 0        ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux ; 8        ; 0        ; 0        ; 0        ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered        ; 1        ; 1        ; 0        ; 0        ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered        ; 145      ; 0        ; 0        ; 0        ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                      ; 774      ; 0        ; 0        ; 0        ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; VGA:vga|frequency_divider_paint:divider|clk_out                ; 40       ; 0        ; 0        ; 0        ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                      ; VGA:vga|frequency_divider_paint:divider|clk_out                ; 3        ; 0        ; 0        ; 0        ;
++----------------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                                            ;
++------------+----------------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock ; To Clock                                                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------------------------------------------------------------------+----------+----------+----------+----------+
+; clk        ; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; 1        ; 0        ; 0        ; 0        ;
++------------+----------------------------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                                             ;
++------------+----------------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock ; To Clock                                                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------------------------------------------------------------------+----------+----------+----------+----------+
+; clk        ; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; 1        ; 0        ; 0        ; 0        ;
++------------+----------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -654,23 +760,26 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 337   ; 337  ;
-; Unconstrained Output Ports      ; 32    ; 32   ;
-; Unconstrained Output Port Paths ; 937   ; 937  ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 129   ; 129  ;
+; Unconstrained Output Ports      ; 33    ; 33   ;
+; Unconstrained Output Port Paths ; 915   ; 915  ;
 +---------------------------------+-------+------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Clock Status Summary                                                                                                   ;
-+-------------------------------------------------+-------------------------------------------------+------+-------------+
-; Target                                          ; Clock                                           ; Type ; Status      ;
-+-------------------------------------------------+-------------------------------------------------+------+-------------+
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; Base ; Constrained ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; VGA:vga|frequency_divider_paint:divider|clk_out ; Base ; Constrained ;
-; clk                                             ; clk                                             ; Base ; Constrained ;
-; frequency_divider_cpu:fdc|clk_out               ; frequency_divider_cpu:fdc|clk_out               ; Base ; Constrained ;
-+-------------------------------------------------+-------------------------------------------------+------+-------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                                                             ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+------+-------------+
+; Target                                                               ; Clock                                                                ; Type ; Status      ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+------+-------------+
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz                            ; Base ; Constrained ;
+; VGA:vga|frequency_divider_paint:divider|clk_out                      ; VGA:vga|frequency_divider_paint:divider|clk_out                      ; Base ; Constrained ;
+; clk                                                                  ; clk                                                                  ; Base ; Constrained ;
+; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out               ; Base ; Constrained ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux       ; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux       ; Base ; Constrained ;
+; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ; Base ; Constrained ;
+; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered              ; Base ; Constrained ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -678,6 +787,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
+; ps2_clk    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ps2_data   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
@@ -700,6 +811,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ff_out[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ff_out[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ff_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ff_out[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -727,6 +839,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
+; ps2_clk    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ps2_data   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
@@ -749,6 +863,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ff_out[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ff_out[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ff_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ff_out[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -777,18 +892,21 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jun  6 14:41:58 2019
+    Info: Processing started: Thu Jun 06 21:51:27 2019
 Info: Command: quartus_sta Project -c Project
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Project.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clk clk
-    Info (332105): create_clock -period 1.000 -name frequency_divider_cpu:fdc|clk_out frequency_divider_cpu:fdc|clk_out
+    Info (332105): create_clock -period 1.000 -name ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux
+    Info (332105): create_clock -period 1.000 -name ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set
+    Info (332105): create_clock -period 1.000 -name ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered
+    Info (332105): create_clock -period 1.000 -name ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out
     Info (332105): create_clock -period 1.000 -name VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz
     Info (332105): create_clock -period 1.000 -name VGA:vga|frequency_divider_paint:divider|clk_out VGA:vga|frequency_divider_paint:divider|clk_out
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -797,120 +915,180 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -11.468
+Info (332146): Worst-case setup slack is -12.870
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.468           -2621.382 frequency_divider_cpu:fdc|clk_out 
-    Info (332119):   -10.642            -197.062 clk 
-    Info (332119):    -3.106              -6.142 VGA:vga|frequency_divider_paint:divider|clk_out 
-    Info (332119):    -2.794             -80.218 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332146): Worst-case hold slack is -0.976
+    Info (332119):   -12.870          -23549.981 clk 
+    Info (332119):    -3.079             -88.027 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -2.491             -41.748 ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered 
+    Info (332119):    -2.318              -4.568 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -2.015             -11.622 ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out 
+    Info (332119):    -1.597             -10.716 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux 
+Info (332146): Worst-case hold slack is 0.218
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.976              -4.153 clk 
-    Info (332119):     0.509               0.000 frequency_divider_cpu:fdc|clk_out 
-    Info (332119):     0.607               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
-    Info (332119):     0.657               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.461
+    Info (332119):     0.218               0.000 clk 
+    Info (332119):     0.262               0.000 ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered 
+    Info (332119):     0.430               0.000 ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out 
+    Info (332119):     0.452               0.000 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux 
+    Info (332119):     0.731               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.735               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+Info (332146): Worst-case recovery slack is -3.151
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.461            -179.801 frequency_divider_cpu:fdc|clk_out 
-    Info (332119):    -0.423             -28.445 clk 
-    Info (332119):    -0.394             -19.819 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.394              -1.044 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -3.151              -3.151 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set 
+Info (332146): Worst-case removal slack is 2.557
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.557               0.000 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set 
+Info (332146): Worst-case minimum pulse width slack is -0.407
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.407           -1272.643 clk 
+    Info (332119):    -0.394             -18.154 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.394             -17.672 ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered 
+    Info (332119):    -0.394              -6.405 ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out 
+    Info (332119):    -0.394              -5.009 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux 
+    Info (332119):    -0.394              -1.160 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -0.394              -0.528 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -11.146
+Info (332146): Worst-case setup slack is -12.635
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.146           -2556.835 frequency_divider_cpu:fdc|clk_out 
-    Info (332119):   -10.105            -189.157 clk 
-    Info (332119):    -3.040              -6.059 VGA:vga|frequency_divider_paint:divider|clk_out 
-    Info (332119):    -2.760             -77.927 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332146): Worst-case hold slack is -1.017
+    Info (332119):   -12.635          -22854.532 clk 
+    Info (332119):    -3.034             -86.927 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -2.491             -39.558 ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered 
+    Info (332119):    -2.330              -4.500 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -2.054             -11.634 ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out 
+    Info (332119):    -1.540             -10.395 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux 
+Info (332146): Worst-case hold slack is 0.133
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.017              -5.863 clk 
-    Info (332119):     0.498               0.000 frequency_divider_cpu:fdc|clk_out 
-    Info (332119):     0.581               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
-    Info (332119):     0.650               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.436
+    Info (332119):     0.133               0.000 clk 
+    Info (332119):     0.262               0.000 ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered 
+    Info (332119):     0.418               0.000 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux 
+    Info (332119):     0.459               0.000 ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out 
+    Info (332119):     0.668               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):     0.679               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+Info (332146): Worst-case recovery slack is -3.244
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.436             -30.454 clk 
-    Info (332119):    -0.394            -160.569 frequency_divider_cpu:fdc|clk_out 
-    Info (332119):    -0.394             -20.272 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.394              -1.025 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -3.244              -3.244 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set 
+Info (332146): Worst-case removal slack is 2.675
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.675               0.000 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set 
+Info (332146): Worst-case minimum pulse width slack is -0.394
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.394           -1380.943 clk 
+    Info (332119):    -0.394             -18.140 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.394             -17.124 ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered 
+    Info (332119):    -0.394              -6.331 ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out 
+    Info (332119):    -0.394              -4.949 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux 
+    Info (332119):    -0.394              -1.150 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -0.394              -0.517 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.914
+Info (332146): Worst-case setup slack is -7.421
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.914           -1563.300 frequency_divider_cpu:fdc|clk_out 
-    Info (332119):    -6.103            -102.361 clk 
-    Info (332119):    -1.516              -3.006 VGA:vga|frequency_divider_paint:divider|clk_out 
-    Info (332119):    -1.384             -38.984 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332146): Worst-case hold slack is -0.682
+    Info (332119):    -7.421          -13259.037 clk 
+    Info (332119):    -1.535             -42.157 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -1.214             -18.955 ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered 
+    Info (332119):    -1.045              -4.453 ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out 
+    Info (332119):    -1.036              -1.972 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -0.795              -4.729 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux 
+Info (332146): Worst-case hold slack is 0.048
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.682              -4.062 clk 
-    Info (332119):     0.229               0.000 frequency_divider_cpu:fdc|clk_out 
-    Info (332119):     0.320               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
-    Info (332119):     0.336               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.424
+    Info (332119):     0.048               0.000 ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered 
+    Info (332119):     0.069               0.000 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux 
+    Info (332119):     0.075               0.000 ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out 
+    Info (332119):     0.127               0.000 clk 
+    Info (332119):     0.179               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):     0.340               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+Info (332146): Worst-case recovery slack is -1.453
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.424              -5.122 clk 
-    Info (332119):    -0.177             -16.481 frequency_divider_cpu:fdc|clk_out 
-    Info (332119):    -0.079              -1.350 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.131               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -1.453              -1.453 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set 
+Info (332146): Worst-case removal slack is 1.245
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.245               0.000 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set 
+Info (332146): Worst-case minimum pulse width slack is -0.387
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.387            -125.997 clk 
+    Info (332119):    -0.127              -1.530 ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered 
+    Info (332119):    -0.036              -0.052 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux 
+    Info (332119):    -0.012              -0.139 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.033               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):     0.082               0.000 ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out 
+    Info (332119):     0.118               0.000 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.182
+Info (332146): Worst-case setup slack is -6.625
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.182           -1394.860 frequency_divider_cpu:fdc|clk_out 
-    Info (332119):    -5.258             -87.621 clk 
-    Info (332119):    -1.363              -2.672 VGA:vga|frequency_divider_paint:divider|clk_out 
-    Info (332119):    -1.207             -33.976 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332146): Worst-case hold slack is -0.856
+    Info (332119):    -6.625          -11772.733 clk 
+    Info (332119):    -1.354             -37.208 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -1.074             -15.588 ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered 
+    Info (332119):    -0.950              -3.636 ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out 
+    Info (332119):    -0.921              -1.726 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -0.665              -3.912 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux 
+Info (332146): Worst-case hold slack is -0.119
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.856              -6.216 clk 
-    Info (332119):     0.203               0.000 frequency_divider_cpu:fdc|clk_out 
-    Info (332119):     0.286               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
-    Info (332119):     0.306               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.424
+    Info (332119):    -0.119              -0.332 clk 
+    Info (332119):    -0.004              -0.004 ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered 
+    Info (332119):     0.018               0.000 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux 
+    Info (332119):     0.044               0.000 ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out 
+    Info (332119):     0.109               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):     0.296               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+Info (332146): Worst-case recovery slack is -1.428
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.424              -5.378 clk 
-    Info (332119):    -0.126              -8.760 frequency_divider_cpu:fdc|clk_out 
-    Info (332119):    -0.046              -0.765 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.146               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -1.428              -1.428 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set 
+Info (332146): Worst-case removal slack is 1.237
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.237               0.000 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set 
+Info (332146): Worst-case minimum pulse width slack is -0.375
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.375            -162.021 clk 
+    Info (332119):    -0.061              -0.303 ps2_keyboard:keyboard|sincronizer:sinc|ps2_clk_filtered 
+    Info (332119):     0.002               0.000 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|aux 
+    Info (332119):     0.018               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.063               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):     0.100               0.000 ps2_keyboard:keyboard|frequency_divider:f_divi|clk_out 
+    Info (332119):     0.129               0.000 ps2_keyboard:keyboard|read_And_shift_register:r_s_register|ready_set 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1195 megabytes
-    Info: Processing ended: Thu Jun  6 14:42:09 2019
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 5198 megabytes
+    Info: Processing ended: Thu Jun 06 21:51:37 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:18
 
 
