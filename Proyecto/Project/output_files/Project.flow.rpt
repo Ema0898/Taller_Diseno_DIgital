@@ -1,5 +1,5 @@
 Flow report for Project
-Thu Jun  6 03:54:58 2019
+Thu Jun  6 19:11:36 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Jun  6 03:54:58 2019       ;
+; Flow Status                     ; Successful - Thu Jun  6 19:11:36 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Project                                     ;
 ; Top-level Entity Name           ; video_game                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 755 / 32,070 ( 2 % )                        ;
-; Total registers                 ; 311                                         ;
-; Total pins                      ; 36 / 457 ( 8 % )                            ;
+; Logic utilization (in ALMs)     ; 723 / 32,070 ( 2 % )                        ;
+; Total registers                 ; 306                                         ;
+; Total pins                      ; 37 / 457 ( 8 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2019 03:52:47 ;
+; Start date & time ; 06/06/2019 19:09:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Project             ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 176830149515233.155981476724328        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 176830149515233.155986977305615        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -99,12 +99,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 991 MB              ; 00:00:43                           ;
-; Fitter               ; 00:01:25     ; 1.0                     ; 2165 MB             ; 00:02:26                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 984 MB              ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:09     ; 1.4                     ; 1194 MB             ; 00:00:12                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 1169 MB             ; 00:00:02                           ;
-; Total                ; 00:02:08     ; --                      ; --                  ; 00:03:30                           ;
+; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 990 MB              ; 00:00:40                           ;
+; Fitter               ; 00:01:30     ; 1.0                     ; 2158 MB             ; 00:02:35                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 986 MB              ; 00:00:08                           ;
+; Total                ; 00:02:01     ; --                      ; --                  ; 00:03:23                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,8 +114,6 @@ refer to the applicable agreement for further details.
 ; Analysis & Synthesis ; Inspiron-5559    ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
 ; Fitter               ; Inspiron-5559    ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
 ; Assembler            ; Inspiron-5559    ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; Timing Analyzer      ; Inspiron-5559    ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
-; EDA Netlist Writer   ; Inspiron-5559    ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
@@ -127,8 +123,6 @@ refer to the applicable agreement for further details.
 quartus_map --read_settings_files=on --write_settings_files=off Project -c Project
 quartus_fit --read_settings_files=off --write_settings_files=off Project -c Project
 quartus_asm --read_settings_files=off --write_settings_files=off Project -c Project
-quartus_sta Project -c Project
-quartus_eda --read_settings_files=off --write_settings_files=off Project -c Project
 
 
 

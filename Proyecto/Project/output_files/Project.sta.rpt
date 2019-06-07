@@ -1,5 +1,5 @@
 Timing Analyzer report for Project
-Thu Jun  6 03:54:55 2019
+Thu Jun  6 14:42:09 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -99,12 +99,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.38        ;
+; Average used               ; 1.41        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  38.2%      ;
+;     Processor 2            ;  41.1%      ;
 +----------------------------+-------------+
 
 
@@ -114,6 +114,7 @@ refer to the applicable agreement for further details.
 ; Clock Name                                      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                             ;
 +-------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------+
 ; clk                                             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                             ;
+; frequency_divider_cpu:fdc|clk_out               ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { frequency_divider_cpu:fdc|clk_out }               ;
 ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz }       ;
 ; VGA:vga|frequency_divider_paint:divider|clk_out ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA:vga|frequency_divider_paint:divider|clk_out } ;
 +-------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------+
@@ -124,9 +125,10 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note ;
 +------------+-----------------+-------------------------------------------------+------+
-; 40.22 MHz  ; 40.22 MHz       ; clk                                             ;      ;
-; 253.23 MHz ; 253.23 MHz      ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ;      ;
-; 475.29 MHz ; 475.29 MHz      ; VGA:vga|frequency_divider_paint:divider|clk_out ;      ;
+; 41.78 MHz  ; 41.78 MHz       ; frequency_divider_cpu:fdc|clk_out               ;      ;
+; 252.21 MHz ; 252.21 MHz      ; clk                                             ;      ;
+; 263.57 MHz ; 263.57 MHz      ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ;      ;
+; 403.23 MHz ; 403.23 MHz      ; VGA:vga|frequency_divider_paint:divider|clk_out ;      ;
 +------------+-----------------+-------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -142,21 +144,23 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------+---------+---------------+
 ; Clock                                           ; Slack   ; End Point TNS ;
 +-------------------------------------------------+---------+---------------+
-; clk                                             ; -12.669 ; -2911.117     ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -2.949  ; -85.539       ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; -2.510  ; -4.953        ;
+; frequency_divider_cpu:fdc|clk_out               ; -11.468 ; -2621.382     ;
+; clk                                             ; -10.642 ; -197.062      ;
+; VGA:vga|frequency_divider_paint:divider|clk_out ; -3.106  ; -6.142        ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -2.794  ; -80.218       ;
 +-------------------------------------------------+---------+---------------+
 
 
-+-------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                                      ;
-+-------------------------------------------------+-------+---------------+
-; Clock                                           ; Slack ; End Point TNS ;
-+-------------------------------------------------+-------+---------------+
-; clk                                             ; 0.371 ; 0.000         ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.564 ; 0.000         ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.697 ; 0.000         ;
-+-------------------------------------------------+-------+---------------+
++--------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                       ;
++-------------------------------------------------+--------+---------------+
+; Clock                                           ; Slack  ; End Point TNS ;
++-------------------------------------------------+--------+---------------+
+; clk                                             ; -0.976 ; -4.153        ;
+; frequency_divider_cpu:fdc|clk_out               ; 0.509  ; 0.000         ;
+; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.607  ; 0.000         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.657  ; 0.000         ;
++-------------------------------------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -176,9 +180,10 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; clk                                             ; -0.464 ; -160.497      ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -0.394 ; -16.046       ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; -0.394 ; -1.043        ;
+; frequency_divider_cpu:fdc|clk_out               ; -0.461 ; -179.801      ;
+; clk                                             ; -0.423 ; -28.445       ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -0.394 ; -19.819       ;
+; VGA:vga|frequency_divider_paint:divider|clk_out ; -0.394 ; -1.044        ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -193,9 +198,10 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note ;
 +------------+-----------------+-------------------------------------------------+------+
-; 40.9 MHz   ; 40.9 MHz        ; clk                                             ;      ;
-; 255.89 MHz ; 255.89 MHz      ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ;      ;
-; 476.19 MHz ; 476.19 MHz      ; VGA:vga|frequency_divider_paint:divider|clk_out ;      ;
+; 42.93 MHz  ; 42.93 MHz       ; frequency_divider_cpu:fdc|clk_out               ;      ;
+; 260.35 MHz ; 260.35 MHz      ; clk                                             ;      ;
+; 265.96 MHz ; 265.96 MHz      ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ;      ;
+; 407.0 MHz  ; 407.0 MHz       ; VGA:vga|frequency_divider_paint:divider|clk_out ;      ;
 +------------+-----------------+-------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -205,21 +211,23 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+---------+---------------+
 ; Clock                                           ; Slack   ; End Point TNS ;
 +-------------------------------------------------+---------+---------------+
-; clk                                             ; -12.414 ; -2865.249     ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -2.908  ; -82.847       ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; -2.440  ; -4.756        ;
+; frequency_divider_cpu:fdc|clk_out               ; -11.146 ; -2556.835     ;
+; clk                                             ; -10.105 ; -189.157      ;
+; VGA:vga|frequency_divider_paint:divider|clk_out ; -3.040  ; -6.059        ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -2.760  ; -77.927       ;
 +-------------------------------------------------+---------+---------------+
 
 
-+-------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                                       ;
-+-------------------------------------------------+-------+---------------+
-; Clock                                           ; Slack ; End Point TNS ;
-+-------------------------------------------------+-------+---------------+
-; clk                                             ; 0.389 ; 0.000         ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.546 ; 0.000         ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.665 ; 0.000         ;
-+-------------------------------------------------+-------+---------------+
++--------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                        ;
++-------------------------------------------------+--------+---------------+
+; Clock                                           ; Slack  ; End Point TNS ;
++-------------------------------------------------+--------+---------------+
+; clk                                             ; -1.017 ; -5.863        ;
+; frequency_divider_cpu:fdc|clk_out               ; 0.498  ; 0.000         ;
+; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.581  ; 0.000         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.650  ; 0.000         ;
++-------------------------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -239,9 +247,10 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; clk                                             ; -0.448 ; -178.666      ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -0.394 ; -16.203       ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; -0.394 ; -1.027        ;
+; clk                                             ; -0.436 ; -30.454       ;
+; frequency_divider_cpu:fdc|clk_out               ; -0.394 ; -160.569      ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -0.394 ; -20.272       ;
+; VGA:vga|frequency_divider_paint:divider|clk_out ; -0.394 ; -1.025        ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -256,21 +265,23 @@ No synchronizer chains to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; clk                                             ; -7.299 ; -1660.047     ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -1.448 ; -41.930       ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; -1.254 ; -2.438        ;
+; frequency_divider_cpu:fdc|clk_out               ; -6.914 ; -1563.300     ;
+; clk                                             ; -6.103 ; -102.361      ;
+; VGA:vga|frequency_divider_paint:divider|clk_out ; -1.516 ; -3.006        ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -1.384 ; -38.984       ;
 +-------------------------------------------------+--------+---------------+
 
 
-+-------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                                      ;
-+-------------------------------------------------+-------+---------------+
-; Clock                                           ; Slack ; End Point TNS ;
-+-------------------------------------------------+-------+---------------+
-; clk                                             ; 0.183 ; 0.000         ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.249 ; 0.000         ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.326 ; 0.000         ;
-+-------------------------------------------------+-------+---------------+
++--------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                       ;
++-------------------------------------------------+--------+---------------+
+; Clock                                           ; Slack  ; End Point TNS ;
++-------------------------------------------------+--------+---------------+
+; clk                                             ; -0.682 ; -4.062        ;
+; frequency_divider_cpu:fdc|clk_out               ; 0.229  ; 0.000         ;
+; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.320  ; 0.000         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.336  ; 0.000         ;
++-------------------------------------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -290,9 +301,10 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; clk                                             ; -0.437 ; -17.747       ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.117  ; 0.000         ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.133  ; 0.000         ;
+; clk                                             ; -0.424 ; -5.122        ;
+; frequency_divider_cpu:fdc|clk_out               ; -0.177 ; -16.481       ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -0.079 ; -1.350        ;
+; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.131  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -307,21 +319,23 @@ No synchronizer chains to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; clk                                             ; -6.481 ; -1470.650     ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -1.267 ; -36.467       ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; -1.079 ; -2.085        ;
+; frequency_divider_cpu:fdc|clk_out               ; -6.182 ; -1394.860     ;
+; clk                                             ; -5.258 ; -87.621       ;
+; VGA:vga|frequency_divider_paint:divider|clk_out ; -1.363 ; -2.672        ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -1.207 ; -33.976       ;
 +-------------------------------------------------+--------+---------------+
 
 
-+-------------------------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                                       ;
-+-------------------------------------------------+-------+---------------+
-; Clock                                           ; Slack ; End Point TNS ;
-+-------------------------------------------------+-------+---------------+
-; clk                                             ; 0.176 ; 0.000         ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.189 ; 0.000         ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.288 ; 0.000         ;
-+-------------------------------------------------+-------+---------------+
++--------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                        ;
++-------------------------------------------------+--------+---------------+
+; Clock                                           ; Slack  ; End Point TNS ;
++-------------------------------------------------+--------+---------------+
+; clk                                             ; -0.856 ; -6.216        ;
+; frequency_divider_cpu:fdc|clk_out               ; 0.203  ; 0.000         ;
+; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.286  ; 0.000         ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.306  ; 0.000         ;
++-------------------------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -341,9 +355,10 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; clk                                             ; -0.417 ; -22.352       ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 0.121  ; 0.000         ;
-; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.145  ; 0.000         ;
+; clk                                             ; -0.424 ; -5.378        ;
+; frequency_divider_cpu:fdc|clk_out               ; -0.126 ; -8.760        ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -0.046 ; -0.765        ;
+; VGA:vga|frequency_divider_paint:divider|clk_out ; 0.146  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -353,20 +368,22 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                             ;
-+--------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Clock                                            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+--------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                 ; -12.669   ; 0.176 ; N/A      ; N/A     ; -0.464              ;
-;  VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -2.949    ; 0.288 ; N/A      ; N/A     ; -0.394              ;
-;  VGA:vga|frequency_divider_paint:divider|clk_out ; -2.510    ; 0.189 ; N/A      ; N/A     ; -0.394              ;
-;  clk                                             ; -12.669   ; 0.176 ; N/A      ; N/A     ; -0.464              ;
-; Design-wide TNS                                  ; -3001.609 ; 0.0   ; 0.0      ; 0.0     ; -195.896            ;
-;  VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -85.539   ; 0.000 ; N/A      ; N/A     ; -16.203             ;
-;  VGA:vga|frequency_divider_paint:divider|clk_out ; -4.953    ; 0.000 ; N/A      ; N/A     ; -1.043              ;
-;  clk                                             ; -2911.117 ; 0.000 ; N/A      ; N/A     ; -178.666            ;
-+--------------------------------------------------+-----------+-------+----------+---------+---------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                              ;
++--------------------------------------------------+-----------+--------+----------+---------+---------------------+
+; Clock                                            ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------------------------------+-----------+--------+----------+---------+---------------------+
+; Worst-case Slack                                 ; -11.468   ; -1.017 ; N/A      ; N/A     ; -0.461              ;
+;  VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -2.794    ; 0.306  ; N/A      ; N/A     ; -0.394              ;
+;  VGA:vga|frequency_divider_paint:divider|clk_out ; -3.106    ; 0.286  ; N/A      ; N/A     ; -0.394              ;
+;  clk                                             ; -10.642   ; -1.017 ; N/A      ; N/A     ; -0.436              ;
+;  frequency_divider_cpu:fdc|clk_out               ; -11.468   ; 0.203  ; N/A      ; N/A     ; -0.461              ;
+; Design-wide TNS                                  ; -2904.804 ; -6.216 ; 0.0      ; 0.0     ; -229.109            ;
+;  VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; -80.218   ; 0.000  ; N/A      ; N/A     ; -20.272             ;
+;  VGA:vga|frequency_divider_paint:divider|clk_out ; -6.142    ; 0.000  ; N/A      ; N/A     ; -1.044              ;
+;  clk                                             ; -197.062  ; -6.216 ; N/A      ; N/A     ; -30.454             ;
+;  frequency_divider_cpu:fdc|clk_out               ; -2621.382 ; 0.000  ; N/A      ; N/A     ; -179.801            ;
++--------------------------------------------------+-----------+--------+----------+---------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -378,6 +395,7 @@ No synchronizer chains to report.
 ; ff_out[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ff_out[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ff_out[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ff_out[4]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; vga_hs      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; vga_vs      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; vga_blank_n ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -430,6 +448,7 @@ No synchronizer chains to report.
 ; ff_out[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; ff_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; ff_out[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; ff_out[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; vga_hs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; vga_vs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; vga_blank_n ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
@@ -470,6 +489,7 @@ No synchronizer chains to report.
 ; ff_out[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; ff_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; ff_out[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; ff_out[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; vga_hs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; vga_vs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; vga_blank_n ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
@@ -510,6 +530,7 @@ No synchronizer chains to report.
 ; ff_out[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; ff_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; ff_out[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; ff_out[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; vga_hs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; vga_vs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; vga_blank_n ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
@@ -550,6 +571,7 @@ No synchronizer chains to report.
 ; ff_out[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; ff_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; ff_out[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; ff_out[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; vga_hs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 ; vga_vs      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; vga_blank_n ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
@@ -586,9 +608,11 @@ No synchronizer chains to report.
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                      ; To Clock                                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
-; clk                                             ; clk                                             ; 24035463 ; 697251   ; 15375673 ; 446117   ;
+; clk                                             ; clk                                             ; 1214     ; 0        ; 0        ; 0        ;
+; frequency_divider_cpu:fdc|clk_out               ; clk                                             ; 1        ; 1        ; 22238088 ; 635610   ;
 ; VGA:vga|frequency_divider_paint:divider|clk_out ; clk                                             ; 1        ; 1        ; 0        ; 0        ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 757      ; 0        ; 0        ; 0        ;
+; frequency_divider_cpu:fdc|clk_out               ; frequency_divider_cpu:fdc|clk_out               ; 2231911  ; 63775    ; 15622682 ; 446425   ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 763      ; 0        ; 0        ; 0        ;
 ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; VGA:vga|frequency_divider_paint:divider|clk_out ; 40       ; 0        ; 0        ; 0        ;
 ; VGA:vga|frequency_divider_paint:divider|clk_out ; VGA:vga|frequency_divider_paint:divider|clk_out ; 3        ; 0        ; 0        ; 0        ;
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
@@ -600,9 +624,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                      ; To Clock                                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
-; clk                                             ; clk                                             ; 24035463 ; 697251   ; 15375673 ; 446117   ;
+; clk                                             ; clk                                             ; 1214     ; 0        ; 0        ; 0        ;
+; frequency_divider_cpu:fdc|clk_out               ; clk                                             ; 1        ; 1        ; 22238088 ; 635610   ;
 ; VGA:vga|frequency_divider_paint:divider|clk_out ; clk                                             ; 1        ; 1        ; 0        ; 0        ;
-; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 757      ; 0        ; 0        ; 0        ;
+; frequency_divider_cpu:fdc|clk_out               ; frequency_divider_cpu:fdc|clk_out               ; 2231911  ; 63775    ; 15622682 ; 446425   ;
+; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; 763      ; 0        ; 0        ; 0        ;
 ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; VGA:vga|frequency_divider_paint:divider|clk_out ; 40       ; 0        ; 0        ; 0        ;
 ; VGA:vga|frequency_divider_paint:divider|clk_out ; VGA:vga|frequency_divider_paint:divider|clk_out ; 3        ; 0        ; 0        ; 0        ;
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
@@ -629,9 +655,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 309   ; 309  ;
-; Unconstrained Output Ports      ; 31    ; 31   ;
-; Unconstrained Output Port Paths ; 936   ; 936  ;
+; Unconstrained Input Port Paths  ; 337   ; 337  ;
+; Unconstrained Output Ports      ; 32    ; 32   ;
+; Unconstrained Output Port Paths ; 937   ; 937  ;
 +---------------------------------+-------+------+
 
 
@@ -643,6 +669,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz       ; Base ; Constrained ;
 ; VGA:vga|frequency_divider_paint:divider|clk_out ; VGA:vga|frequency_divider_paint:divider|clk_out ; Base ; Constrained ;
 ; clk                                             ; clk                                             ; Base ; Constrained ;
+; frequency_divider_cpu:fdc|clk_out               ; frequency_divider_cpu:fdc|clk_out               ; Base ; Constrained ;
 +-------------------------------------------------+-------------------------------------------------+------+-------------+
 
 
@@ -672,6 +699,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ff_out[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ff_out[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ff_out[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ff_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -720,6 +748,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ff_out[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ff_out[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ff_out[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ff_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -748,7 +777,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jun  6 03:54:46 2019
+    Info: Processing started: Thu Jun  6 14:41:58 2019
 Info: Command: quartus_sta Project -c Project
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -759,6 +788,7 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'Pro
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name frequency_divider_cpu:fdc|clk_out frequency_divider_cpu:fdc|clk_out
     Info (332105): create_clock -period 1.000 -name VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz
     Info (332105): create_clock -period 1.000 -name VGA:vga|frequency_divider_paint:divider|clk_out VGA:vga|frequency_divider_paint:divider|clk_out
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -767,108 +797,120 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -12.669
+Info (332146): Worst-case setup slack is -11.468
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -12.669           -2911.117 clk 
-    Info (332119):    -2.949             -85.539 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -2.510              -4.953 VGA:vga|frequency_divider_paint:divider|clk_out 
-Info (332146): Worst-case hold slack is 0.371
+    Info (332119):   -11.468           -2621.382 frequency_divider_cpu:fdc|clk_out 
+    Info (332119):   -10.642            -197.062 clk 
+    Info (332119):    -3.106              -6.142 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -2.794             -80.218 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+Info (332146): Worst-case hold slack is -0.976
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.371               0.000 clk 
-    Info (332119):     0.564               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
-    Info (332119):     0.697               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.976              -4.153 clk 
+    Info (332119):     0.509               0.000 frequency_divider_cpu:fdc|clk_out 
+    Info (332119):     0.607               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):     0.657               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.464
+Info (332146): Worst-case minimum pulse width slack is -0.461
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.464            -160.497 clk 
-    Info (332119):    -0.394             -16.046 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.394              -1.043 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -0.461            -179.801 frequency_divider_cpu:fdc|clk_out 
+    Info (332119):    -0.423             -28.445 clk 
+    Info (332119):    -0.394             -19.819 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.394              -1.044 VGA:vga|frequency_divider_paint:divider|clk_out 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -12.414
+Info (332146): Worst-case setup slack is -11.146
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -12.414           -2865.249 clk 
-    Info (332119):    -2.908             -82.847 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -2.440              -4.756 VGA:vga|frequency_divider_paint:divider|clk_out 
-Info (332146): Worst-case hold slack is 0.389
+    Info (332119):   -11.146           -2556.835 frequency_divider_cpu:fdc|clk_out 
+    Info (332119):   -10.105            -189.157 clk 
+    Info (332119):    -3.040              -6.059 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -2.760             -77.927 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+Info (332146): Worst-case hold slack is -1.017
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.389               0.000 clk 
-    Info (332119):     0.546               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
-    Info (332119):     0.665               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -1.017              -5.863 clk 
+    Info (332119):     0.498               0.000 frequency_divider_cpu:fdc|clk_out 
+    Info (332119):     0.581               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):     0.650               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.448
+Info (332146): Worst-case minimum pulse width slack is -0.436
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.448            -178.666 clk 
-    Info (332119):    -0.394             -16.203 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -0.394              -1.027 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -0.436             -30.454 clk 
+    Info (332119):    -0.394            -160.569 frequency_divider_cpu:fdc|clk_out 
+    Info (332119):    -0.394             -20.272 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.394              -1.025 VGA:vga|frequency_divider_paint:divider|clk_out 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.299
+Info (332146): Worst-case setup slack is -6.914
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.299           -1660.047 clk 
-    Info (332119):    -1.448             -41.930 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -1.254              -2.438 VGA:vga|frequency_divider_paint:divider|clk_out 
-Info (332146): Worst-case hold slack is 0.183
+    Info (332119):    -6.914           -1563.300 frequency_divider_cpu:fdc|clk_out 
+    Info (332119):    -6.103            -102.361 clk 
+    Info (332119):    -1.516              -3.006 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -1.384             -38.984 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+Info (332146): Worst-case hold slack is -0.682
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.183               0.000 clk 
-    Info (332119):     0.249               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
-    Info (332119):     0.326               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.682              -4.062 clk 
+    Info (332119):     0.229               0.000 frequency_divider_cpu:fdc|clk_out 
+    Info (332119):     0.320               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):     0.336               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.437
+Info (332146): Worst-case minimum pulse width slack is -0.424
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.437             -17.747 clk 
-    Info (332119):     0.117               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.133               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -0.424              -5.122 clk 
+    Info (332119):    -0.177             -16.481 frequency_divider_cpu:fdc|clk_out 
+    Info (332119):    -0.079              -1.350 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.131               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.481
+Info (332146): Worst-case setup slack is -6.182
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.481           -1470.650 clk 
-    Info (332119):    -1.267             -36.467 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):    -1.079              -2.085 VGA:vga|frequency_divider_paint:divider|clk_out 
-Info (332146): Worst-case hold slack is 0.176
+    Info (332119):    -6.182           -1394.860 frequency_divider_cpu:fdc|clk_out 
+    Info (332119):    -5.258             -87.621 clk 
+    Info (332119):    -1.363              -2.672 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -1.207             -33.976 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+Info (332146): Worst-case hold slack is -0.856
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.176               0.000 clk 
-    Info (332119):     0.189               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
-    Info (332119):     0.288               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):    -0.856              -6.216 clk 
+    Info (332119):     0.203               0.000 frequency_divider_cpu:fdc|clk_out 
+    Info (332119):     0.286               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):     0.306               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.417
+Info (332146): Worst-case minimum pulse width slack is -0.424
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.417             -22.352 clk 
-    Info (332119):     0.121               0.000 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
-    Info (332119):     0.145               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
+    Info (332119):    -0.424              -5.378 clk 
+    Info (332119):    -0.126              -8.760 frequency_divider_cpu:fdc|clk_out 
+    Info (332119):    -0.046              -0.765 VGA:vga|ClkDivisor:VGAClkDivisor|clk25Mhz 
+    Info (332119):     0.146               0.000 VGA:vga|frequency_divider_paint:divider|clk_out 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1194 megabytes
-    Info: Processing ended: Thu Jun  6 03:54:55 2019
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 1195 megabytes
+    Info: Processing ended: Thu Jun  6 14:42:09 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:15
 
 

@@ -8,7 +8,6 @@ module flip_flop_D_IO
 		else 
 			begin
 			if (enb) q <= d;
-			else q <= q;
 			end		
 		end
 
