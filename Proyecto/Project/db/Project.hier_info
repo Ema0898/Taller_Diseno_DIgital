@@ -51,6 +51,7 @@ register[4] <= memory:mem.port2
 register[5] <= memory:mem.port2
 register[6] <= memory:mem.port2
 register[7] <= memory:mem.port2
+scan_ready <= scan_ready.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |video_game|ps2_keyboard:keyboard|Debounce:debouncing
