@@ -17,7 +17,7 @@ module VGA (input clk, reset,
 		
   animation anm(low_clock, d_reset, refreshDraw, s);
 
-  PixelGenerator pixel(posY, posX, vCounter, hCounter, s, RGB);		  
+  PixelGenerator pixel(posY, posX, vCounter, hCounter, RGB);		  
 	 	
   assign red = RGB[23:16];
   assign green = RGB[15:8];
